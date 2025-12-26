@@ -1,0 +1,100 @@
+.bg-header {
+    background-image: url('https://images.unsplash.com/photo-1511233744044-194342066754?q=80&w=3540&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 80vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.alt-bg {
+    background-color: rgb(233, 233, 233);
+}
+
+.outer {
+    background-color: rgb(233, 233, 233);
+    text-align: right;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+* {
+    margin: 0;
+}
+
+.marquee {
+    display: flex;
+    align-items: center;
+    width: 90%;
+    max-width: 1536px;
+    margin-inline: auto;
+    position: relative;
+    height: 100px;
+    margin-top: 5rem;
+    overflow: hidden;
+    mask-image: linear-gradient(to right,
+            rgba(0, 0, 0, 0),
+            rgba(0, 0, 0, 1) 20%,
+            rgba(0, 0, 0, 1) 80%,
+            rgba(0, 0, 0, 0));
+}
+
+@keyframes scrollLeft {
+    to {
+        left: -200px;
+    }
+}
+
+.item {
+    width: 200px;
+    height: auto;
+    border-radius: 6px;
+    position: absolute;
+    left: max(calc(200px * 5), 100%);
+    animation-name: scrollLeft;
+    animation-duration: 30s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+
+.item1 {
+    animation-delay: calc(30s / 5 * (5 - 1) * -1);
+}
+
+.item2 {
+    animation-delay: calc(30s / 5 * (5 - 2) * -1);
+}
+
+.item3 {
+    animation-delay: calc(30s / 5 * (5 - 3) * -1);
+}
+
+.item4 {
+    animation-delay: calc(30s / 5 * (5 - 4) * -1);
+}
+
+.item5 {
+    animation-delay: calc(30s / 5 * (5 - 5) * -1);
+}
+
+.sections .row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between; 
+}
+
+#sections .col-md-6 {
+    flex: 1;
+}
+
+.section-image {
+    max-width: 100%;  
+    height: auto; 
+    border-radius: 40px;
+}
