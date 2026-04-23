@@ -4,141 +4,133 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Medley Networks</title>
+    <title>Contact | Medley Networks</title>
+    <meta name="description" content="Contact Medley Networks for staffing, RF compliance, and telecom engineering inquiries.">
     <link rel="icon" type="image/x-icon" href="assets/favicon.ico">
-    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-    <script src="script.js"></script>
+    <link rel="stylesheet" href="styles.css">
 </head>
 
-<body>
-    <nav class="navbar navbar-expand-lg bg-body-tertiary sticky-top shadow-lg">
-        <div class="container-fluid">
-            <a class="navbar-brand" href="/MedleyWebsite/">
-                <img src="assets/medley-logo.png" height="30" width="30" alt="Company 1">
-                Medley Networks</a>
+<body class="site-body d-flex flex-column min-vh-100">
+    <nav class="navbar navbar-expand-lg sticky-top site-navbar">
+        <div class="container-fluid px-3 px-lg-4">
+            <a class="navbar-brand d-flex align-items-center gap-2" href="./index.html">
+                <img src="assets/medley-logo.png" height="34" width="34" alt="Medley Networks logo">
+                <span>Medley Networks</span>
+            </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                 data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
                 aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
-            <div class="collapse navbar-collapse d-flex justify-content-center" id="navbarSupportedContent">
-                <ul class="navbar-nav mb-2 mb-lg-0">
-                    <li class="nav-item">
-                        <a class="nav-link" href="./about.html">About Us</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="./services.html">Services</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="./solutions.html">Solutions</a>
-                    </li>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mx-lg-auto mb-2 mb-lg-0 gap-lg-1">
+                    <li class="nav-item"><a class="nav-link" href="./index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="./about.html">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="./services.html">Services</a></li>
+                    <li class="nav-item"><a class="nav-link" href="./solutions.html">Solutions</a></li>
+                    <li class="nav-item"><a class="nav-link active" aria-current="page" href="./contact.html">Contact</a></li>
                 </ul>
-            </div>
-            <div class="d-flex">
-                <a href="./contact.html" class="btn btn-primary">Get in touch</a>
+                <div class="d-flex flex-wrap gap-2 ms-lg-2">
+                    <a href="#contactForm" class="btn btn-primary">Start a message</a>
+                </div>
             </div>
         </div>
     </nav>
 
-    <section class="bg-light py-3 py-md-5">
-        <div class="container">
-            <div class="row justify-content-md-center">
-                <div class="col-12 col-md-10 col-lg-8 col-xl-7 col-xxl-6">
-                    <h2 class="mb-4 display-5 text-center">Contact Us</h2>
-                    <p class="text-secondary mb-5 text-center">The best way to contact us is to use our contact form
-                        below. Please fill out all of the required fields and we will get back to you as soon as
-                        possible.</p>
-                    <hr class="w-50 mx-auto mb-5 mb-xl-9 border-dark-subtle">
-                </div>
-            </div>
+    <header class="page-hero">
+        <div class="container text-center">
+            <p class="section-kicker reveal">Contact</p>
+            <h1 class="display-5 fw-bold reveal reveal-delay-1">Let’s talk</h1>
+            <p class="lead text-secondary mx-auto reveal reveal-delay-2 mb-0" style="max-width: 40rem;">Use the form below and we’ll route your message to the right team. Required fields are marked with an asterisk.</p>
         </div>
+    </header>
 
+    <main class="flex-grow-1 pb-5">
         <div class="container">
             <div class="row justify-content-lg-center">
-                <div class="col-12 col-lg-9">
-                    <div class="bg-white border rounded shadow-sm overflow-hidden">
-
-                        <div id="contactForm">
-                            <div class="row gy-4 gy-xl-5 p-4 p-xl-5">
-                                <div class="col-12">
-                                    <label for="fullname" class="form-label">Full Name <span
-                                            class="text-danger">*</span></label>
-                                    <input type="text" class="form-control" id="fullname" name="fullname" value=""
-                                        onKeyUp="sendEmail()" required>
-                                </div>
-                                <div class="col-12 col-md-6">
-
-                                    <label for="subject" class="form-label">Subject <span
-                                            class="text-danger">*</span></label>
-                                    <div class="input-group">
-                                        <input type="text" class="form-control" id="subject" name="subject" required
-                                            list="medleySubject" onKeyUp="sendEmail()" />
+                <div class="col-12 col-lg-9 reveal">
+                    <div class="card site-card border-0 overflow-hidden">
+                        <div class="card-body p-4 p-xl-5">
+                            <div id="contactForm">
+                                <div class="row g-4">
+                                    <div class="col-12">
+                                        <label for="fullname" class="form-label">Full name <span class="text-danger">*</span></label>
+                                        <input type="text" class="form-control form-control-lg" id="fullname" name="fullname" value=""
+                                            oninput="sendEmail()" required>
+                                    </div>
+                                    <div class="col-12 col-md-6">
+                                        <label for="subject" class="form-label">Subject <span class="text-danger">*</span></label>
+                                        <input type="text" class="form-control form-control-lg" id="subject" name="subject" required
+                                            list="medleySubject" oninput="sendEmail()" />
                                         <datalist id="medleySubject">
                                             <option value="Construction Engineer Position">
                                             <option value="RF Engineer Position">
                                             <option value="Project Manager Position">
                                             <option value="Quality Assurance Engineer Position">
                                         </datalist>
-
                                     </div>
-                                </div>
-                                <div class="col-12 col-md-6">
-                                    <label for="phone" class="form-label">Phone Number <span
-                                            class="text-danger">*</span></label>
-                                    <div class="input-group">
-                                        <span class="input-group-text">
-                                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
-                                                fill="currentColor" class="bi bi-telephone" viewBox="0 0 16 16">
-                                                <path
-                                                    d="M3.654 1.328a.678.678 0 0 0-1.015-.063L1.605 2.3c-.483.484-.661 1.169-.45 1.77a17.568 17.568 0 0 0 4.168 6.608 17.569 17.569 0 0 0 6.608 4.168c.601.211 1.286.033 1.77-.45l1.034-1.034a.678.678 0 0 0-.063-1.015l-2.307-1.794a.678.678 0 0 0-.58-.122l-2.19.547a1.745 1.745 0 0 1-1.657-.459L5.482 8.062a1.745 1.745 0 0 1-.46-1.657l.548-2.19a.678.678 0 0 0-.122-.58L3.654 1.328zM1.884.511a1.745 1.745 0 0 1 2.612.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.678.678 0 0 0 .178.643l2.457 2.457a.678.678 0 0 0 .644.178l2.189-.547a1.745 1.745 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.634 18.634 0 0 1-7.01-4.42 18.634 18.634 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877L1.885.511z" />
-                                            </svg>
-                                        </span>
-                                        <input type="tel" class="form-control" id="phone" name="phone" value="" required
-                                            onKeyUp="sendEmail()">
+                                    <div class="col-12 col-md-6">
+                                        <label for="phone" class="form-label">Phone number <span class="text-danger">*</span></label>
+                                        <div class="input-group input-group-lg">
+                                            <span class="input-group-text bg-body-secondary border-end-0">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-telephone" viewBox="0 0 16 16" aria-hidden="true">
+                                                    <path d="M3.654 1.328a.678.678 0 0 0-1.015-.063L1.605 2.3c-.483.484-.661 1.169-.45 1.77a17.568 17.568 0 0 0 4.168 6.608 17.569 17.569 0 0 0 6.608 4.168c.601.211 1.286.033 1.77-.45l1.034-1.034a.678.678 0 0 0-.063-1.015l-2.307-1.794a.678.678 0 0 0-.58-.122l-2.19.547a1.745 1.745 0 0 1-1.657-.459L5.482 8.062a1.745 1.745 0 0 1-.46-1.657l.548-2.19a.678.678 0 0 0-.122-.58L3.654 1.328zM1.884.511a1.745 1.745 0 0 1 2.612.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.678.678 0 0 0 .178.643l2.457 2.457a.678.678 0 0 0 .644.178l2.189-.547a1.745 1.745 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.634 18.634 0 0 1-7.01-4.42 18.634 18.634 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877L1.885.511z" />
+                                                </svg>
+                                            </span>
+                                            <input type="tel" class="form-control border-start-0" id="phone" name="phone" value="" required
+                                                oninput="sendEmail()">
+                                        </div>
                                     </div>
-                                </div>
-                                <div class="col-12">
-                                    <label for="message" class="form-label">Message <span
-                                            class="text-danger">*</span></label>
-                                    <textarea class="form-control" id="message" name="message" rows="3" required
-                                        onKeyUp="sendEmail()"></textarea>
-                                </div>
-                                <div class="col-12">
-                                    <div class="d-grid">
-                                        <a class="btn btn-primary btn-lg" href="" id="send_email">Submit</a>
+                                    <div class="col-12">
+                                        <label for="message" class="form-label">Message <span class="text-danger">*</span></label>
+                                        <textarea class="form-control form-control-lg" id="message" name="message" rows="4" required
+                                            oninput="sendEmail()"></textarea>
+                                    </div>
+                                    <div class="col-12">
+                                        <div class="d-grid">
+                                            <a class="btn btn-primary btn-lg" href="#" id="send_email">Open email to send</a>
+                                        </div>
+                                        <p class="small text-secondary mt-3 mb-0">This opens your email client with a pre-filled message to <strong>info@medleynetworks.com</strong>.</p>
                                     </div>
                                 </div>
                             </div>
                         </div>
-
                     </div>
                 </div>
             </div>
         </div>
-    </section>
+    </main>
 
-    <div class="container">
-        <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
-            <p class="col-md-4 mb-0 text-body-secondary">© 2024 Medley Networks, Inc.</p>
-
-            <a href="/MedleyWebsite/"
-                class="col-md-4 d-flex align-items-center justify-content-center mb-3 mb-md-0 me-md-auto link-body-emphasis text-decoration-none">
-                <img src="assets/medley-logo.png" height="30" width="30" alt="Company 1">
-            </a>
-
-            <ul class="nav col-md-4 justify-content-end">
-                <li class="nav-item"><a href="/MedleyWebsite/" class="nav-link px-2 text-body-secondary">Home</a></li>
-                <li class="nav-item"><a href="./about.html" class="nav-link px-2 text-body-secondary">About</a></li>
-                <li class="nav-item"><a href="./services.html" class="nav-link px-2 text-body-secondary">Services</a>
-                </li>
-                <li class="nav-item"><a href="./solutions.html" class="nav-link px-2 text-body-secondary">Solutions</a>
-                </li>
-                <li class="nav-item"><a href="./contact.html" class="nav-link px-2 text-body-secondary">Contact</a></li>
-            </ul>
-        </footer>
-    </div>
+    <footer class="site-footer mt-auto">
+        <div class="container py-4">
+            <div class="row align-items-center gy-4">
+                <div class="col-md-4 text-center text-md-start">
+                    <p class="mb-1 small text-white-50">&copy; 2024 Medley Networks, Inc.</p>
+                    <p class="mb-0 small text-white-50">Parsippany, NJ · Nationwide programs</p>
+                </div>
+                <div class="col-md-4 text-center">
+                    <a href="./index.html" class="d-inline-flex align-items-center justify-content-center text-decoration-none gap-2">
+                        <img src="assets/medley-logo.png" height="36" width="36" alt="Medley Networks">
+                        <span class="fw-semibold text-white">Medley Networks</span>
+                    </a>
+                </div>
+                <div class="col-md-4">
+                    <ul class="nav justify-content-center justify-content-md-end flex-wrap gap-2">
+                        <li class="nav-item"><a class="nav-link py-1" href="./index.html">Home</a></li>
+                        <li class="nav-item"><a class="nav-link py-1" href="./about.html">About</a></li>
+                        <li class="nav-item"><a class="nav-link py-1" href="./services.html">Services</a></li>
+                        <li class="nav-item"><a class="nav-link py-1" href="./solutions.html">Solutions</a></li>
+                        <li class="nav-item"><a class="nav-link py-1" href="./contact.html">Contact</a></li>
+                        <li class="nav-item"><a class="nav-link py-1" href="./privacy-policy.html">Privacy</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
         integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
@@ -146,6 +138,7 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"
         integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy"
         crossorigin="anonymous"></script>
+    <script src="script.js" defer></script>
 </body>
 
 </html>

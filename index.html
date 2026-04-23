@@ -4,28 +4,35 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Medley Networks</title>
+    <title>Medley Networks | Telecom &amp; IT Solutions</title>
+    <meta name="description" content="Medley Networks delivers RF compliance, wireless engineering, and IT workforce solutions for telecommunications and enterprise.">
     <link rel="icon" type="image/x-icon" href="assets/favicon.ico">
-    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="styles.css">
 </head>
 
-<body>
-    <nav class="navbar navbar-expand-lg bg-body-tertiary sticky-top shadow-lg">
-        <div class="container-fluid">
-            <a class="navbar-brand" href="/MedleyWebsite/">
-                <img src="assets/medley-logo.png" height="30" width="30" alt="Company 1">
-                Medley Networks</a>
+<body class="site-body d-flex flex-column min-vh-100">
+    <nav class="navbar navbar-expand-lg sticky-top site-navbar">
+        <div class="container-fluid px-3 px-lg-4">
+            <a class="navbar-brand d-flex align-items-center gap-2" href="./index.html">
+                <img src="assets/medley-logo.png" height="34" width="34" alt="Medley Networks logo">
+                <span>Medley Networks</span>
+            </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                 data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
                 aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
-            <div class="collapse navbar-collapse d-flex justify-content-center" id="navbarSupportedContent">
-                <ul class="navbar-nav mb-2 mb-lg-0">
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mx-lg-auto mb-2 mb-lg-0 gap-lg-1">
                     <li class="nav-item">
-                        <a class="nav-link" href="./about.html">About Us</a>
+                        <a class="nav-link active" aria-current="page" href="./index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./about.html">About</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="./services.html">Services</a>
@@ -34,93 +41,109 @@
                         <a class="nav-link" href="./solutions.html">Solutions</a>
                     </li>
                 </ul>
-            </div>
-            <div class="d-flex">
-                <a href="./contact.html" class="btn btn-primary">Get in touch</a>
+                <div class="d-flex flex-wrap gap-2 ms-lg-2">
+                    <a href="./contact.html" class="btn btn-primary">Get in touch</a>
+                </div>
             </div>
         </div>
     </nav>
 
     <header class="bg-header text-white">
         <div class="container">
-            <h1 class="display-2">RF Compliance Experts</h1>
-            <p class="lead">Network solutions and services in telecommunication <br>and information technology.</p>
-            <a href="./about.html" class="btn btn-primary">About Us</a>
+            <p class="section-kicker text-white-50 mb-2">Telecom · Wireless · IT</p>
+            <h1 class="display-3 fw-bold">RF Compliance <span class="text-warning">Experts</span></h1>
+            <p class="lead fs-5">Network solutions and services in telecommunications and information technology—built for operators, integrators, and enterprises.</p>
+            <div class="d-flex flex-wrap gap-3 justify-content-center mt-4">
+                <a href="./about.html" class="btn btn-light btn-lg text-dark">About us</a>
+                <a href="./services.html" class="btn btn-outline-light btn-lg">View services</a>
+            </div>
         </div>
     </header>
 
-    <div class="container pt-5 text-center">
-        <h1>Our clients</h1>
-        <div class="marquee">
+    <section class="clients-strip text-center">
+        <div class="container">
+            <h2 class="reveal">Trusted by industry leaders</h2>
+            <p class="text-secondary reveal reveal-delay-1 mb-0">Partnerships across carriers, OEMs, and technology programs.</p>
+        </div>
+        <div class="marquee mt-2">
             <img class="item item1" src="assets/verizon.png" alt="Verizon">
             <img class="item item2" src="assets/alcatel.png" alt="Alcatel">
             <img class="item item3" src="assets/Brook.png" alt="Brook">
             <img class="item item4" src="assets/amatel.png" alt="Amatel">
             <img class="item item5" src="assets/ericsson.png" alt="Ericsson">
         </div>
-    </div>
+    </section>
 
-    <div id="about" class=" sections container py-5">
-        <div class="row">
-            <div class="col-md-6">
-                <h1>About Us</h1>
-                <h2>Your Partner in Telecom & IT</h2>
-                <p>Expertise in telecommunication and wireless solutions to elevate your business.</p>
-                <a href="./about.html" class="btn btn-primary">Learn More</a>
+    <section id="about" class="section-block sections container">
+        <div class="row align-items-center">
+            <div class="col-lg-6 reveal">
+                <p class="section-kicker">Who we are</p>
+                <h2 class="display-6 fw-bold mb-3">About Medley</h2>
+                <p class="text-secondary fs-5 mb-4">Your partner in telecom and IT—from RF compliance and network rollout to specialized technical talent.</p>
+                <a href="./about.html" class="btn btn-primary btn-lg">Learn more</a>
             </div>
-            <div class="col-md-6">
-                <img src="assets/rooftop_antenna_urban.jpg" alt="About Us Image" class="section-image">
+            <div class="col-lg-6 mt-4 mt-lg-0 reveal reveal-delay-1">
+                <img src="assets/rooftop_antenna_urban.jpg" alt="RF engineering on an urban rooftop" class="section-image w-100">
             </div>
         </div>
-    </div>
+    </section>
 
-    <div class="sections outer">
-        <div id="services" class="container py-5">
-            <div class="row">
-                <div class=" col-md-6">
-                    <img src="assets/medley_engineer_testing_rooftop.jpg" alt="About Us Image" class="section-image">
+    <section class="section-block sections outer">
+        <div id="services" class="container">
+            <div class="row align-items-center flex-lg-row-reverse">
+                <div class="col-lg-6 reveal">
+                    <p class="section-kicker">What we deliver</p>
+                    <h2 class="display-6 fw-bold mb-3">Services</h2>
+                    <p class="text-secondary fs-5 mb-4">Engineering, integration, compliance, and field services aligned to how modern networks are built.</p>
+                    <a href="./services.html" class="btn btn-primary btn-lg">Explore services</a>
                 </div>
-                <div class="col-md-6">
-                    <h1 class="">Services</h1>
-                    <p class="">We offer a range of services to meet the demands of the telecom and IT industries.</p>
-                    <a href="./services.html" class="btn btn-primary">Learn More</a>
+                <div class="col-lg-6 mt-4 mt-lg-0 reveal reveal-delay-1">
+                    <img src="assets/medley_engineer_testing_rooftop.jpg" alt="Medley engineer performing RF testing" class="section-image w-100">
                 </div>
             </div>
         </div>
-    </div>
+    </section>
 
-    <div id="solutions" class="sections container py-5">
-        <div class="row">
-            <div class="col-md-6">
-                <h1 class="">Solutions</h1>
-                <p class="">Discover our comprehensive solutions tailored for diverse industries.</p>
-                <a href="./solutions.html" class="btn btn-primary">Learn More</a>
+    <section id="solutions" class="section-block sections container">
+        <div class="row align-items-center">
+            <div class="col-lg-6 reveal">
+                <p class="section-kicker">Capabilities</p>
+                <h2 class="display-6 fw-bold mb-3">Solutions</h2>
+                <p class="text-secondary fs-5 mb-4">Structured offerings across telecom, IT, finance, and professional services—so teams scale with confidence.</p>
+                <a href="./solutions.html" class="btn btn-primary btn-lg">See solutions</a>
             </div>
-            <div class="col-md-6">
-                <img src="assets/self_support_tower_suburban.jpg" alt="About Us Image" class="section-image">
+            <div class="col-lg-6 mt-4 mt-lg-0 reveal reveal-delay-1">
+                <img src="assets/self_support_tower_suburban.jpg" alt="Self-support tower in a suburban landscape" class="section-image w-100">
             </div>
         </div>
+    </section>
 
-    </div>
-
-    <div class="container">
-        <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
-            <p class="col-md-4 mb-0 text-body-secondary">© 2024 Medley Networks, Inc.</p>
-
-            <a href="/MedleyWebsite/"
-                class="col-md-4 d-flex align-items-center justify-content-center mb-3 mb-md-0 me-md-auto link-body-emphasis text-decoration-none">
-                <img src="assets/medley-logo.png" height="30" width="30" alt="Company 1">
-            </a>
-
-            <ul class="nav col-md-4 justify-content-end">
-                <li class="nav-item"><a href="/MedleyWebsite/" class="nav-link px-2 text-body-secondary">Home</a></li>
-                <li class="nav-item"><a href="./about.html" class="nav-link px-2 text-body-secondary">About</a></li>
-                <li class="nav-item"><a href="./services.html" class="nav-link px-2 text-body-secondary">Services</a></li>
-                <li class="nav-item"><a href="./solutions.html" class="nav-link px-2 text-body-secondary">Solutions</a></li>
-                <li class="nav-item"><a href="./contact.html" class="nav-link px-2 text-body-secondary">Contact</a></li>
-            </ul>
-        </footer>
-    </div>
+    <footer class="site-footer mt-auto">
+        <div class="container py-4">
+            <div class="row align-items-center gy-4">
+                <div class="col-md-4 text-center text-md-start">
+                    <p class="mb-1 small text-white-50">&copy; 2024 Medley Networks, Inc.</p>
+                    <p class="mb-0 small text-white-50">Parsippany, NJ · Nationwide programs</p>
+                </div>
+                <div class="col-md-4 text-center">
+                    <a href="./index.html" class="d-inline-flex align-items-center justify-content-center text-decoration-none gap-2">
+                        <img src="assets/medley-logo.png" height="36" width="36" alt="Medley Networks">
+                        <span class="fw-semibold text-white">Medley Networks</span>
+                    </a>
+                </div>
+                <div class="col-md-4">
+                    <ul class="nav justify-content-center justify-content-md-end flex-wrap gap-2">
+                        <li class="nav-item"><a class="nav-link py-1" href="./index.html">Home</a></li>
+                        <li class="nav-item"><a class="nav-link py-1" href="./about.html">About</a></li>
+                        <li class="nav-item"><a class="nav-link py-1" href="./services.html">Services</a></li>
+                        <li class="nav-item"><a class="nav-link py-1" href="./solutions.html">Solutions</a></li>
+                        <li class="nav-item"><a class="nav-link py-1" href="./contact.html">Contact</a></li>
+                        <li class="nav-item"><a class="nav-link py-1" href="./privacy-policy.html">Privacy</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
         integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
@@ -128,6 +151,7 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"
         integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy"
         crossorigin="anonymous"></script>
+    <script src="script.js" defer></script>
 </body>
 
 </html>
