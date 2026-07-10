@@ -1,0 +1,590 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>Staffing Solutions | Medley Networks</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link href="https://fonts.googleapis.com/css?family=Raleway:900,300,700" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.2/css/font-awesome.min.css">
+  <link rel="stylesheet" type="text/css" href="css/grid.css">
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <link rel="stylesheet" type="text/css" href="css/layout.css">
+  <link rel="stylesheet" type="text/css" href="css/style2.css" />
+  <link rel="stylesheet" type="text/css" href="css/jquery.bxslider.css">
+  <link rel="stylesheet" type="text/css" href="css/responsive.css">
+  <link rel="stylesheet" type="text/css" href="css/animate.css">
+  <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+  <link rel="stylesheet" type="text/css" href="css/ionicons.min.css">
+
+  <style>
+    body {
+      padding-top: 70px;
+      font-family: 'Shonar Bangla', 'amblelight', sans-serif;
+    }
+
+    .navbar-brand img {
+      max-width: 100px;
+      height: auto;
+    }
+
+    #staffing .os-animation {
+      opacity: 1 !important;
+    }
+
+    #staffing .section-title {
+      color: #222 !important;
+      line-height: 1.15 !important;
+    }
+
+    #staffing .section-subtitle {
+      color: #555 !important;
+    }
+
+    .staffing-section {
+      text-align: left;
+    }
+
+    .staffing-section .staffing-eyebrow {
+      text-transform: uppercase;
+      letter-spacing: .14em;
+      font-size: 13px;
+      font-weight: 700;
+      color: #d87843;
+      margin-bottom: 10px;
+    }
+
+    .staffing-section .staffing-accent-bar {
+      width: 52px;
+      height: 4px;
+      background: #d87843;
+      margin-bottom: 20px;
+    }
+
+    .staffing-section .section-title {
+      font-size: 30px;
+      font-weight: 900;
+      letter-spacing: 4px;
+      text-transform: uppercase;
+      color: #222;
+      line-height: 1.15;
+      margin-bottom: 16px;
+    }
+
+    .staffing-section .section-subtitle {
+      font-size: 16px;
+      color: #555;
+      max-width: 680px;
+      line-height: 1.7;
+      margin-bottom: 40px;
+    }
+
+    .staffing-section .dual-cta {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 20px;
+      margin-bottom: 60px;
+    }
+
+    .staffing-section .cta-card {
+      padding: 36px;
+      text-align: left;
+      background: #f4f4f4;
+    }
+
+    .staffing-section .cta-card h3 {
+      font-size: 18px;
+      letter-spacing: 2px;
+      margin-bottom: 10px;
+      color: #d84012;
+    }
+
+    .staffing-section .cta-card p {
+      font-size: 16px;
+      line-height: 26px;
+      color: #555;
+      margin-bottom: 22px;
+    }
+
+    .staffing-section .cta-btn {
+      display: inline-block;
+      padding: 10px 25px;
+      font-weight: 700;
+      text-decoration: none;
+      background: #d84012;
+      color: #fff;
+      border: none;
+    }
+
+    .staffing-section .cta-btn:hover {
+      background: #222;
+      color: #fff;
+      text-decoration: none;
+    }
+
+    .staffing-section .industries-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+      gap: 16px;
+      margin-bottom: 60px;
+    }
+
+    .staffing-section .industry-card {
+      padding: 26px 22px;
+      background: #f4f4f4;
+      text-align: left;
+    }
+
+    .staffing-section .industry-icon {
+      font-size: 24px;
+      margin-bottom: 10px;
+    }
+
+    .staffing-section .industry-card h4 {
+      font-size: 15px;
+      letter-spacing: 2px;
+      color: #d84012;
+      margin-bottom: 12px;
+    }
+
+    .staffing-section .industry-card ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    .staffing-section .industry-card ul li {
+      font-size: 14px;
+      color: #222;
+      padding: 4px 0 4px 16px;
+      position: relative;
+      line-height: 1.5;
+    }
+
+    .staffing-section .industry-card ul li::before {
+      content: '\203A';
+      position: absolute;
+      left: 0;
+      color: #d87843;
+      font-weight: 700;
+      font-size: 18px;
+    }
+
+    .staffing-section .how-we-work {
+      background: #f4f4f4;
+      padding: 60px 48px;
+      margin-bottom: 60px;
+    }
+
+    .staffing-section .pipeline-intro {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 48px;
+      align-items: center;
+      margin-bottom: 52px;
+    }
+
+    .staffing-section .pipeline-intro p {
+      font-size: 16px;
+      color: #555;
+      line-height: 1.75;
+    }
+
+    .staffing-section .pipeline-stats {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+    }
+
+    .staffing-section .stat-box {
+      padding: 20px;
+      text-align: center;
+      background: #fff;
+    }
+
+    .staffing-section .stat-box .stat-num {
+      font-size: 28px;
+      font-weight: 900;
+      color: #d84012;
+      display: block;
+    }
+
+    .staffing-section .stat-box .stat-label {
+      font-size: 12px;
+      color: #222;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: .08em;
+      margin-top: 4px;
+    }
+
+    .staffing-section .pipeline-steps {
+      display: grid;
+      grid-template-columns: repeat(6, 1fr);
+      gap: 12px;
+    }
+
+    .staffing-section .step {
+      padding: 20px 10px;
+      text-align: center;
+      background: #fff;
+    }
+
+    .staffing-section .step .step-num {
+      display: block;
+      font-size: 26px;
+      font-weight: 900;
+      color: #d84012;
+      margin-bottom: 8px;
+    }
+
+    .staffing-section .step .step-title {
+      font-size: 13px;
+      font-weight: 700;
+      color: #222;
+      margin-bottom: 8px;
+      line-height: 1.3;
+    }
+
+    .staffing-section .step .step-body {
+      font-size: 12px;
+      color: #555;
+      line-height: 1.5;
+    }
+
+    .staffing-section .step .step-tag {
+      display: inline-block;
+      margin-top: 6px;
+      font-size: 10px;
+      font-weight: 700;
+      padding: 3px 10px;
+      border-radius: 20px;
+      color: #fff;
+      background: #d84012;
+    }
+
+    .staffing-section .why-medley {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+      margin-bottom: 40px;
+    }
+
+    .staffing-section .value-card {
+      border-left: 4px solid #d87843;
+      padding: 25px;
+      background: #f4f4f4;
+      text-align: left;
+    }
+
+    .staffing-section .value-card h4 {
+      font-size: 15px;
+      letter-spacing: 2px;
+      color: #222;
+      margin-bottom: 12px;
+    }
+
+    .staffing-section .value-card p {
+      font-size: 15px;
+      color: #555;
+      line-height: 1.65;
+    }
+
+    @media (max-width: 900px) {
+      .staffing-section .dual-cta {
+        grid-template-columns: 1fr;
+      }
+
+      .staffing-section .pipeline-intro {
+        grid-template-columns: 1fr;
+      }
+
+      .staffing-section .pipeline-steps {
+        grid-template-columns: repeat(3, 1fr);
+      }
+
+      .staffing-section .why-medley {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    @media (max-width: 600px) {
+      .staffing-section .how-we-work {
+        padding: 36px 22px;
+      }
+
+      .staffing-section .pipeline-steps {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      .staffing-section .industries-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- Navigation -->
+  <section id="navigation">
+    <nav role="navigation" class="navbar navbar-default navbar-fixed-top">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <button data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" class="navbar-toggle"
+            type="button">&nbsp;</button>
+          <a style="margin: 0px; padding: 5px 0px 0px; vertical-align: middle !important;" class="navbar-brand"
+            href="index.html#home">
+            <img alt=""
+              style="height: 40px; width: 100px; margin: 0px; padding: 0px; vertical-align: middle !important;"
+              src="images/logo-L.png" />
+          </a>
+        </div>
+        <div id="bs-example-navbar-collapse-1" class="collapse navbar-collapse">
+          <ul style="vertical-align: bottom !important;" class="nav navbar-nav navbar-right">
+            <li style="font-size: 14px; font-family: Arial, sans-serif;"><a href="index.html#home">Home</a></li>
+            <li style="font-size: 14px; font-family: Arial, sans-serif;"><a href="index.html#AboutUs">About Us</a></li>
+            <li style="font-size: 14px; font-family: Arial, sans-serif;"><a href="index.html#services">Services</a></li>
+            <li style="font-size: 14px; font-family: Arial, sans-serif;"><a href="index.html#solutions">Solutions</a>
+            </li>
+            <li style="font-size: 14px; font-family: Arial, sans-serif;"><a href="index.html#clients">Clients</a></li>
+            <li style="font-size: 14px; font-family: Arial, sans-serif;"><a href="index.html#store">Store</a></li>
+            <li style="font-size: 14px; font-family: Arial, sans-serif;"><a href="index.html#careers">Careers</a></li>
+            <li style="font-size: 14px; font-family: Arial, sans-serif;"><a href="/staffing.html">Staffing</a></li>
+            <li style="font-size: 14px; font-family: Arial, sans-serif;"><a href="index.html#ContactUs">Contact Us</a>
+            </li>
+            <li style="font-size: 14px; font-family: Arial, sans-serif;"><a href="/privacy-policy.html">Privacy
+                Policy</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </section>
+
+  <div id="staffing" class="intro">
+    <div class="container">
+      <div class="staffing-section">
+        <h2 class="os-animation" data-os-animation="zoomIn" data-os-animation-delay="0.3s"
+          style="font-size: 44px; line-height: 1.15; margin-top: 0; margin-bottom: 0.3em; color: #222;">STAFFING
+          SOLUTIONS</h2>
+        <p class="os-animation" data-os-animation="zoomIn" data-os-animation-delay="0.5s"
+          style="font-size: 18px; color: #555; max-width: 680px; line-height: 1.7; font-weight: 700; margin-bottom: 30px;">
+          Connecting the Right Talent to the Right Opportunity</p>
+        <p data-os-animation="zoomIn" data-os-animation-delay="0.6s" class="os-animation section-subtitle"
+          style="margin-bottom: 30px;">
+          Medley Networks provides end-to-end staffing services across Telecommunications, IT, Finance, Healthcare, and
+          Professional Services. Whether you're a company looking to build a high-performing team or a professional
+          seeking your next opportunity, we're your trusted partner.
+        </p>
+
+        <div class="dual-cta" data-os-animation="fadeIn" data-os-animation-delay="0.7s" class="os-animation">
+          <div class="cta-card">
+            <h3>For Employers</h3>
+            <p>Looking to hire RF engineers, field technicians, IT professionals, or office staff? Our vetting process
+              ensures you only meet qualified, job-ready candidates.</p>
+            <a href="mailto:hiremedley@medleynetworks.com" class="cta-btn">Request Talent &rarr;</a>
+          </div>
+          <div class="cta-card">
+            <h3 style="color: #222;">For Candidates</h3>
+            <p>Explore opportunities with leading telecom carriers, tower companies, and technology firms. Submit your
+              resume and let us match you to the right role.</p>
+            <a href="mailto:jobs@medleynetworks.com" class="cta-btn" style="background: #222;">Explore Opportunities
+              &rarr;</a>
+          </div>
+        </div>
+
+        <div data-os-animation="zoomIn" data-os-animation-delay="0.9s" class="os-animation">
+          <div class="staffing-eyebrow">Industries We Serve</div>
+          <div class="staffing-accent-bar"></div>
+          <h2 class="section-title">Industries We Staff For</h2>
+        </div>
+        <p data-os-animation="zoomIn" data-os-animation-delay="1.1s" class="os-animation section-subtitle">
+          We place skilled professionals across a broad range of disciplines — from highly specialized RF engineering
+          roles to general professional services.
+        </p>
+
+        <div class="industries-grid" data-os-animation="fadeIn" data-os-animation-delay="1.3s" class="os-animation">
+          <div class="industry-card">
+            <div class="industry-icon">📡</div>
+            <h4>RF &amp; Telecom Engineering</h4>
+            <ul>
+              <li>RF Design &amp; Optimization Engineers</li>
+              <li>Drive Test Engineers</li>
+              <li>RF Compliance Specialists</li>
+              <li>EME / RF Exposure Analysts</li>
+              <li>Network Implementation Engineers</li>
+            </ul>
+          </div>
+          <div class="industry-card">
+            <div class="industry-icon">🔧</div>
+            <h4>Telecom Field &amp; Construction</h4>
+            <ul>
+              <li>Tower Technicians</li>
+              <li>Field Services Technicians</li>
+              <li>BBU / C-RAN Installation Crews</li>
+              <li>GPS &amp; Sweep Technicians</li>
+              <li>Site Acquisition Specialists</li>
+            </ul>
+          </div>
+          <div class="industry-card">
+            <div class="industry-icon">💻</div>
+            <h4>Information Technology</h4>
+            <ul>
+              <li>Software Developers &amp; Architects</li>
+              <li>Network &amp; Cloud Engineers</li>
+              <li>DevOps &amp; QA Engineers</li>
+              <li>Data / BI Analysts</li>
+              <li>Project Managers &amp; Business Analysts</li>
+            </ul>
+          </div>
+          <div class="industry-card">
+            <div class="industry-icon">🏥</div>
+            <h4>Healthcare</h4>
+            <ul>
+              <li>Clinical Administrative Staff</li>
+              <li>Medical Records Specialists</li>
+              <li>Healthcare IT Professionals</li>
+              <li>Billing &amp; Coding Specialists</li>
+            </ul>
+          </div>
+          <div class="industry-card">
+            <div class="industry-icon">💰</div>
+            <h4>Finance</h4>
+            <ul>
+              <li>Accountants &amp; Accounting Managers</li>
+              <li>Finance Directors &amp; Managers</li>
+              <li>Budget &amp; Tax Analysts</li>
+              <li>Mortgage Underwriters</li>
+              <li>Loan Servicing Staff</li>
+            </ul>
+          </div>
+          <div class="industry-card">
+            <div class="industry-icon">🗂️</div>
+            <h4>Professional &amp; Admin Services</h4>
+            <ul>
+              <li>Office Administrators</li>
+              <li>Executive Assistants</li>
+              <li>HR &amp; Payroll Specialists</li>
+              <li>Front Desk &amp; Receptionist</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="how-we-work" data-os-animation="fadeIn" data-os-animation-delay="1.5s" class="os-animation">
+          <div class="staffing-eyebrow">Our Process</div>
+          <div class="staffing-accent-bar"></div>
+          <h2 class="section-title">How We Work</h2>
+
+          <div class="pipeline-intro">
+            <p>
+              Our six-step placement process is built around quality over speed. Starting from client requisition to
+              candidate start, every candidate passes through structured screening, skills validation, and background
+              checks before being submitted — so you spend less time interviewing and more time building.
+            </p>
+            <div class="pipeline-stats">
+              <div class="stat-box">
+                <span class="stat-num">6</span>
+                <span class="stat-label">Stage Vetting Process</span>
+              </div>
+              <div class="stat-box">
+                <span class="stat-num">25%</span>
+                <span class="stat-label">Pass Technical Interview</span>
+              </div>
+              <div class="stat-box">
+                <span class="stat-num">6%</span>
+                <span class="stat-label">Submitted to Client</span>
+              </div>
+              <div class="stat-box">
+                <span class="stat-num">100%</span>
+                <span class="stat-label">Background &amp; E-Verified</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="pipeline-steps">
+            <div class="step">
+              <span class="step-num">1</span>
+              <div class="step-title">Source Candidates</div>
+              <div class="step-body">Internal DB (Ceipal), Job Fairs, Indeed, Dice, CareerBuilder, ZipRecruiter,
+                Employee Referrals, LinkedIn</div>
+            </div>
+            <div class="step">
+              <span class="step-num">2</span>
+              <div class="step-title">Pre-Screening &amp; Screening</div>
+              <div class="step-body">Resume review, skills &amp; experience verification, discussion of past projects
+              </div>
+            </div>
+            <div class="step">
+              <span class="step-num">3</span>
+              <div class="step-title">Language &amp; Soft-Skill Assessment</div>
+              <div class="step-body">Communication, personality evaluation, English proficiency</div>
+            </div>
+            <div class="step">
+              <span class="step-num">4</span>
+              <div class="step-title">Technical Vetting Interview</div>
+              <div class="step-body">Validation test, professional reference check, basic background check</div>
+              <span class="step-tag">Only 25% advance</span>
+            </div>
+            <div class="step">
+              <span class="step-num">5</span>
+              <div class="step-title">Submission to Client</div>
+              <div class="step-body">Shortlisted candidates forwarded for client's own interview process</div>
+              <span class="step-tag">Top 6% only</span>
+            </div>
+            <div class="step">
+              <span class="step-num">6</span>
+              <div class="step-title">Candidate Onboarding</div>
+              <div class="step-body">Detailed background check, drug test, E-Verify — ready to start</div>
+            </div>
+          </div>
+        </div>
+
+        <div data-os-animation="zoomIn" data-os-animation-delay="1.7s" class="os-animation">
+          <div class="staffing-eyebrow">Why Choose Us</div>
+          <div class="staffing-accent-bar"></div>
+          <h2 class="section-title">What Sets Our Staffing Apart</h2>
+        </div>
+        <p data-os-animation="zoomIn" data-os-animation-delay="1.9s" class="os-animation section-subtitle">
+          We don't just source — we validate. Our deep domain expertise in Telecom and IT means we understand technical
+          roles at a level that generalist staffing agencies simply can't match.
+        </p>
+
+        <div class="why-medley" data-os-animation="fadeIn" data-os-animation-delay="2.1s" class="os-animation">
+          <div class="value-card">
+            <h4>Deep Technical Domain Expertise</h4>
+            <p>Our team has hands-on experience in RF engineering and telecom deployments. We know what a good candidate
+              looks like because we've worked alongside them.</p>
+          </div>
+          <div class="value-card">
+            <h4>Rigorous Multi-Stage Vetting</h4>
+            <p>Only the top 6% of applicants make it to client submission. Every candidate is pre-screened, technically
+              tested, reference-checked, and background-verified before you meet them.</p>
+          </div>
+          <div class="value-card">
+            <h4>Contract, Contract-to-Hire &amp; Direct Placement</h4>
+            <p>We offer flexible engagement models to match your hiring strategy — from short-term project support to
+              permanent placement across all our industries.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <a href="#"><img alt="" src="images/logo1.png" /></a>
+      <p>2026 &copy; <a href="#">Medley Networks</a> All Rights Reserved.</p>
+    </div>
+  </footer>
+
+  <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+  <script src="js/classie.js"></script>
+  <script src="js/borderMenu.js"></script>
+  <script src="js/waypoints.min.js"></script>
+  <script src="js/script.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+</body>
+
+</html>
