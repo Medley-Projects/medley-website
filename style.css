@@ -75,6 +75,14 @@ table {
 
 /*FONTS*/
 @font-face {
+    font-family: "Raleway";
+    font-style: normal;
+    font-weight: 300 900;
+    src: url(fonts/raleway-latin.woff2)format("woff2");
+    font-display: swap
+}
+
+@font-face {
     font-family: 'Shonar Bangla','amblebold';
     src: url('fonts/amble-bold.eot');
     src: url('fonts/amble-bold.eot?#iefix') format('embedded-opentype'), url('fonts/amble-bold.woff2') format('woff2'), url('fonts/amble-bold.woff') format('woff'), url('fonts/amble-bold.ttf') format('truetype'), url('fonts/amble-bold.svg#amblebold') format('svg');
@@ -132,7 +140,7 @@ body {
 }
 
 h1, h2, h3, h4, h5 {
-    font-family: 'Shonar Bangla', 'Raleway', sans-serif;
+    font-family: 'Raleway', 'Shonar Bangla', sans-serif;
     font-weight: 900;
     letter-spacing: 4px;
     text-transform: uppercase;
@@ -187,25 +195,6 @@ span.line2 {
 .intro p {
     padding: 0 0px;
     text-align: start !important;
-}
-
-.service-pills {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 10px;
-    margin-top: 30px;
-}
-
-.service-pill {
-    display: inline-block;
-    padding: 8px 18px;
-    font-size: 13px;
-    font-weight: 600;
-    color: #fff;
-    background: #d84012;
-    border-radius: 20px;
-    white-space: nowrap;
 }
 
 .lapy {
