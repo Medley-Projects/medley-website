@@ -75,102 +75,49 @@
       margin-bottom: 40px;
     }
 
-    /* Hero */
-    .rfe-hero {
-      background: #f9f9f9;
-      padding: 60px 0 50px;
-      position: relative;
-      overflow: hidden;
-      margin-bottom: 10px;
-      text-align: left;
-    }
-
-    .hero-inner {
-      display: grid;
-      grid-template-columns: 1fr 380px;
-      gap: 50px;
-      align-items: center;
-    }
-
-    .hero-eyebrow {
-      text-transform: uppercase;
-      letter-spacing: .14em;
-      font-size: 13px;
-      font-weight: 700;
-      color: #d87843;
-      margin-bottom: 12px;
-    }
-
-    .hero-title {
-      font-size: 32px;
-      font-weight: 900;
-      letter-spacing: 3px;
-      text-transform: uppercase;
-      color: #222;
-      line-height: 1.2;
-      margin-bottom: 18px;
-    }
-
-    .hero-title em {
-      font-style: normal;
-      color: #d84012;
-    }
-
-    .hero-desc {
-      font-size: 15px;
-      color: #555;
-      line-height: 1.7;
-      max-width: 540px;
-      margin-bottom: 24px;
-    }
-
-    .hero-cta {
-      display: inline-block;
-      background: #222;
-      color: #fff;
-      font-weight: 700;
-      font-size: 13px;
-      padding: 11px 24px;
-      text-decoration: none;
-      transition: background .2s;
-      letter-spacing: 1px;
-    }
-    .hero-cta:hover { background: #d84012; color: #fff; text-decoration: none; }
-
+    /* Stats */
     .hero-stats {
       display: grid;
-      grid-template-columns: 1fr 1fr;
+      grid-template-columns: repeat(4, 1fr);
       gap: 12px;
+      margin-top: 10px;
     }
 
-    .hstat {
-      background: #fff;
-      border: 1px solid #ddd;
-      border-top: 3px solid #d84012;
-      padding: 18px 14px;
+    .stat-box {
+      background: #f4f4f4;
+      padding: 18px;
       text-align: center;
     }
 
-    .hstat:nth-child(2) { border-top-color: #d87843; }
-    .hstat:nth-child(3) { border-top-color: #222; }
-    .hstat:nth-child(4) { border-top-color: #d84012; }
-
-    .hstat-num {
+    .stat-box .stat-num {
       font-size: 1.6rem;
       font-weight: 700;
-      color: #222;
+      color: #d84012;
       display: block;
-      line-height: 1;
-      margin-bottom: 6px;
     }
 
-    .hstat-label {
+    .stat-box .stat-label {
       font-size: 11px;
-      letter-spacing: .08em;
-      text-transform: uppercase;
       color: #777;
-      line-height: 1.4;
+      text-transform: uppercase;
+      letter-spacing: .08em;
+      margin-top: 4px;
     }
+
+    .cta-btn {
+      display: inline-block;
+      padding: 10px 25px;
+      font-size: 13px;
+      font-weight: 700;
+      text-decoration: none;
+      background: #d84012;
+      color: #fff;
+      border: none;
+      transition: background .2s;
+      letter-spacing: 1px;
+    }
+
+    .cta-btn:hover { background: #222; color: #fff; text-decoration: none; }
 
     /* Capabilities grid */
     .cap-section {
@@ -362,16 +309,17 @@
 
     .client-cta {
       display: inline-block;
-      background: #222;
-      color: #fff;
-      font-size: 12px;
+      padding: 10px 25px;
+      font-size: 13px;
       font-weight: 700;
-      padding: 9px 18px;
       text-decoration: none;
+      background: #d84012;
+      color: #fff;
+      border: none;
       transition: background .2s;
       letter-spacing: 1px;
     }
-    .client-cta:hover { background: #d84012; color: #fff; text-decoration: none; }
+    .client-cta:hover { background: #222; color: #fff; text-decoration: none; }
 
     /* Credential cards */
     .cred-section {
@@ -408,11 +356,10 @@
     }
 
     @media (max-width: 960px) {
-      .hero-inner { grid-template-columns: 1fr; }
-      .hero-stats { grid-template-columns: repeat(4, 1fr); }
       .cap-grid { grid-template-columns: 1fr 1fr; }
       .expertise-inner { grid-template-columns: 1fr; gap: 28px; }
       .timeline { grid-template-columns: 1fr 1fr; gap: 28px; }
+      .hero-stats { grid-template-columns: repeat(2, 1fr); }
       .client-inner { grid-template-columns: 1fr; }
       .cred-grid { grid-template-columns: 1fr; }
     }
@@ -462,48 +409,45 @@
 
   <div id="rf-engineering" class="intro">
 
-    <!-- Hero (full-width) -->
-    <div data-os-animation="fadeIn" data-os-animation-delay="0.1s" class="os-animation rfe-hero">
-      <div class="container">
-        <div class="hero-inner">
-          <div>
-            <div class="hero-eyebrow">// RF Engineering Services</div>
-            <h1 class="hero-title">
-              Networks Built on<br><em>Engineering Depth</em>
-            </h1>
-            <p class="hero-desc">
-              Medley Networks delivers end-to-end RF engineering services across the full network lifecycle — from initial design and coverage planning through drive testing, optimization, and KPI-driven performance tuning. Our engineers have hands-on experience across 4G LTE, 5G NR, C-RAN, small cells, and in-building systems for the nation's leading carriers.
-            </p>
-            <a href="mailto:info@medleynetworks.com" class="hero-cta">Talk to an RF Engineer →</a>
-          </div>
-          <div class="hero-stats">
-            <div class="hstat">
-              <span class="hstat-num">5G</span>
-              <span class="hstat-label">NR &amp; LTE Advanced</span>
-            </div>
-            <div class="hstat">
-              <span class="hstat-num">C‑RAN</span>
-              <span class="hstat-label">Architecture Experience</span>
-            </div>
-            <div class="hstat">
-              <span class="hstat-num">Macro</span>
-              <span class="hstat-label">Small Cell &amp; DAS</span>
-            </div>
-            <div class="hstat">
-              <span class="hstat-num">Tier‑1</span>
-              <span class="hstat-label">Carrier Clients</span>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-
     <div class="container">
       <div class="rfe-section">
 
+        <!-- Header -->
+        <div data-os-animation="zoomIn" data-os-animation-delay="0.1s" class="os-animation">
+          <div class="rfe-eyebrow">RF Engineering</div>
+          <div class="rfe-accent-bar"></div>
+          <h2 class="section-title">Networks Built on<br>Engineering Depth</h2>
+          <p class="section-subtitle">
+            Medley Networks delivers end-to-end RF engineering services across the full network lifecycle — from initial design and coverage planning through drive testing, optimization, and KPI-driven performance tuning. Our engineers have hands-on experience across 4G LTE, 5G NR, C-RAN, small cells, and in-building systems for the nation's leading carriers.
+          </p>
+        </div>
+
+        <div data-os-animation="fadeIn" data-os-animation-delay="0.2s" class="os-animation">
+          <div class="hero-stats" style="margin-bottom: 50px;">
+            <div class="stat-box">
+              <span class="stat-num">5G</span>
+              <span class="stat-label">NR &amp; LTE Advanced</span>
+            </div>
+            <div class="stat-box">
+              <span class="stat-num">C‑RAN</span>
+              <span class="stat-label">Architecture Experience</span>
+            </div>
+            <div class="stat-box">
+              <span class="stat-num">Macro</span>
+              <span class="stat-label">Small Cell &amp; DAS</span>
+            </div>
+            <div class="stat-box">
+              <span class="stat-num">Tier‑1</span>
+              <span class="stat-label">Carrier Clients</span>
+            </div>
+          </div>
+          <a href="mailto:info@medleynetworks.com" class="cta-btn" style="margin-bottom: 50px; display: inline-block;">Talk to an RF Engineer →</a>
+        </div>
+
         <!-- Capabilities -->
-        <div data-os-animation="fadeIn" data-os-animation-delay="0.2s" class="os-animation cap-section">
-          <div class="rfe-eyebrow">// What We Deliver</div>
+        <div data-os-animation="fadeIn" data-os-animation-delay="0.3s" class="os-animation cap-section">
+          <div class="rfe-eyebrow">What We Deliver</div>
+          <div class="rfe-accent-bar"></div>
           <h2 class="section-title">RF Engineering Capabilities</h2>
           <p class="section-subtitle" style="margin-bottom: 30px;">
             Our team covers every phase of the RF engineering workflow — from greenfield design to live network performance management — across macro, small cell, in-building, and private wireless environments.
@@ -623,7 +567,8 @@
 
         <!-- Engagement Model -->
         <div data-os-animation="fadeIn" data-os-animation-delay="0.1s" class="os-animation engage-section">
-          <div class="rfe-eyebrow">// Engagement Model</div>
+          <div class="rfe-eyebrow">Engagement Model</div>
+          <div class="rfe-accent-bar"></div>
           <h2 class="section-title">How We Work With You</h2>
           <p class="section-subtitle">
             Whether you need a full project team, a single expert to augment your existing staff, or ongoing optimization support, we structure engagements to fit your program — not the other way around.
@@ -679,7 +624,7 @@
 
         <!-- Why Medley -->
         <div data-os-animation="fadeIn" data-os-animation-delay="0.3s" class="os-animation cred-section">
-          <div class="rfe-eyebrow">// Why Medley</div>
+          <div class="rfe-eyebrow">Why Medley</div>
           <div class="rfe-accent-bar"></div>
           <h2 class="section-title">What Makes Our RF Practice Different</h2>
           <p class="section-subtitle">

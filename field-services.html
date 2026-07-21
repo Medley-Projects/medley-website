@@ -75,102 +75,49 @@
       margin-bottom: 40px;
     }
 
-    /* Hero */
-    .fs-hero {
-      background: #f9f9f9;
-      padding: 60px 0 50px;
-      position: relative;
-      overflow: hidden;
-      margin-bottom: 10px;
-      text-align: left;
-    }
-
-    .hero-inner {
-      display: grid;
-      grid-template-columns: 1fr 400px;
-      gap: 50px;
-      align-items: center;
-    }
-
-    .hero-eyebrow {
-      text-transform: uppercase;
-      letter-spacing: .14em;
-      font-size: 13px;
-      font-weight: 700;
-      color: #d87843;
-      margin-bottom: 12px;
-    }
-
-    .hero-title {
-      font-size: 32px;
-      font-weight: 900;
-      letter-spacing: 3px;
-      text-transform: uppercase;
-      color: #222;
-      line-height: 1.2;
-      margin-bottom: 18px;
-    }
-
-    .hero-title em {
-      font-style: normal;
-      color: #d84012;
-    }
-
-    .hero-desc {
-      font-size: 15px;
-      color: #555;
-      line-height: 1.7;
-      max-width: 540px;
-      margin-bottom: 24px;
-    }
-
-    .hero-cta {
-      display: inline-block;
-      background: #222;
-      color: #fff;
-      font-weight: 700;
-      font-size: 13px;
-      padding: 11px 24px;
-      text-decoration: none;
-      transition: background .2s;
-      letter-spacing: 1px;
-    }
-    .hero-cta:hover { background: #d84012; color: #fff; text-decoration: none; }
-
+    /* Stats */
     .hero-stats {
       display: grid;
-      grid-template-columns: 1fr 1fr;
+      grid-template-columns: repeat(4, 1fr);
       gap: 12px;
+      margin-top: 10px;
     }
 
-    .hstat {
-      background: #fff;
-      border: 1px solid #ddd;
-      border-top: 3px solid #d84012;
-      padding: 18px 14px;
+    .stat-box {
+      background: #f4f4f4;
+      padding: 18px;
       text-align: center;
     }
 
-    .hstat:nth-child(2) { border-top-color: #d87843; }
-    .hstat:nth-child(3) { border-top-color: #222; }
-    .hstat:nth-child(4) { border-top-color: #d84012; }
-
-    .hstat-num {
+    .stat-box .stat-num {
       font-size: 1.6rem;
       font-weight: 700;
-      color: #222;
+      color: #d84012;
       display: block;
-      line-height: 1;
-      margin-bottom: 6px;
     }
 
-    .hstat-label {
+    .stat-box .stat-label {
       font-size: 11px;
-      letter-spacing: .08em;
-      text-transform: uppercase;
       color: #777;
-      line-height: 1.4;
+      text-transform: uppercase;
+      letter-spacing: .08em;
+      margin-top: 4px;
     }
+
+    .cta-btn {
+      display: inline-block;
+      padding: 10px 25px;
+      font-size: 13px;
+      font-weight: 700;
+      text-decoration: none;
+      background: #d84012;
+      color: #fff;
+      border: none;
+      transition: background .2s;
+      letter-spacing: 1px;
+    }
+
+    .cta-btn:hover { background: #222; color: #fff; text-decoration: none; }
 
     /* Capabilities grid */
     .cap-section {
@@ -471,22 +418,21 @@
     }
 
     @media (max-width: 960px) {
-      .hero-inner { grid-template-columns: 1fr; }
-      .hero-stats { grid-template-columns: repeat(4, 1fr); }
       .cap-grid { grid-template-columns: 1fr 1fr; }
       .oem-inner { grid-template-columns: 1fr; gap: 28px; }
       .track-grid { grid-template-columns: repeat(2, 1fr); }
       .team-intro { grid-template-columns: 1fr; }
       .timeline { grid-template-columns: 1fr 1fr; gap: 28px; }
       .cred-grid { grid-template-columns: 1fr; }
+      .hero-stats { grid-template-columns: repeat(2, 1fr); }
     }
 
     @media (max-width: 600px) {
       .cap-grid { grid-template-columns: 1fr; }
-      .hero-stats { grid-template-columns: 1fr 1fr; }
       .track-grid { grid-template-columns: 1fr 1fr; }
       .team-highlights { grid-template-columns: 1fr; }
       .timeline { grid-template-columns: 1fr; }
+      .hero-stats { grid-template-columns: 1fr 1fr; }
     }
   </style>
 </head>
@@ -528,48 +474,45 @@
 
   <div id="field-services" class="intro">
 
-    <!-- Hero (full-width) -->
-    <div data-os-animation="fadeIn" data-os-animation-delay="0.1s" class="os-animation fs-hero">
-      <div class="container">
-        <div class="hero-inner">
-          <div>
-            <div class="hero-eyebrow">// Field Services</div>
-            <h1 class="hero-title">
-              Boots on the Ground.<br><em>Done Right, First Time.</em>
-            </h1>
-            <p class="hero-desc">
-              Medley Networks deploys trained, certified field crews across the United States for installation, integration, commissioning, and testing of telecom infrastructure. From macro towers to data centers, we've delivered thousands of completed scopes for all three Tier-1 carriers — and we scale fast when programs demand it.
-            </p>
-            <a href="mailto:info@medleynetworks.com" class="hero-cta">Discuss a Field Program →</a>
-          </div>
-          <div class="hero-stats">
-            <div class="hstat">
-              <span class="hstat-num">35</span>
-              <span class="hstat-label">Active Field Crews Nationwide</span>
-            </div>
-            <div class="hstat">
-              <span class="hstat-num">10</span>
-              <span class="hstat-label">States &amp; Markets Covered</span>
-            </div>
-            <div class="hstat">
-              <span class="hstat-num">Tier‑1</span>
-              <span class="hstat-label">Carrier Experience — VzW, AT&amp;T, TMO</span>
-            </div>
-            <div class="hstat">
-              <span class="hstat-num">5000+</span>
-              <span class="hstat-label">Deliverables Completed</span>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-
     <div class="container">
       <div class="fs-section">
 
+        <!-- Header -->
+        <div data-os-animation="zoomIn" data-os-animation-delay="0.1s" class="os-animation">
+          <div class="fs-eyebrow">Field Services</div>
+          <div class="fs-accent-bar"></div>
+          <h2 class="section-title">Boots on the Ground.<br>Done Right, First Time.</h2>
+          <p class="section-subtitle">
+            Medley Networks deploys trained, certified field crews across the United States for installation, integration, commissioning, and testing of telecom infrastructure. From macro towers to data centers, we've delivered thousands of completed scopes for all three Tier-1 carriers — and we scale fast when programs demand it.
+          </p>
+        </div>
+
+        <div data-os-animation="fadeIn" data-os-animation-delay="0.2s" class="os-animation">
+          <div class="hero-stats" style="margin-bottom: 50px;">
+            <div class="stat-box">
+              <span class="stat-num">35</span>
+              <span class="stat-label">Active Field Crews Nationwide</span>
+            </div>
+            <div class="stat-box">
+              <span class="stat-num">10</span>
+              <span class="stat-label">States &amp; Markets Covered</span>
+            </div>
+            <div class="stat-box">
+              <span class="stat-num">Tier‑1</span>
+              <span class="stat-label">Carrier Experience — VzW, AT&amp;T, TMO</span>
+            </div>
+            <div class="stat-box">
+              <span class="stat-num">5000+</span>
+              <span class="stat-label">Deliverables Completed</span>
+            </div>
+          </div>
+          <a href="mailto:info@medleynetworks.com" class="cta-btn" style="margin-bottom: 50px; display: inline-block;">Discuss a Field Program →</a>
+        </div>
+
         <!-- Capabilities -->
-        <div data-os-animation="fadeIn" data-os-animation-delay="0.2s" class="os-animation cap-section">
-          <div class="fs-eyebrow">// What We Do</div>
+        <div data-os-animation="fadeIn" data-os-animation-delay="0.3s" class="os-animation cap-section">
+          <div class="fs-eyebrow">What We Do</div>
+          <div class="fs-accent-bar"></div>
           <h2 class="section-title">Field Services Capabilities</h2>
           <p class="section-subtitle" style="margin-bottom: 30px;">
             Our field teams are trained and certified across all major telecom OEM platforms — supporting everything from baseband swaps and router migrations to optical integration, C-RAN deployments, and functional call testing.
@@ -679,7 +622,8 @@
 
         <!-- Track Record -->
         <div data-os-animation="fadeIn" data-os-animation-delay="0.1s" class="os-animation track-section">
-          <div class="fs-eyebrow">// Project Track Record</div>
+          <div class="fs-eyebrow">Project Track Record</div>
+          <div class="fs-accent-bar"></div>
           <h2 class="section-title">Completed Scopes — by the Numbers</h2>
           <p class="section-subtitle">
             We've delivered field programs at scale for all three Tier-1 mobile operators across the US. These are completed units — not estimates.
@@ -745,7 +689,8 @@
     <div data-os-animation="fadeIn" data-os-animation-delay="0.2s" class="os-animation team-strip">
       <div class="container">
         <div class="team-inner">
-          <div class="fs-eyebrow">// Field Team Coverage</div>
+          <div class="fs-eyebrow">Field Team Coverage</div>
+          <div class="fs-accent-bar"></div>
           <h2 class="section-title">35 Crews. 10 Markets. Ready to Scale.</h2>
 
           <div class="team-intro">
@@ -776,7 +721,8 @@
 
         <!-- Engagement Model -->
         <div data-os-animation="fadeIn" data-os-animation-delay="0.3s" class="os-animation engage-section">
-          <div class="fs-eyebrow">// Engagement Model</div>
+          <div class="fs-eyebrow">Engagement Model</div>
+          <div class="fs-accent-bar"></div>
           <h2 class="section-title">How We Mobilize for Your Program</h2>
           <p class="section-subtitle">
             From initial scoping to final site acceptance, we manage the full field operations lifecycle — so your program team stays focused on outcomes, not logistics.
@@ -808,7 +754,7 @@
 
         <!-- Why Medley -->
         <div data-os-animation="fadeIn" data-os-animation-delay="0.1s" class="os-animation cred-section">
-          <div class="fs-eyebrow">// Why Medley</div>
+          <div class="fs-eyebrow">Why Medley</div>
           <div class="fs-accent-bar"></div>
           <h2 class="section-title">What Sets Our Field Practice Apart</h2>
           <p class="section-subtitle">
