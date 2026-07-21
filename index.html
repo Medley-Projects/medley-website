@@ -24,6 +24,22 @@
   <link rel="stylesheet" type="text/css" href="css/ionicons.min.css">
   <link rel="preload" href="images/banner.jpg" as="image">
 
+  <style>
+    .imgDescription2 {
+      background: rgba(0,0,0,0.6) !important;
+      border: none !important;
+      visibility: visible !important;
+      opacity: 1 !important;
+    }
+    .imgDescription2InnerContent {
+      visibility: visible !important;
+      opacity: 1 !important;
+      padding-top: 0 !important;
+    }
+    .imgDescription2InnerContent ul {
+      display: none !important;
+    }
+  </style>
 
   <!--JS-->
   <script type="text/javascript">
@@ -289,18 +305,16 @@
         <div id="bs-example-navbar-collapse-1" class="collapse navbar-collapse">
           <ul style="vertical-align: bottom !important;" class="nav navbar-nav navbar-right">
             <li style="font-size: 14px; font-family: Arial, sans-serif;"><a href="#home">Home</a></li>
-            <li style="font-size: 14px; font-family: Arial, sans-serif;"><a href="#AboutUs">About Us</a></li>
             <li style="font-size: 14px; font-family: Arial, sans-serif;"><a href="#services">Services</a></li>
+            <li style="font-size: 14px; font-family: Arial, sans-serif;"><a href="/rf-engineering.html">RF Engineering</a></li>
             <li style="font-size: 14px; font-family: Arial, sans-serif;"><a href="/rf-compliance.html">RF Compliance</a></li>
-            <li style="font-size: 14px; font-family: Arial, sans-serif;"><a href="#solutions">Solutions</a></li>
-            <li style="font-size: 14px; font-family: Arial, sans-serif;"><a href="#clients">Clients</a></li>
+            <li style="font-size: 14px; font-family: Arial, sans-serif;"><a href="/staffing.html">Staffing</a></li>
+            <li style="font-size: 14px; font-family: Arial, sans-serif;"><a href="/it-services.html">IT Services</a></li>
+            <li style="font-size: 14px; font-family: Arial, sans-serif;"><a href="/field-services.html">Field Services</a></li>
+            <li style="font-size: 14px; font-family: Arial, sans-serif;"><a href="/emerging-technologies.html">Emerging Technologies</a></li>
             <li style="font-size: 14px; font-family: Arial, sans-serif;"><a href="#store">Store</a></li>
-            <li style="font-size: 14px; font-family: Arial, sans-serif;"><a href="#careers">Careers</a></li>
-            <li style="font-size: 14px; font-family: Arial, sans-serif;"><a href="/staffing.html">Staffing</a>
-            </li>
             <li style="font-size: 14px; font-family: Arial, sans-serif;"><a href="#ContactUs">Contact Us</a></li>
-            <li style="font-size: 14px; font-family: Arial, sans-serif;"><a href="/privacy-policy.html">Privacy
-                Policy</a></li>
+            <li style="font-size: 14px; font-family: Arial, sans-serif;"><a href="/privacy-policy.html">Privacy Policy</a></li>
           </ul>
         </div> <!-- collapse navbar-collapse -->
 
@@ -442,6 +456,7 @@
       <br /><br />
       <div id="portfoliolist" class="clearfix">
         <div data-cat="app" class="portfolio app">
+          <a href="/rf-engineering.html" style="display: block; text-decoration: none; color: inherit;">
           <div class="portfolio-wrapper"> <img alt="RF Engineering" style="width: 350px; height: 300px;"
               src="images/ServicesEngneering.jpg" loading="lazy" />
             <div class="imgDescription2">
@@ -460,27 +475,7 @@
               </div>
             </div>
           </div>
-        </div>
-        <div data-cat="app" class="portfolio app">
-          <div class="portfolio-wrapper"> <img alt="Field Services" style="width: 350px; height: 300px;"
-              src="images/ServicesConstruction.jpg" loading="lazy" />
-            <div class="imgDescription2">
-              <div class="imgDescription2InnerContent">
-                <h1>Field Services</h1>
-                <div class="orangeline"></div>
-                <ul
-                  style="display: block; margin: 0px; padding: 0px; line-height: 1.2em !important; vertical-align: middle !important;">
-                  <li>Anchor Cabinet Prep</li>
-                  <li>BBU Swap, Install & Integrate</li>
-                  <li>C-RAN, C-Band</li>
-                  <li>GPS Install and Sweep/Survey</li>
-                  <li>PSAP / Functional Call Testing</li>
-                  <li>Router Migration (IXRE)</li>
-                  <li>SiteBoss Installation and testing</li>
-                </ul>
-              </div>
-            </div>
-          </div>
+          </a>
         </div>
         <div data-cat="app" class="portfolio app">
           <a href="/rf-compliance.html" style="display: block; text-decoration: none; color: inherit;">
@@ -530,6 +525,7 @@
         </div>
 
         <div data-cat="app" class="portfolio app">
+          <a href="/it-services.html" style="display: block; text-decoration: none; color: inherit;">
           <div class="portfolio-wrapper"> <img alt="IT Services" style="width: 350px; height: 300px;"
               src="images/cell-towers-1.jpg" loading="lazy" />
             <div class="imgDescription2">
@@ -550,9 +546,35 @@
               </div>
             </div>
           </div>
+          </a>
         </div>
 
         <div data-cat="app" class="portfolio app">
+          <a href="/field-services.html" style="display: block; text-decoration: none; color: inherit;">
+          <div class="portfolio-wrapper"> <img alt="Field Services" style="width: 350px; height: 300px;"
+              src="images/ServicesConstruction.jpg" loading="lazy" />
+            <div class="imgDescription2">
+              <div class="imgDescription2InnerContent">
+                <h1>Field Services</h1>
+                <div class="orangeline"></div>
+                <ul
+                  style="display: block; margin: 0px; padding: 0px; line-height: 1.2em !important; vertical-align: middle !important;">
+                  <li>Anchor Cabinet Prep</li>
+                  <li>BBU Swap, Install & Integrate</li>
+                  <li>C-RAN, C-Band</li>
+                  <li>GPS Install and Sweep/Survey</li>
+                  <li>PSAP / Functional Call Testing</li>
+                  <li>Router Migration (IXRE)</li>
+                  <li>SiteBoss Installation and testing</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          </a>
+        </div>
+
+        <div data-cat="app" class="portfolio app">
+          <a href="/emerging-technologies.html" style="display: block; text-decoration: none; color: inherit;">
           <div class="portfolio-wrapper"> <img alt="Emerging Technologies" style="width: 350px; height: 300px;"
               src="images/emerging_technologies.jpg" loading="lazy" />
             <div class="imgDescription2">
@@ -570,6 +592,7 @@
               </div>
             </div>
           </div>
+          </a>
         </div>
 
       </div>
@@ -578,90 +601,6 @@
 
   <div class="help"> <a data-os-animation="flipInX" data-os-animation-delay="0.5s" class="os-animation disableClick"
       href="#">We’re here to help.</a>
-  </div>
-  <div id="solutions" class="intro">
-    <div class="container">
-      <h2 data-os-animation="zoomIn" data-os-animation-delay="0.3s" class="os-animation">Solutions</h2>
-      <div><br />
-      </div>
-      <div class="row">
-        <div style="text-align: left !important;" class="col-lg-6"> <span
-            style="color: rgb(0, 0, 0); font-weight: 700; text-align: left !important;"
-            class="filter active">Telecommunications</span>
-          <ul style="text-align: left !important;" class="descp lead2">
-            <li> &nbsp;CW Testing
-            </li>
-            <li> &nbsp;Equipment Engineering
-
-            </li>
-            <li> &nbsp;Transport Planning
-
-            </li>
-            <li>&nbsp;RF and Network Design</li>
-            <li> &nbsp;Cell site scoping
-            </li>
-            <li> &nbsp;Construction issues and alarms troubleshooting
-            </li>
-            <li> &nbsp;RF Launch and Optimization
-            </li>
-            <li> &nbsp;RF Drive Testing
-            </li>
-            <li> &nbsp;E-911 testing and PSAP Co-ordination
-            </li>
-            <li> &nbsp;PIM Troubleshooting
-            </li>
-            <li> &nbsp;External Interference hunting/analysis
-            </li>
-            <li> &nbsp;RF Compliance (EME)
-            </li>
-          </ul>
-        </div>
-        <div style="text-align: left !important;" class="col-lg-6"> <span style="color: rgb(0, 0, 0); font-weight: 700;"
-            class="filter active">Information Technology</span>
-          <ul style="text-align: left !important;" class="descp lead2">
-            <li> &nbsp;Software Developers and Architects </li>
-            <li> &nbsp;Database Administrators and Developers </li>
-            <li> &nbsp;Mobile App Developers </li>
-            <li> &nbsp;Cloud Computing </li>
-            <li> &nbsp;DevOps </li>
-            <li> &nbsp;Quant analysts </li>
-            <li> &nbsp;QA Leads and Analysts </li>
-            <li> &nbsp;Big Data </li>
-            <li> &nbsp;Network Professionals </li>
-            <li> &nbsp;System Administrators </li>
-            <li> &nbsp;Help Desk and PC admin </li>
-            <li> &nbsp;Project Management </li>
-            <li> &nbsp;Business Analyst </li>
-          </ul>
-        </div>
-
-        <div style="text-align: left !important;" class="col-lg-6"> <span style="color: rgb(0, 0, 0); font-weight: 700;"
-            class="filter active">Finance</span>
-          <ul style="text-align: left !important;" class="descp lead2">
-            <li> &nbsp;Accountants and accounting managers </li>
-            <li> &nbsp;Finance directors and managers </li>
-            <li> &nbsp;Budget Analysts </li>
-            <li> &nbsp;Loan Servicing Staff </li>
-            <li> &nbsp;Consumer Loans Staff </li>
-            <li> &nbsp;Mortgage Underwriters </li>
-            <li> &nbsp;Tax and finance Analysts </li>
-          </ul>
-        </div>
-
-        <div style="text-align: left !important;" class="col-lg-6"> <span style="color: rgb(0, 0, 0); font-weight: 700;"
-            class="filter active">Professional Services</span>
-          <ul style="text-align: left !important;" class="descp lead2">
-            <li> &nbsp;Office Administrator </li>
-            <li> &nbsp;Executive Assistants </li>
-            <li> &nbsp;HR & Payroll </li>
-            <li> &nbsp;Front Desk </li>
-          </ul>
-        </div>
-
-
-
-      </div>
-    </div>
   </div>
   <div id="clients" class="clients">
     <div class="container">
@@ -1156,37 +1095,7 @@
     </div>
   </div>
 
-  <div class="JoinUs"> <a data-os-animation="flipInX" data-os-animation-delay="0.5s" class="os-animation disableClick"
-      href="#">Join Us</a>
-  </div>
-  <div id="careers" class="intro">
-    <div class="container">
-      <div class="row">
-        <div class="col-lg-12">
-          <h2 data-os-animation="shake" data-os-animation-delay="0.3s" class="os-animation">Careers</h2>
-          <div><br />
-          </div>
-          <p data-os-animation="shake" data-os-animation-delay="0.5s" class="os-animation">&nbsp;</p>
 
-          <div class="row">
-            <div class="col-lg-2"></div>
-            <div class="col-lg-10" style="text-align: left; padding-top: 15px;">
-              <p>
-                <span style="font-weight: bold;">Aspiring candidates can mail their resume to:</span><br>
-                Recruiting Team<br>
-                Medley Networks<br>
-                239 New Road, Ste B 202<br>
-                Parsippany, NJ 07054<br>
-                Email: <a href="mailto:jobs@medleynetworks.com">jobs@medleynetworks.com</a>
-              </p>
-            </div>
-          </div>
-
-          <p>&nbsp;</p>
-        </div>
-      </div>
-    </div>
-  </div>
   <div class="quotes"> <a data-os-animation="flipInX" data-os-animation-delay="0.5s" class="os-animation disableClick"
       href="#">To Know Us</a>
   </div>

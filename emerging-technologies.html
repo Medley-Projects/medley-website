@@ -1,0 +1,646 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>Emerging Technologies | Medley Networks</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="stylesheet" type="text/css" href="css/grid.css">
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <link rel="stylesheet" type="text/css" href="css/layout.css">
+  <link rel="stylesheet" type="text/css" href="css/responsive.css">
+  <link rel="stylesheet" type="text/css" href="css/animate.css">
+  <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+
+  <style>
+    body {
+      padding-top: 70px;
+      font-family: 'Shonar Bangla', 'amblelight', sans-serif;
+    }
+
+    .navbar-brand img {
+      max-width: 100px;
+      height: auto;
+    }
+
+    #emerging-technologies .os-animation {
+      opacity: 1 !important;
+    }
+
+    #emerging-technologies .section-title {
+      color: #222 !important;
+      line-height: 1.15 !important;
+    }
+
+    #emerging-technologies .section-subtitle {
+      color: #555 !important;
+    }
+
+    .et-block {
+      text-align: left;
+    }
+
+    .et-block .et-eyebrow {
+      text-transform: uppercase;
+      letter-spacing: .14em;
+      font-size: 13px;
+      font-weight: 700;
+      color: #d87843;
+      margin-bottom: 10px;
+    }
+
+    .et-block .et-accent-bar {
+      width: 52px;
+      height: 4px;
+      background: #d87843;
+      margin-bottom: 20px;
+    }
+
+    .et-block .section-title {
+      font-size: 30px;
+      font-weight: 900;
+      letter-spacing: 4px;
+      text-transform: uppercase;
+      color: #222;
+      line-height: 1.15;
+      margin-bottom: 16px;
+    }
+
+    .et-block .section-subtitle {
+      font-size: 16px;
+      color: #555;
+      max-width: 680px;
+      line-height: 1.7;
+      margin-bottom: 40px;
+    }
+
+    /* Dual CTA */
+    .dual-cta {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 20px;
+      margin-bottom: 50px;
+    }
+
+    .cta-card {
+      padding: 36px;
+      text-align: left;
+      background: #f4f4f4;
+    }
+
+    .cta-card h3 {
+      font-size: 18px;
+      letter-spacing: 2px;
+      margin-bottom: 10px;
+      color: #d84012;
+    }
+
+    .cta-card.enterprise h3 {
+      color: #222;
+    }
+
+    .cta-card p {
+      font-size: 16px;
+      line-height: 26px;
+      color: #555;
+      margin-bottom: 22px;
+    }
+
+    .cta-btn {
+      display: inline-block;
+      padding: 10px 25px;
+      font-size: 13px;
+      font-weight: 700;
+      text-decoration: none;
+      background: #d84012;
+      color: #fff;
+      border: none;
+      transition: background .2s;
+      letter-spacing: 1px;
+    }
+
+    .cta-btn:hover { background: #222; color: #fff; text-decoration: none; }
+
+    .cta-card.enterprise .cta-btn {
+      background: #222;
+    }
+
+    .cta-card.enterprise .cta-btn:hover {
+      background: #d84012;
+    }
+
+    /* Services grid */
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 16px;
+      margin-bottom: 50px;
+    }
+
+    .service-card {
+      background: #f4f4f4;
+      padding: 22px 18px;
+    }
+
+    .service-card h4 {
+      font-size: 15px;
+      font-weight: 700;
+      color: #222;
+      margin-bottom: 10px;
+      line-height: 1.3;
+    }
+
+    .service-card ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    .service-card ul li {
+      font-size: 13px;
+      color: #555;
+      padding: 3px 0 3px 14px;
+      position: relative;
+      line-height: 1.5;
+    }
+
+    .service-card ul li::before {
+      content: '—';
+      position: absolute;
+      left: 0;
+      color: #d87843;
+    }
+
+    /* Trend band */
+    .trend-band {
+      background: #f4f4f4;
+      padding: 40px 40px;
+      margin-bottom: 50px;
+    }
+
+    .trend-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 16px;
+    }
+
+    .trend-item {
+      background: #fff;
+      border-top: 3px solid #d87843;
+      padding: 20px 18px;
+    }
+
+    .trend-item:nth-child(2) { border-top-color: #d84012; }
+    .trend-item:nth-child(3) { border-top-color: #222; }
+    .trend-item:nth-child(4) { border-top-color: #d87843; }
+
+    .trend-item h5 {
+      font-size: 14px;
+      font-weight: 700;
+      color: #222;
+      margin-bottom: 6px;
+    }
+
+    .trend-item p {
+      font-size: 13px;
+      color: #555;
+      line-height: 1.55;
+    }
+
+    /* How we work */
+    .how-we-work {
+      background: #f4f4f4;
+      padding: 50px 40px;
+      margin-bottom: 50px;
+    }
+
+    .process-intro {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 40px;
+      align-items: center;
+      margin-bottom: 40px;
+    }
+
+    .process-intro p {
+      font-size: 14px;
+      color: #555;
+      line-height: 1.75;
+    }
+
+    .process-stats {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 12px;
+    }
+
+    .stat-box {
+      background: #fff;
+      padding: 18px;
+      text-align: center;
+    }
+
+    .stat-box .stat-num {
+      font-size: 1.6rem;
+      font-weight: 700;
+      color: #d84012;
+      display: block;
+    }
+
+    .stat-box .stat-label {
+      font-size: 11px;
+      color: #777;
+      text-transform: uppercase;
+      letter-spacing: .08em;
+      margin-top: 4px;
+    }
+
+    .process-steps {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 16px;
+    }
+
+    .step {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+
+    .step-circle {
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+      background: #222;
+      border: 3px solid #d87843;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.2rem;
+      font-weight: 700;
+      color: #d87843;
+      margin-bottom: 14px;
+      flex-shrink: 0;
+    }
+
+    .step:nth-child(2) .step-circle { border-color: #d84012; color: #d84012; }
+    .step:nth-child(3) .step-circle { border-color: #222; color: #fff; }
+    .step:nth-child(4) .step-circle { border-color: #d87843; color: #d87843; }
+
+    .step-title {
+      font-size: 13px;
+      font-weight: 700;
+      color: #222;
+      margin-bottom: 6px;
+      line-height: 1.3;
+    }
+
+    .step-body {
+      font-size: 12px;
+      color: #555;
+      line-height: 1.55;
+    }
+
+    /* Why Medley */
+    .why-medley {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+      margin-bottom: 40px;
+    }
+
+    .value-card {
+      padding: 24px 20px;
+      border-left: 4px solid #d87843;
+      background: #f4f4f4;
+    }
+
+    .value-card:nth-child(2) { border-left-color: #d84012; }
+    .value-card:nth-child(3) { border-left-color: #222; }
+
+    .value-card h4 {
+      font-size: 15px;
+      font-weight: 700;
+      color: #222;
+      margin-bottom: 10px;
+    }
+
+    .value-card p {
+      font-size: 14px;
+      color: #555;
+      line-height: 1.65;
+    }
+
+    @media (max-width: 960px) {
+      .dual-cta { grid-template-columns: 1fr; }
+      .services-grid { grid-template-columns: 1fr 1fr; }
+      .process-intro { grid-template-columns: 1fr; }
+      .process-steps { grid-template-columns: repeat(2, 1fr); gap: 20px; }
+      .trend-grid { grid-template-columns: 1fr 1fr; }
+      .why-medley { grid-template-columns: 1fr; }
+    }
+
+    @media (max-width: 600px) {
+      .how-we-work { padding: 30px 20px; }
+      .trend-band { padding: 30px 20px; }
+      .services-grid { grid-template-columns: 1fr; }
+      .process-steps { grid-template-columns: 1fr 1fr; }
+      .process-stats { grid-template-columns: 1fr 1fr; }
+      .trend-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- Navigation -->
+  <section id="navigation">
+    <nav role="navigation" class="navbar navbar-default navbar-fixed-top">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <button data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" class="navbar-toggle"
+            type="button">&nbsp;</button>
+          <a style="margin: 0px; padding: 5px 0px 0px; vertical-align: middle !important;" class="navbar-brand"
+            href="index.html#home">
+            <img alt=""
+              style="height: 40px; width: 100px; margin: 0px; padding: 0px; vertical-align: middle !important;"
+              src="images/logo-L.png" />
+          </a>
+        </div>
+        <div id="bs-example-navbar-collapse-1" class="collapse navbar-collapse">
+          <ul style="vertical-align: bottom !important;" class="nav navbar-nav navbar-right">
+            <li style="font-size: 14px; font-family: Arial, sans-serif;"><a href="index.html#home">Home</a></li>
+            <li style="font-size: 14px; font-family: Arial, sans-serif;"><a href="index.html#services">Services</a></li>
+            <li style="font-size: 14px; font-family: Arial, sans-serif;"><a href="/rf-engineering.html">RF Engineering</a></li>
+            <li style="font-size: 14px; font-family: Arial, sans-serif;"><a href="/rf-compliance.html">RF Compliance</a></li>
+            <li style="font-size: 14px; font-family: Arial, sans-serif;"><a href="/staffing.html">Staffing</a></li>
+            <li style="font-size: 14px; font-family: Arial, sans-serif;"><a href="/it-services.html">IT Services</a></li>
+            <li style="font-size: 14px; font-family: Arial, sans-serif;"><a href="/field-services.html">Field Services</a></li>
+            <li style="font-size: 14px; font-family: Arial, sans-serif;"><a href="/emerging-technologies.html">Emerging Technologies</a></li>
+            <li style="font-size: 14px; font-family: Arial, sans-serif;"><a href="index.html#store">Store</a></li>
+            <li style="font-size: 14px; font-family: Arial, sans-serif;"><a href="index.html#ContactUs">Contact Us</a></li>
+            <li style="font-size: 14px; font-family: Arial, sans-serif;"><a href="/privacy-policy.html">Privacy Policy</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </section>
+
+  <div id="emerging-technologies" class="intro">
+    <div class="container">
+      <div class="et-block">
+
+        <!-- Section header -->
+        <div data-os-animation="zoomIn" data-os-animation-delay="0.1s" class="os-animation">
+          <div class="et-eyebrow">Emerging Technologies</div>
+          <div class="et-accent-bar"></div>
+          <h2 class="section-title">Where Telecom, IT &amp;<br>Innovation Converge</h2>
+          <p class="section-subtitle">
+            The technology landscape is evolving faster than ever — from AI-driven network management and private wireless to edge computing and software-defined infrastructure. Medley Networks stays at the forefront of these shifts, helping clients understand, evaluate, and adopt the technologies that matter most to their business.
+          </p>
+        </div>
+
+        <!-- Dual CTA -->
+        <div data-os-animation="fadeIn" data-os-animation-delay="0.2s" class="os-animation dual-cta">
+          <div class="cta-card carriers">
+            <h3>Carriers &amp; Network Operators</h3>
+            <p>Exploring 5G private networks, Fixed Wireless Access, C-RAN evolution, or next-generation network automation? We can help you evaluate the landscape and understand where these technologies fit your network roadmap.</p>
+            <a href="mailto:info@medleynetworks.com" class="cta-btn">Start a Conversation →</a>
+          </div>
+          <div class="cta-card enterprise">
+            <h3>Enterprises &amp; Technology Firms</h3>
+            <p>Looking to deploy a private wireless network, modernize infrastructure with cloud-native or SDN/NFV approaches, or integrate AI into your operations? We're here to help you navigate the options and find the right path forward.</p>
+            <a href="mailto:info@medleynetworks.com" class="cta-btn">Explore the Possibilities →</a>
+          </div>
+        </div>
+
+        <!-- Technologies -->
+        <div data-os-animation="fadeIn" data-os-animation-delay="0.1s" class="os-animation">
+          <div class="et-eyebrow">Technologies We Track &amp; Support</div>
+          <div class="et-accent-bar"></div>
+          <h2 class="section-title">Emerging Technology Areas</h2>
+          <p class="section-subtitle">
+            These are the technology areas shaping the next generation of telecom and IT infrastructure. We work with clients to understand how each applies to their environment and where the opportunities lie.
+          </p>
+        </div>
+
+        <div data-os-animation="fadeIn" data-os-animation-delay="0.2s" class="os-animation"><div class="services-grid">
+          <div class="service-card">
+            <h4>Artificial Intelligence &amp; Machine Learning</h4>
+            <ul>
+              <li>AI-driven network performance analytics</li>
+              <li>Predictive maintenance &amp; fault detection</li>
+              <li>ML-based traffic optimization</li>
+              <li>Intelligent automation for operations (AIOps)</li>
+              <li>AI-assisted candidate sourcing &amp; matching</li>
+              <li>Natural language processing &amp; chatbot integration</li>
+            </ul>
+          </div>
+          <div class="service-card">
+            <h4>Private Wireless Networks</h4>
+            <ul>
+              <li>Private LTE &amp; 5G network design concepts</li>
+              <li>CBRS / Citizens Broadband deployments</li>
+              <li>Enterprise campus &amp; industrial wireless</li>
+              <li>Mission-critical push-to-talk (MCPTT)</li>
+              <li>Neutral host &amp; shared spectrum models</li>
+              <li>Security &amp; access control for private networks</li>
+            </ul>
+          </div>
+          <div class="service-card">
+            <h4>Fixed Wireless Access</h4>
+            <ul>
+              <li>5G &amp; LTE fixed wireless broadband</li>
+              <li>Last-mile connectivity solutions</li>
+              <li>CPE selection &amp; deployment planning</li>
+              <li>FWA network coverage &amp; capacity modeling</li>
+              <li>Rural &amp; suburban broadband expansion</li>
+              <li>FWA performance benchmarking</li>
+            </ul>
+          </div>
+          <div class="service-card">
+            <h4>Multi-Access Edge Computing</h4>
+            <ul>
+              <li>Edge compute architecture &amp; use case evaluation</li>
+              <li>Low-latency application deployment at the edge</li>
+              <li>IoT &amp; industrial automation edge support</li>
+              <li>Edge AI &amp; real-time data processing</li>
+              <li>MEC integration with 5G core networks</li>
+              <li>Edge security &amp; data sovereignty considerations</li>
+            </ul>
+          </div>
+          <div class="service-card">
+            <h4>SDN &amp; NFV</h4>
+            <ul>
+              <li>SDN architecture concepts &amp; vendor evaluation</li>
+              <li>NFV platform selection &amp; planning</li>
+              <li>Virtualized RAN (vRAN) &amp; Open RAN (O-RAN)</li>
+              <li>Network slicing design &amp; policy frameworks</li>
+              <li>SDN controller integration</li>
+              <li>Cloud-native network function deployment</li>
+            </ul>
+          </div>
+          <div class="service-card">
+            <h4>Cloud-Native &amp; Hybrid Infrastructure</h4>
+            <ul>
+              <li>Kubernetes &amp; containerized network functions</li>
+              <li>Microservices architecture for telecom</li>
+              <li>Hybrid cloud &amp; on-premise integration</li>
+              <li>CI/CD for telecom software delivery</li>
+              <li>Infrastructure-as-Code (IaC) approaches</li>
+              <li>Cloud migration planning &amp; assessment</li>
+            </ul>
+          </div>
+          <div class="service-card">
+            <h4>Network Security &amp; Zero Trust</h4>
+            <ul>
+              <li>Zero Trust Architecture (ZTA) frameworks</li>
+              <li>5G network security considerations</li>
+              <li>Identity &amp; access management (IAM)</li>
+              <li>Threat detection &amp; incident response planning</li>
+              <li>Secure access service edge (SASE)</li>
+              <li>Security for private wireless deployments</li>
+            </ul>
+          </div>
+          <div class="service-card">
+            <h4>IoT &amp; Connected Infrastructure</h4>
+            <ul>
+              <li>IoT connectivity platform evaluation</li>
+              <li>Smart city &amp; infrastructure sensor networks</li>
+              <li>Industrial IoT (IIoT) &amp; Industry 4.0</li>
+              <li>Device management &amp; lifecycle planning</li>
+              <li>IoT data pipeline &amp; analytics integration</li>
+              <li>Low-power wide-area network (LPWAN) planning</li>
+            </ul>
+          </div>
+        </div>
+        </div>
+
+        <!-- Industry Context Band -->
+        <div data-os-animation="fadeIn" data-os-animation-delay="0.3s" class="os-animation trend-band">
+          <div class="et-eyebrow">Why It Matters</div>
+          <div class="et-accent-bar"></div>
+          <h2 class="section-title">The Trends Shaping the Industry</h2>
+          <p class="section-subtitle" style="margin-bottom: 0;">
+            Understanding where the industry is heading helps organizations make smarter technology investments today. These are the forces driving technology decisions across telecom, enterprise, and public sector.
+          </p>
+          <div class="trend-grid" style="margin-top: 32px;">
+            <div class="trend-item">
+              <h5>5G is Expanding Beyond Mobile</h5>
+              <p>Private networks, FWA, and industrial 5G are creating new use cases that go well beyond consumer connectivity — creating opportunities across manufacturing, logistics, healthcare, and smart infrastructure.</p>
+            </div>
+            <div class="trend-item">
+              <h5>AI is Becoming Operational Infrastructure</h5>
+              <p>AI is moving from a research tool to an embedded part of network management, workforce operations, and customer engagement — and organizations that integrate it early will operate more efficiently than those that don't.</p>
+            </div>
+            <div class="trend-item">
+              <h5>Networks are Moving to Software</h5>
+              <p>SDN, NFV, vRAN, and O-RAN are fundamentally changing how networks are built and operated — shifting control from proprietary hardware to software-defined platforms that are more flexible and cost-efficient.</p>
+            </div>
+            <div class="trend-item">
+              <h5>The Edge is Getting Smarter</h5>
+              <p>Processing at the network edge — closer to where data is generated — is enabling real-time applications in automation, AR/VR, autonomous vehicles, and connected devices that cloud-only architectures can't support.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- How We Work -->
+        <div data-os-animation="fadeIn" data-os-animation-delay="0.2s" class="os-animation how-we-work">
+          <div class="et-eyebrow">How We Engage</div>
+          <div class="et-accent-bar"></div>
+          <h2 class="section-title">How We Work With You</h2>
+
+          <div class="process-intro">
+            <p>
+              Emerging technologies can feel overwhelming — the landscape moves fast, the vendor claims are loud, and the right path isn't always obvious. Our role is to help clients cut through the noise: understand what's real, what's relevant to their situation, and what practical steps make sense. We engage as a knowledgeable partner — not a vendor pushing a particular solution.
+            </p>
+            <div class="process-stats">
+              <div class="stat-box">
+                <span class="stat-num">8</span>
+                <span class="stat-label">Technology Areas Tracked</span>
+              </div>
+              <div class="stat-box">
+                <span class="stat-num">Vendor</span>
+                <span class="stat-label">Agnostic Guidance</span>
+              </div>
+              <div class="stat-box">
+                <span class="stat-num">Telecom</span>
+                <span class="stat-label">&amp; IT Domain Depth</span>
+              </div>
+              <div class="stat-box">
+                <span class="stat-num">Strategy</span>
+                <span class="stat-label">to Implementation</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="process-steps">
+            <div class="step">
+              <div class="step-circle">1</div>
+              <div class="step-title">Understand Your Context</div>
+              <div class="step-body">We start by understanding your current environment, business objectives, and where technology gaps or opportunities exist — before any technology recommendation is made.</div>
+            </div>
+            <div class="step">
+              <div class="step-circle">2</div>
+              <div class="step-title">Evaluate the Options</div>
+              <div class="step-body">We map relevant emerging technologies to your specific needs — explaining the tradeoffs, maturity levels, vendor landscape, and realistic timelines in plain language.</div>
+            </div>
+            <div class="step">
+              <div class="step-circle">3</div>
+              <div class="step-title">Build a Roadmap</div>
+              <div class="step-body">We help develop a pragmatic adoption roadmap — sequencing investments, identifying quick wins, and aligning technology decisions to your budget and organizational capacity.</div>
+            </div>
+            <div class="step">
+              <div class="step-circle">4</div>
+              <div class="step-title">Support Implementation</div>
+              <div class="step-body">From staffing specialized roles to supporting technical delivery, Medley's broader service capabilities mean we can stay involved beyond strategy — into execution.</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Why Medley -->
+        <div data-os-animation="fadeIn" data-os-animation-delay="0.1s" class="os-animation">
+          <div class="et-eyebrow">Why Medley</div>
+          <div class="et-accent-bar"></div>
+          <h2 class="section-title">Why Bring Emerging Tech Questions to Medley</h2>
+          <p class="section-subtitle">
+            We don't sell technology platforms or earn commissions on vendor recommendations. Our interest is in helping clients make better-informed decisions — backed by practical experience in the telecom and IT domains where many of these technologies are being deployed today.
+          </p>
+        </div>
+
+        <div data-os-animation="fadeIn" data-os-animation-delay="0.2s" class="os-animation"><div class="why-medley">
+          <div class="value-card">
+            <h4>Grounded in Real Network Experience</h4>
+            <p>Our team has designed, deployed, and optimized real networks for Tier-1 carriers. When we discuss 5G, private wireless, or vRAN, it's informed by firsthand experience — not just white papers. That context makes a difference when evaluating what's ready for production versus what's still maturing.</p>
+          </div>
+          <div class="value-card">
+            <h4>Vendor-Agnostic Perspective</h4>
+            <p>We don't have partnerships that incentivize us to favor particular technology vendors. Our guidance is shaped by what makes sense for your specific environment, budget, and timeline — not by what generates the best margin for us.</p>
+          </div>
+          <div class="value-card">
+            <h4>From Conversation to Capability</h4>
+            <p>Whether you need to explore a technology area, staff a specialized role, or support a technical delivery, Medley's full service portfolio — engineering, IT, and staffing — means we can support you across the entire journey from initial evaluation to operational deployment.</p>
+          </div>
+        </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <a href="#"><img alt="" src="images/logo1.png" /></a>
+      <p>2026 &copy; <a href="#">Medley Networks</a> All Rights Reserved.</p>
+    </div>
+  </footer>
+
+  <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+  <script src="js/waypoints.min.js"></script>
+  <script src="js/script.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+</body>
+
+</html>

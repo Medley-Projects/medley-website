@@ -6,17 +6,12 @@
   <title>RF Compliance | Medley Networks</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <link href="https://fonts.googleapis.com/css?family=Raleway:900,300,700" rel="stylesheet" type="text/css">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.2/css/font-awesome.min.css">
   <link rel="stylesheet" type="text/css" href="css/grid.css">
   <link rel="stylesheet" type="text/css" href="style.css">
   <link rel="stylesheet" type="text/css" href="css/layout.css">
-  <link rel="stylesheet" type="text/css" href="css/style2.css" />
-  <link rel="stylesheet" type="text/css" href="css/jquery.bxslider.css">
   <link rel="stylesheet" type="text/css" href="css/responsive.css">
   <link rel="stylesheet" type="text/css" href="css/animate.css">
   <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
-  <link rel="stylesheet" type="text/css" href="css/ionicons.min.css">
 
   <style>
     body {
@@ -84,7 +79,7 @@
       display: grid;
       grid-template-columns: 1fr 1fr;
       gap: 20px;
-      margin-bottom: 60px;
+      margin-bottom: 50px;
     }
 
     .rfc-section .cta-card {
@@ -100,6 +95,10 @@
       color: #d84012;
     }
 
+    .rfc-section .cta-card.landlords h3 {
+      color: #222;
+    }
+
     .rfc-section .cta-card p {
       font-size: 16px;
       line-height: 26px;
@@ -110,28 +109,35 @@
     .rfc-section .cta-btn {
       display: inline-block;
       padding: 10px 25px;
+      font-size: 13px;
       font-weight: 700;
       text-decoration: none;
       background: #d84012;
       color: #fff;
       border: none;
+      transition: background .2s;
+      letter-spacing: 1px;
     }
 
-    .rfc-section .cta-btn:hover {
+    .rfc-section .cta-btn:hover { background: #222; color: #fff; text-decoration: none; }
+
+    .rfc-section .cta-card.landlords .cta-btn {
       background: #222;
-      color: #fff;
-      text-decoration: none;
+    }
+
+    .rfc-section .cta-card.landlords .cta-btn:hover {
+      background: #d84012;
     }
 
     .rfc-section .services-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+      grid-template-columns: repeat(3, 1fr);
       gap: 16px;
-      margin-bottom: 60px;
+      margin-bottom: 50px;
     }
 
     .rfc-section .service-card {
-      padding: 26px 22px;
+      padding: 22px 18px;
       background: #f4f4f4;
       text-align: left;
     }
@@ -143,9 +149,10 @@
 
     .rfc-section .service-card h4 {
       font-size: 15px;
-      letter-spacing: 2px;
-      color: #d84012;
-      margin-bottom: 12px;
+      font-weight: 700;
+      color: #222;
+      margin-bottom: 10px;
+      line-height: 1.3;
     }
 
     .rfc-section .service-card ul {
@@ -155,38 +162,36 @@
     }
 
     .rfc-section .service-card ul li {
-      font-size: 14px;
-      color: #222;
-      padding: 4px 0 4px 16px;
+      font-size: 13px;
+      color: #555;
+      padding: 3px 0 3px 14px;
       position: relative;
       line-height: 1.5;
     }
 
     .rfc-section .service-card ul li::before {
-      content: '\203A';
+      content: '—';
       position: absolute;
       left: 0;
       color: #d87843;
-      font-weight: 700;
-      font-size: 18px;
     }
 
     .rfc-section .how-we-work {
       background: #f4f4f4;
-      padding: 60px 48px;
-      margin-bottom: 60px;
+      padding: 50px 40px;
+      margin-bottom: 50px;
     }
 
     .rfc-section .process-intro {
       display: grid;
       grid-template-columns: 1fr 1fr;
-      gap: 48px;
+      gap: 40px;
       align-items: center;
-      margin-bottom: 52px;
+      margin-bottom: 40px;
     }
 
     .rfc-section .process-intro p {
-      font-size: 16px;
+      font-size: 14px;
       color: #555;
       line-height: 1.75;
     }
@@ -194,26 +199,25 @@
     .rfc-section .process-stats {
       display: grid;
       grid-template-columns: 1fr 1fr;
-      gap: 16px;
+      gap: 12px;
     }
 
     .rfc-section .stat-box {
-      padding: 20px;
+      padding: 18px;
       text-align: center;
       background: #fff;
     }
 
     .rfc-section .stat-box .stat-num {
-      font-size: 28px;
-      font-weight: 900;
+      font-size: 1.6rem;
+      font-weight: 700;
       color: #d84012;
       display: block;
     }
 
     .rfc-section .stat-box .stat-label {
-      font-size: 12px;
-      color: #222;
-      font-weight: 700;
+      font-size: 11px;
+      color: #777;
       text-transform: uppercase;
       letter-spacing: .08em;
       margin-top: 4px;
@@ -222,75 +226,93 @@
     .rfc-section .process-steps {
       display: grid;
       grid-template-columns: repeat(5, 1fr);
-      gap: 12px;
+      gap: 16px;
     }
 
     .rfc-section .step {
-      padding: 20px 10px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
       text-align: center;
-      background: #fff;
     }
 
-    .rfc-section .step .step-num {
-      display: block;
-      font-size: 26px;
-      font-weight: 900;
-      color: #d84012;
-      margin-bottom: 8px;
+    .rfc-section .step-circle {
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+      background: #222;
+      border: 3px solid #d87843;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.2rem;
+      font-weight: 700;
+      color: #d87843;
+      margin-bottom: 14px;
+      flex-shrink: 0;
     }
 
-    .rfc-section .step .step-title {
+    .rfc-section .step:nth-child(2) .step-circle { border-color: #d84012; color: #d84012; }
+    .rfc-section .step:nth-child(3) .step-circle { border-color: #222; color: #fff; }
+    .rfc-section .step:nth-child(4) .step-circle { border-color: #d87843; color: #d87843; }
+    .rfc-section .step:nth-child(5) .step-circle { border-color: #d84012; color: #d84012; }
+
+    .rfc-section .step-title {
       font-size: 13px;
       font-weight: 700;
       color: #222;
-      margin-bottom: 8px;
+      margin-bottom: 6px;
       line-height: 1.3;
     }
 
-    .rfc-section .step .step-body {
+    .rfc-section .step-body {
       font-size: 12px;
       color: #555;
-      line-height: 1.5;
+      line-height: 1.55;
     }
 
     .rfc-section .why-medley {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
-      gap: 24px;
+      gap: 20px;
       margin-bottom: 40px;
     }
 
     .rfc-section .value-card {
       border-left: 4px solid #d87843;
-      padding: 25px;
+      padding: 24px 20px;
       background: #f4f4f4;
       text-align: left;
     }
 
+    .rfc-section .value-card:nth-child(2) { border-left-color: #d84012; }
+    .rfc-section .value-card:nth-child(3) { border-left-color: #222; }
+
     .rfc-section .value-card h4 {
       font-size: 15px;
-      letter-spacing: 2px;
+      font-weight: 700;
       color: #222;
-      margin-bottom: 12px;
+      margin-bottom: 10px;
     }
 
     .rfc-section .value-card p {
-      font-size: 15px;
+      font-size: 14px;
       color: #555;
       line-height: 1.65;
     }
 
-    @media (max-width: 900px) {
+    @media (max-width: 960px) {
       .rfc-section .dual-cta { grid-template-columns: 1fr; }
+      .rfc-section .services-grid { grid-template-columns: 1fr 1fr; }
       .rfc-section .process-intro { grid-template-columns: 1fr; }
-      .rfc-section .process-steps { grid-template-columns: repeat(3, 1fr); }
+      .rfc-section .process-steps { grid-template-columns: repeat(3, 1fr); gap: 20px; }
       .rfc-section .why-medley { grid-template-columns: 1fr; }
     }
 
     @media (max-width: 600px) {
-      .rfc-section .how-we-work { padding: 36px 22px; }
+      .rfc-section .how-we-work { padding: 30px 20px; }
       .rfc-section .process-steps { grid-template-columns: 1fr 1fr; }
-      .rfc-section .services-grid { grid-template-columns: 1fr 1fr; }
+      .rfc-section .services-grid { grid-template-columns: 1fr; }
       .rfc-section .process-stats { grid-template-columns: 1fr 1fr; }
     }
   </style>
@@ -315,14 +337,14 @@
         <div id="bs-example-navbar-collapse-1" class="collapse navbar-collapse">
           <ul style="vertical-align: bottom !important;" class="nav navbar-nav navbar-right">
             <li style="font-size: 14px; font-family: Arial, sans-serif;"><a href="index.html#home">Home</a></li>
-            <li style="font-size: 14px; font-family: Arial, sans-serif;"><a href="index.html#AboutUs">About Us</a></li>
             <li style="font-size: 14px; font-family: Arial, sans-serif;"><a href="index.html#services">Services</a></li>
+            <li style="font-size: 14px; font-family: Arial, sans-serif;"><a href="/rf-engineering.html">RF Engineering</a></li>
             <li style="font-size: 14px; font-family: Arial, sans-serif;"><a href="/rf-compliance.html">RF Compliance</a></li>
-            <li style="font-size: 14px; font-family: Arial, sans-serif;"><a href="index.html#solutions">Solutions</a></li>
-            <li style="font-size: 14px; font-family: Arial, sans-serif;"><a href="index.html#clients">Clients</a></li>
-            <li style="font-size: 14px; font-family: Arial, sans-serif;"><a href="index.html#store">Store</a></li>
-            <li style="font-size: 14px; font-family: Arial, sans-serif;"><a href="index.html#careers">Careers</a></li>
             <li style="font-size: 14px; font-family: Arial, sans-serif;"><a href="/staffing.html">Staffing</a></li>
+            <li style="font-size: 14px; font-family: Arial, sans-serif;"><a href="/it-services.html">IT Services</a></li>
+            <li style="font-size: 14px; font-family: Arial, sans-serif;"><a href="/field-services.html">Field Services</a></li>
+            <li style="font-size: 14px; font-family: Arial, sans-serif;"><a href="/emerging-technologies.html">Emerging Technologies</a></li>
+            <li style="font-size: 14px; font-family: Arial, sans-serif;"><a href="index.html#store">Store</a></li>
             <li style="font-size: 14px; font-family: Arial, sans-serif;"><a href="index.html#ContactUs">Contact Us</a></li>
             <li style="font-size: 14px; font-family: Arial, sans-serif;"><a href="/privacy-policy.html">Privacy Policy</a></li>
           </ul>
@@ -336,25 +358,28 @@
       <div class="rfc-section">
 
         <!-- Section Header -->
-        <h2 class="section-title" data-os-animation="zoomIn" data-os-animation-delay="0.1s" class="os-animation">RF COMPLIANCE &amp; EME</h2>
-        <p class="os-animation" data-os-animation="zoomIn" data-os-animation-delay="0.2s" style="font-size: 18px; color: #555; max-width: 680px; line-height: 1.7; font-weight: 700; margin-bottom: 30px;">RF Compliance &amp; EME Expertise You Can Rely On</p>
-        <p data-os-animation="zoomIn" data-os-animation-delay="0.3s" class="os-animation section-subtitle" style="margin-bottom: 30px;">
-          Medley Networks provides comprehensive RF compliance and electromagnetic energy (EME) assessment services to carriers, tower companies, landlords, and property owners across the United States. We ensure your sites meet FCC requirements and OSHA standards — so you stay compliant, safe, and operationally ready.
-        </p>
+        <div data-os-animation="zoomIn" data-os-animation-delay="0.1s" class="os-animation">
+          <div class="rfc-eyebrow">RF Compliance</div>
+          <div class="rfc-accent-bar"></div>
+          <h2 class="section-title">RF Compliance &amp; EME Expertise<br>You Can Rely On</h2>
+          <p class="section-subtitle">
+            Medley Networks provides comprehensive RF compliance and electromagnetic energy (EME) assessment services to carriers, tower companies, landlords, and property owners across the United States. We ensure your sites meet FCC requirements and OSHA standards — so you stay compliant, safe, and operationally ready.
+          </p>
+        </div>
 
         <!-- Dual CTA -->
-        <div class="dual-cta" data-os-animation="fadeIn" data-os-animation-delay="0.4s" class="os-animation">
-          <div class="cta-card">
+        <div data-os-animation="fadeIn" data-os-animation-delay="0.2s" class="os-animation"><div class="dual-cta">
+          <div class="cta-card carriers">
             <h3>Carriers &amp; Tower Companies</h3>
             <p>Need RF compliance surveys, EME assessments, or signage for your network sites? Our certified specialists deliver accurate, audit-ready reports that satisfy FCC and OSHA requirements.</p>
             <a href="mailto:medley_eme@medleynetworks.com" class="cta-btn">Request a Survey or EME Report &rarr;</a>
           </div>
-          <div class="cta-card">
-            <h3 style="color: #222;">Property Owners &amp; Landlords</h3>
+          <div class="cta-card landlords">
+            <h3>Property Owners &amp; Landlords</h3>
             <p>Have a wireless antenna or cell site on your property? We help landlords and building owners understand their RF exposure obligations, obtain compliant signage, and maintain documentation for tenant and public safety.</p>
-            <a href="tel:+19739090919" class="cta-btn" style="background: #222;">Talk to a Specialist &rarr;</a>
+            <a href="tel:+19739090919" class="cta-btn">Talk to a Specialist &rarr;</a>
           </div>
-        </div>
+        </div></div>
 
         <!-- Services We Offer -->
         <div data-os-animation="zoomIn" data-os-animation-delay="0.1s" class="os-animation">
@@ -366,7 +391,7 @@
           From initial site assessments to regulatory documentation and safety signage, our team handles the full spectrum of RF compliance obligations — for new deployments and existing infrastructure alike.
         </p>
 
-        <div class="services-grid" data-os-animation="fadeIn" data-os-animation-delay="0.3s" class="os-animation">
+        <div data-os-animation="fadeIn" data-os-animation-delay="0.2s" class="os-animation"><div class="services-grid">
 
           <div class="service-card">
             <div class="service-icon">📊</div>
@@ -439,9 +464,10 @@
           </div>
 
         </div>
+        </div>
 
         <!-- How We Work -->
-        <div class="how-we-work" data-os-animation="fadeIn" data-os-animation-delay="0.1s" class="os-animation">
+        <div data-os-animation="fadeIn" data-os-animation-delay="0.3s" class="os-animation how-we-work">
           <div class="rfc-eyebrow">Our Process</div>
           <div class="rfc-accent-bar"></div>
           <h2 class="section-title">How We Work</h2>
@@ -472,35 +498,35 @@
 
           <div class="process-steps">
             <div class="step">
-              <span class="step-num">1</span>
+              <div class="step-circle">1</div>
               <div class="step-title">Site Intake &amp; Scoping</div>
               <div class="step-body">
                 Collect site details, antenna parameters, carrier data, and access requirements. Define deliverables and timeline.
               </div>
             </div>
             <div class="step">
-              <span class="step-num">2</span>
+              <div class="step-circle">2</div>
               <div class="step-title">EME Analysis &amp; Calculations</div>
               <div class="step-body">
                 MPE calculations for all transmitters, occupational and general population exposure modeling, and co-location aggregate analysis.
               </div>
             </div>
             <div class="step">
-              <span class="step-num">3</span>
+              <div class="step-circle">3</div>
               <div class="step-title">Compliance Report &amp; Signage</div>
               <div class="step-body">
                 Deliver FCC/OSHA-compliant report with findings, exclusion zone diagrams, and any required RF hazard signage specifications.
               </div>
             </div>
             <div class="step">
-              <span class="step-num">4</span>
+              <div class="step-circle">4</div>
               <div class="step-title">Field Survey &amp; Measurement</div>
               <div class="step-body">
                 On-site visit to measure RF field levels, document antenna inventory, map exclusion zones, and capture site photographs.
               </div>
             </div>
             <div class="step">
-              <span class="step-num">5</span>
+              <div class="step-circle">5</div>
               <div class="step-title">Remediation &amp; Follow-Up</div>
               <div class="step-body">
                 Where gaps are identified, we recommend corrective actions, support implementation, and re-assess to confirm compliance.
@@ -519,7 +545,7 @@
           RF compliance isn't just paperwork for us — it's a discipline our engineers have practiced in the field across thousands of sites, from legacy macro towers to the latest 5G small cell deployments.
         </p>
 
-        <div class="why-medley" data-os-animation="fadeIn" data-os-animation-delay="0.3s" class="os-animation">
+        <div data-os-animation="fadeIn" data-os-animation-delay="0.2s" class="os-animation"><div class="why-medley">
           <div class="value-card">
             <h4>Deep RF Engineering Roots</h4>
             <p>Our compliance specialists are RF engineers first. They understand antenna systems, power configurations, and network architecture — which means faster, more accurate assessments and fewer back-and-forth cycles with your team.</p>
@@ -532,7 +558,7 @@
             <h4>Audit-Ready, Every Time</h4>
             <p>Every report we produce is structured for FCC and OSHA audit readiness from day one — with clear methodology, supporting calculations, site photographs, and signage documentation included as standard.</p>
           </div>
-        </div>
+        </div></div>
 
       </div>
     </div>
@@ -547,9 +573,6 @@
   </footer>
 
   <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
-  <script src="js/classie.js"></script>
-  <script src="js/borderMenu.js"></script>
-  <script src="js/jquery.bxslider.js"></script>
   <script src="js/waypoints.min.js"></script>
   <script src="js/script.js"></script>
   <script src="js/bootstrap.min.js"></script>
