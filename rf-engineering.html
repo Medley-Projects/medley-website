@@ -1,668 +1,338 @@
 <!doctype html>
 <html lang="en">
-
 <head>
   <meta charset="utf-8">
-  <title>RF Engineering | Medley Networks</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  <link rel="stylesheet" type="text/css" href="css/grid.css">
-  <link rel="stylesheet" type="text/css" href="style.css">
-  <link rel="stylesheet" type="text/css" href="css/layout.css">
-  <link rel="stylesheet" type="text/css" href="css/responsive.css">
-  <link rel="stylesheet" type="text/css" href="css/animate.css">
-  <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
-
-  <style>
-    body {
-      padding-top: 70px;
-      font-family: 'Shonar Bangla', 'amblelight', sans-serif;
-    }
-
-    .navbar-brand img {
-      max-width: 100px;
-      height: auto;
-    }
-
-    #rf-engineering .os-animation {
-      opacity: 1 !important;
-    }
-
-    #rf-engineering .section-title {
-      color: #222 !important;
-      line-height: 1.15 !important;
-    }
-
-    #rf-engineering .section-subtitle {
-      color: #555 !important;
-    }
-
-    .rfe-section {
-      text-align: left;
-    }
-
-    .rfe-section .rfe-eyebrow {
-      text-transform: uppercase;
-      letter-spacing: .14em;
-      font-size: 13px;
-      font-weight: 700;
-      color: #d87843;
-      margin-bottom: 10px;
-    }
-
-    .rfe-section .rfe-accent-bar {
-      width: 52px;
-      height: 4px;
-      background: #d87843;
-      margin-bottom: 20px;
-    }
-
-    .rfe-section .section-title {
-      font-size: 30px;
-      font-weight: 900;
-      letter-spacing: 4px;
-      text-transform: uppercase;
-      color: #222;
-      line-height: 1.15;
-      margin-bottom: 16px;
-    }
-
-    .rfe-section .section-subtitle {
-      font-size: 16px;
-      color: #555;
-      max-width: 680px;
-      line-height: 1.7;
-      margin-bottom: 40px;
-    }
-
-    /* Stats */
-    .hero-stats {
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      gap: 12px;
-      margin-top: 10px;
-    }
-
-    .stat-box {
-      background: #f4f4f4;
-      padding: 18px;
-      text-align: center;
-    }
-
-    .stat-box .stat-num {
-      font-size: 1.6rem;
-      font-weight: 700;
-      color: #d84012;
-      display: block;
-    }
-
-    .stat-box .stat-label {
-      font-size: 11px;
-      color: #777;
-      text-transform: uppercase;
-      letter-spacing: .08em;
-      margin-top: 4px;
-    }
-
-    .cta-btn {
-      display: inline-block;
-      padding: 10px 25px;
-      font-size: 13px;
-      font-weight: 700;
-      text-decoration: none;
-      background: #d84012;
-      color: #fff;
-      border: none;
-      transition: background .2s;
-      letter-spacing: 1px;
-    }
-
-    .cta-btn:hover { background: #222; color: #fff; text-decoration: none; }
-
-    /* Capabilities grid */
-    .cap-section {
-      padding: 50px 0;
-    }
-
-    .cap-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 16px;
-    }
-
-    .cap-card {
-      background: #f4f4f4;
-      border-left: 4px solid #d87843;
-      padding: 22px 18px;
-      transition: box-shadow .2s;
-    }
-
-    .cap-card:hover {
-      box-shadow: 0 4px 16px rgba(0,0,0,.08);
-    }
-
-    .cap-tag {
-      font-size: 10px;
-      letter-spacing: .12em;
-      text-transform: uppercase;
-      font-weight: 700;
-      color: #d87843;
-      margin-bottom: 8px;
-    }
-
-    .cap-card h4 {
-      font-size: 15px;
-      font-weight: 700;
-      color: #222;
-      margin-bottom: 10px;
-      line-height: 1.3;
-    }
-
-    .cap-card ul {
-      list-style: none;
-      padding: 0;
-    }
-
-    .cap-card ul li {
-      font-size: 13px;
-      color: #555;
-      padding: 3px 0 3px 14px;
-      position: relative;
-      line-height: 1.5;
-      border-bottom: 1px solid #ddd;
-    }
-
-    .cap-card ul li:last-child { border-bottom: none; }
-
-    .cap-card ul li::before {
-      content: '—';
-      position: absolute;
-      left: 0;
-      color: #d87843;
-    }
-
-    /* Expertise strip */
-    .expertise-strip {
-      background: #f4f4f4;
-      padding: 50px 0;
-    }
-
-    .expertise-inner {
-      display: grid;
-      grid-template-columns: 1fr 2fr;
-      gap: 50px;
-      align-items: start;
-    }
-
-    .expertise-lede h3 {
-      font-size: 20px;
-      font-weight: 700;
-      color: #222;
-      line-height: 1.25;
-      margin-bottom: 12px;
-    }
-
-    .expertise-lede p {
-      font-size: 14px;
-      color: #555;
-      line-height: 1.7;
-    }
-
-    .tech-grid {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 8px;
-    }
-
-    .tech-tag {
-      background: #fff;
-      border: 1px solid #ddd;
-      color: #222;
-      font-size: 12px;
-      padding: 6px 12px;
-    }
-
-    /* Engagement timeline */
-    .engage-section {
-      padding: 50px 0;
-    }
-
-    .timeline {
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      gap: 20px;
-      margin-top: 30px;
-    }
-
-    .tl-step {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      padding: 0 12px;
-      text-align: center;
-    }
-
-    .tl-dot {
-      width: 40px;
-      height: 40px;
-      border-radius: 50%;
-      background: #222;
-      border: 2px solid #d87843;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 14px;
-      font-weight: 700;
-      color: #d87843;
-      margin-bottom: 16px;
-      flex-shrink: 0;
-    }
-
-    .tl-step:nth-child(2) .tl-dot { border-color: #d84012; color: #d84012; }
-    .tl-step:nth-child(3) .tl-dot { border-color: #222; color: #fff; }
-    .tl-step:nth-child(4) .tl-dot { border-color: #d87843; color: #d87843; }
-
-    .tl-title {
-      font-size: 14px;
-      font-weight: 700;
-      color: #222;
-      margin-bottom: 8px;
-      line-height: 1.3;
-    }
-
-    .tl-body {
-      font-size: 13px;
-      color: #555;
-      line-height: 1.6;
-    }
-
-    /* Client banner */
-    .client-banner {
-      background: #f4f4f4;
-      padding: 50px 0;
-    }
-
-    .client-inner {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 20px;
-    }
-
-    .client-card {
-      background: #fff;
-      padding: 28px 24px;
-    }
-
-    .client-card h4 {
-      font-size: 16px;
-      font-weight: 700;
-      color: #222;
-      margin-bottom: 10px;
-    }
-
-    .client-card p {
-      font-size: 14px;
-      color: #555;
-      line-height: 1.65;
-      margin-bottom: 18px;
-    }
-
-    .client-cta {
-      display: inline-block;
-      padding: 10px 25px;
-      font-size: 13px;
-      font-weight: 700;
-      text-decoration: none;
-      background: #d84012;
-      color: #fff;
-      border: none;
-      transition: background .2s;
-      letter-spacing: 1px;
-    }
-    .client-cta:hover { background: #222; color: #fff; text-decoration: none; }
-
-    /* Credential cards */
-    .cred-section {
-      padding: 50px 0 60px;
-    }
-
-    .cred-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 20px;
-      margin-top: 30px;
-    }
-
-    .cred-card {
-      padding: 24px 20px;
-      background: #f4f4f4;
-      border-left: 4px solid #d87843;
-    }
-
-    .cred-card:nth-child(2) { border-left-color: #d84012; }
-    .cred-card:nth-child(3) { border-left-color: #222; }
-
-    .cred-card h4 {
-      font-size: 15px;
-      font-weight: 700;
-      color: #222;
-      margin-bottom: 10px;
-    }
-
-    .cred-card p {
-      font-size: 14px;
-      color: #555;
-      line-height: 1.65;
-    }
-
-    @media (max-width: 960px) {
-      .cap-grid { grid-template-columns: 1fr 1fr; }
-      .expertise-inner { grid-template-columns: 1fr; gap: 28px; }
-      .timeline { grid-template-columns: 1fr 1fr; gap: 28px; }
-      .hero-stats { grid-template-columns: repeat(2, 1fr); }
-      .client-inner { grid-template-columns: 1fr; }
-      .cred-grid { grid-template-columns: 1fr; }
-    }
-
-    @media (max-width: 600px) {
-      .cap-grid { grid-template-columns: 1fr; }
-      .hero-stats { grid-template-columns: 1fr 1fr; }
-      .timeline { grid-template-columns: 1fr; }
-    }
-  </style>
+  <title>RF Engineering | Medley Networks</title>
+  <meta name="description" content="End-to-end RF engineering services — network design, drive testing, optimization, and rollout support for 4G LTE, 5G NR, small cells, and in-building systems.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/site.css">
 </head>
-
 <body>
 
-  <!-- Navigation -->
-  <section id="navigation">
-    <nav role="navigation" class="navbar navbar-default navbar-fixed-top">
-      <div class="container-fluid">
-        <div class="navbar-header">
-          <button data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" class="navbar-toggle"
-            type="button">&nbsp;</button>
-          <a style="margin: 0px; padding: 5px 0px 0px; vertical-align: middle !important;" class="navbar-brand"
-            href="index.html#home">
-            <img alt=""
-              style="height: 40px; width: 100px; margin: 0px; padding: 0px; vertical-align: middle !important;"
-              src="images/logo-L.png" />
-          </a>
+  <header class="site-header" id="siteHeader">
+    <div class="container header-inner">
+      <a class="brand" href="index.html" aria-label="Medley Networks home">
+        <img src="images/logo-L.png" alt="Medley Networks">
+      </a>
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle menu" aria-expanded="false" aria-controls="siteNav">
+        <span></span><span></span><span></span>
+      </button>
+      <nav class="site-nav" id="siteNav" aria-label="Primary">
+        <ul class="nav-list">
+          <li><a class="nav-link" href="index.html">Home</a></li>
+          <li class="has-dropdown active">
+            <a class="nav-link" href="index.html#services">Services</a>
+            <ul class="dropdown">
+              <li class="active"><a href="rf-engineering.html">RF Engineering</a></li>
+              <li><a href="rf-compliance.html">RF Compliance</a></li>
+              <li><a href="staffing.html">Staffing Solutions</a></li>
+              <li><a href="it-services.html">IT Services</a></li>
+              <li><a href="field-services.html">Field Services</a></li>
+              <li><a href="emerging-technologies.html">Emerging Technologies</a></li>
+            </ul>
+          </li>
+          <li><a class="nav-link" href="index.html#store">Store</a></li>
+          <li><a class="nav-link" href="index.html#contact">Contact</a></li>
+          <li><a class="btn btn-primary btn-sm nav-cta" href="mailto:info@medleynetworks.com">Get in Touch</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Page hero -->
+  <section class="page-hero">
+    <div class="container">
+      <span class="eyebrow">RF Engineering</span>
+      <h1>Networks built on engineering depth</h1>
+      <p class="page-intro">Medley Networks delivers end-to-end RF engineering services across the full network lifecycle — from initial design and coverage planning through drive testing, optimization, and KPI-driven performance tuning. Our engineers have hands-on experience across 4G LTE, 5G NR, C-RAN, small cells, and in-building systems for the nation's leading carriers.</p>
+    </div>
+  </section>
+
+  <!-- Stats -->
+  <section class="section section-tight">
+    <div class="container">
+      <div class="stat-grid">
+        <div class="stat">
+          <span class="stat-num">5G</span>
+          <span class="stat-label">NR &amp; LTE Advanced</span>
         </div>
-        <div id="bs-example-navbar-collapse-1" class="collapse navbar-collapse">
-          <ul style="vertical-align: bottom !important;" class="nav navbar-nav navbar-right">
-            <li style="font-size: 14px; font-family: Arial, sans-serif;"><a href="index.html#home">Home</a></li>
-            <li style="font-size: 14px; font-family: Arial, sans-serif;"><a href="index.html#services">Services</a></li>
-            <li style="font-size: 14px; font-family: Arial, sans-serif;"><a href="/rf-engineering.html">RF Engineering</a></li>
-            <li style="font-size: 14px; font-family: Arial, sans-serif;"><a href="/rf-compliance.html">RF Compliance</a></li>
-            <li style="font-size: 14px; font-family: Arial, sans-serif;"><a href="/staffing.html">Staffing</a></li>
-            <li style="font-size: 14px; font-family: Arial, sans-serif;"><a href="/it-services.html">IT Services</a></li>
-            <li style="font-size: 14px; font-family: Arial, sans-serif;"><a href="/field-services.html">Field Services</a></li>
-            <li style="font-size: 14px; font-family: Arial, sans-serif;"><a href="/emerging-technologies.html">Emerging Technologies</a></li>
-            <li style="font-size: 14px; font-family: Arial, sans-serif;"><a href="index.html#store">Store</a></li>
-            <li style="font-size: 14px; font-family: Arial, sans-serif;"><a href="index.html#ContactUs">Contact Us</a></li>
-            <li style="font-size: 14px; font-family: Arial, sans-serif;"><a href="/privacy-policy.html">Privacy Policy</a></li>
+        <div class="stat">
+          <span class="stat-num">C-RAN</span>
+          <span class="stat-label">Architecture Experience</span>
+        </div>
+        <div class="stat">
+          <span class="stat-num">Macro</span>
+          <span class="stat-label">Small Cell &amp; DAS</span>
+        </div>
+        <div class="stat">
+          <span class="stat-num">Tier-1</span>
+          <span class="stat-label">Carrier Clients</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Capabilities -->
+  <section class="section">
+    <div class="container">
+      <div class="section-head">
+        <span class="eyebrow">What We Deliver</span>
+        <h2 class="section-title">RF Engineering capabilities</h2>
+        <p class="lead">Our team covers every phase of the RF engineering workflow — from greenfield design to live network performance management — across macro, small cell, in-building, and private wireless environments.</p>
+      </div>
+
+      <div class="grid grid-3">
+        <div class="card">
+          <span class="eyebrow">Design</span>
+          <h3>RF Design &amp; Coverage Planning</h3>
+          <ul class="card-list">
+            <li>Macro &amp; small cell RF design</li>
+            <li>Coverage &amp; capacity modeling</li>
+            <li>Frequency planning &amp; channel assignment</li>
+            <li>5G NR beam management &amp; coverage prediction</li>
+            <li>C-Band &amp; CBRS spectrum planning</li>
+            <li>In-building (DAS &amp; small cell) design</li>
+          </ul>
+        </div>
+
+        <div class="card">
+          <span class="eyebrow">Testing</span>
+          <h3>Drive Testing &amp; Walk Testing</h3>
+          <ul class="card-list">
+            <li>Macro &amp; small cell drive testing</li>
+            <li>In-building walk testing</li>
+            <li>Pre- &amp; post-launch benchmarking</li>
+            <li>Competitive benchmarking &amp; analysis</li>
+            <li>Data collection &amp; post-processing</li>
+            <li>Reporting &amp; network visibility dashboards</li>
+          </ul>
+        </div>
+
+        <div class="card">
+          <span class="eyebrow">Optimization</span>
+          <h3>Network Optimization &amp; Tuning</h3>
+          <ul class="card-list">
+            <li>KPI monitoring &amp; root cause analysis</li>
+            <li>Antenna tilt, azimuth &amp; power optimization</li>
+            <li>Parameter optimization (LTE &amp; 5G NR)</li>
+            <li>Handover &amp; neighbor list tuning</li>
+            <li>Interference identification &amp; resolution</li>
+            <li>AI-assisted performance analytics</li>
+          </ul>
+        </div>
+
+        <div class="card">
+          <span class="eyebrow">Rollout</span>
+          <h3>Site Readiness &amp; Launch Support</h3>
+          <ul class="card-list">
+            <li>Site rollout readiness assessments</li>
+            <li>Pre-launch RF verification</li>
+            <li>E-911 testing &amp; PSAP coordination</li>
+            <li>PIM troubleshooting</li>
+            <li>Intermodulation studies</li>
+            <li>External interference hunting &amp; analysis</li>
+            <li>CW testing &amp; path loss analysis</li>
+          </ul>
+        </div>
+
+        <div class="card">
+          <span class="eyebrow">Planning</span>
+          <h3>Traffic &amp; Capacity Planning</h3>
+          <ul class="card-list">
+            <li>Traffic demand forecasting</li>
+            <li>Capacity dimensioning &amp; upgrade planning</li>
+            <li>Transport &amp; backhaul planning</li>
+            <li>Load balancing strategy</li>
+            <li>5G densification planning</li>
+          </ul>
+        </div>
+
+        <div class="card">
+          <span class="eyebrow">Emerging</span>
+          <h3>Private &amp; Next-Gen Wireless</h3>
+          <ul class="card-list">
+            <li>Private LTE &amp; 5G network design</li>
+            <li>CBRS / Citizens Broadband deployment</li>
+            <li>Fixed Wireless Access (FWA) planning</li>
+            <li>Multi-Access Edge Computing (MEC) support</li>
+            <li>Network slicing &amp; QoS design</li>
           </ul>
         </div>
       </div>
-    </nav>
+    </div>
   </section>
 
-  <div id="rf-engineering" class="intro">
-
+  <!-- Technologies -->
+  <section class="section section-alt">
     <div class="container">
-      <div class="rfe-section">
-
-        <!-- Header -->
-        <div data-os-animation="zoomIn" data-os-animation-delay="0.1s" class="os-animation">
-          <div class="rfe-eyebrow">RF Engineering</div>
-          <div class="rfe-accent-bar"></div>
-          <h2 class="section-title">Networks Built on<br>Engineering Depth</h2>
-          <p class="section-subtitle">
-            Medley Networks delivers end-to-end RF engineering services across the full network lifecycle — from initial design and coverage planning through drive testing, optimization, and KPI-driven performance tuning. Our engineers have hands-on experience across 4G LTE, 5G NR, C-RAN, small cells, and in-building systems for the nation's leading carriers.
-          </p>
+      <div class="grid grid-wide" style="align-items:start;">
+        <div>
+          <span class="eyebrow">Technologies &amp; Standards</span>
+          <h2 class="section-title">What we work in</h2>
+          <p class="lead">Our engineers are current across the full stack of wireless standards and toolsets in active deployment today — from legacy LTE optimization to 5G NR and private wireless buildouts.</p>
         </div>
-
-        <div data-os-animation="fadeIn" data-os-animation-delay="0.2s" class="os-animation">
-          <div class="hero-stats" style="margin-bottom: 50px;">
-            <div class="stat-box">
-              <span class="stat-num">5G</span>
-              <span class="stat-label">NR &amp; LTE Advanced</span>
-            </div>
-            <div class="stat-box">
-              <span class="stat-num">C‑RAN</span>
-              <span class="stat-label">Architecture Experience</span>
-            </div>
-            <div class="stat-box">
-              <span class="stat-num">Macro</span>
-              <span class="stat-label">Small Cell &amp; DAS</span>
-            </div>
-            <div class="stat-box">
-              <span class="stat-num">Tier‑1</span>
-              <span class="stat-label">Carrier Clients</span>
-            </div>
-          </div>
-          <a href="mailto:info@medleynetworks.com" class="cta-btn" style="margin-bottom: 50px; display: inline-block;">Talk to an RF Engineer →</a>
-        </div>
-
-        <!-- Capabilities -->
-        <div data-os-animation="fadeIn" data-os-animation-delay="0.3s" class="os-animation cap-section">
-          <div class="rfe-eyebrow">What We Deliver</div>
-          <div class="rfe-accent-bar"></div>
-          <h2 class="section-title">RF Engineering Capabilities</h2>
-          <p class="section-subtitle" style="margin-bottom: 30px;">
-            Our team covers every phase of the RF engineering workflow — from greenfield design to live network performance management — across macro, small cell, in-building, and private wireless environments.
-          </p>
-
-          <div class="cap-grid">
-            <div class="cap-card">
-              <div class="cap-tag">Design</div>
-              <h4>RF Design &amp; Coverage Planning</h4>
-              <ul>
-                <li>Macro &amp; small cell RF design</li>
-                <li>Coverage &amp; capacity modeling</li>
-                <li>Frequency planning &amp; channel assignment</li>
-                <li>5G NR beam management &amp; coverage prediction</li>
-                <li>C-Band &amp; CBRS spectrum planning</li>
-                <li>In-building (DAS &amp; small cell) design</li>
-              </ul>
-            </div>
-            <div class="cap-card">
-              <div class="cap-tag">Testing</div>
-              <h4>Drive Testing &amp; Walk Testing</h4>
-              <ul>
-                <li>Macro &amp; small cell drive testing</li>
-                <li>In-building walk testing</li>
-                <li>Pre- &amp; post-launch benchmarking</li>
-                <li>Competitive benchmarking &amp; analysis</li>
-                <li>Data collection &amp; post-processing</li>
-                <li>Reporting &amp; network visibility dashboards</li>
-              </ul>
-            </div>
-            <div class="cap-card">
-              <div class="cap-tag">Optimization</div>
-              <h4>Network Optimization &amp; Tuning</h4>
-              <ul>
-                <li>KPI monitoring &amp; root cause analysis</li>
-                <li>Antenna tilt, azimuth &amp; power optimization</li>
-                <li>Parameter optimization (LTE &amp; 5G NR)</li>
-                <li>Handover &amp; neighbor list tuning</li>
-                <li>Interference identification &amp; resolution</li>
-                <li>AI-assisted performance analytics</li>
-              </ul>
-            </div>
-            <div class="cap-card">
-              <div class="cap-tag">Rollout</div>
-              <h4>Site Readiness &amp; Launch Support</h4>
-              <ul>
-                <li>Site rollout readiness assessments</li>
-                <li>Pre-launch RF verification</li>
-                <li>E-911 testing &amp; PSAP coordination</li>
-                <li>PIM troubleshooting</li>
-                <li>Intermodulation study</li>
-                <li>External interference hunting &amp; analysis</li>
-                <li>CW testing &amp; path loss analysis</li>
-              </ul>
-            </div>
-            <div class="cap-card">
-              <div class="cap-tag">Planning</div>
-              <h4>Traffic &amp; Capacity Planning</h4>
-              <ul>
-                <li>Traffic demand forecasting</li>
-                <li>Capacity dimensioning &amp; upgrade planning</li>
-                <li>Transport &amp; backhaul planning</li>
-                <li>Load balancing strategy</li>
-                <li>5G densification planning</li>
-              </ul>
-            </div>
-            <div class="cap-card">
-              <div class="cap-tag">Emerging</div>
-              <h4>Private &amp; Next-Gen Wireless</h4>
-              <ul>
-                <li>Private LTE &amp; 5G network design</li>
-                <li>CBRS / Citizens Broadband deployment</li>
-                <li>Fixed Wireless Access (FWA) planning</li>
-                <li>Multi-Access Edge Computing (MEC) support</li>
-                <li>Network slicing &amp; QoS design</li>
-              </ul>
-            </div>
-          </div>
-        </div>
-
-      </div>
-    </div>
-
-    <!-- Technology Strip (full-width) -->
-    <div data-os-animation="fadeIn" data-os-animation-delay="0.3s" class="os-animation expertise-strip">
-      <div class="container">
-        <div class="expertise-inner">
-          <div class="expertise-lede">
-            <h3>Technologies &amp; Standards We Work In</h3>
-            <p>
-              Our engineers are current across the full stack of wireless standards and toolsets in active deployment today — from legacy LTE optimization to 5G NR and private wireless buildouts.
-            </p>
-          </div>
-          <div class="tech-grid">
-            <span class="tech-tag">5G NR (Sub-6 &amp; mmWave)</span>
-            <span class="tech-tag">4G LTE / LTE-A</span>
-            <span class="tech-tag">C-RAN / vRAN</span>
-            <span class="tech-tag">C-Band (3.7–3.98 GHz)</span>
-            <span class="tech-tag">CBRS / Band 48</span>
-            <span class="tech-tag">Fixed Wireless Access</span>
-            <span class="tech-tag">Private LTE / 5G</span>
-            <span class="tech-tag">DAS (Distributed Antenna Systems)</span>
-            <span class="tech-tag">Small Cells</span>
-            <span class="tech-tag">Atoll / Planet</span>
-            <span class="tech-tag">TEMS / Nemo</span>
-            <span class="tech-tag">MapInfo</span>
-            <span class="tech-tag">NSA / SA 5G Architecture</span>
-            <span class="tech-tag">Massive MIMO / Beamforming</span>
-            <span class="tech-tag">O-RAN</span>
-          </div>
+        <div class="tags">
+          <span class="tag">5G NR (Sub-6 &amp; mmWave)</span>
+          <span class="tag">4G LTE / LTE-A</span>
+          <span class="tag">C-RAN / vRAN</span>
+          <span class="tag">C-Band (3.7–3.98 GHz)</span>
+          <span class="tag">CBRS / Band 48</span>
+          <span class="tag">Fixed Wireless Access</span>
+          <span class="tag">Private LTE / 5G</span>
+          <span class="tag">DAS (Distributed Antenna Systems)</span>
+          <span class="tag">Small Cells</span>
+          <span class="tag">Atoll / Planet</span>
+          <span class="tag">TEMS / Nemo</span>
+          <span class="tag">MapInfo</span>
+          <span class="tag">NSA / SA 5G Architecture</span>
+          <span class="tag">Massive MIMO / Beamforming</span>
+          <span class="tag">O-RAN</span>
         </div>
       </div>
     </div>
+  </section>
 
+  <!-- Engagement model -->
+  <section class="section">
     <div class="container">
-      <div class="rfe-section">
-
-        <!-- Engagement Model -->
-        <div data-os-animation="fadeIn" data-os-animation-delay="0.1s" class="os-animation engage-section">
-          <div class="rfe-eyebrow">Engagement Model</div>
-          <div class="rfe-accent-bar"></div>
-          <h2 class="section-title">How We Work With You</h2>
-          <p class="section-subtitle">
-            Whether you need a full project team, a single expert to augment your existing staff, or ongoing optimization support, we structure engagements to fit your program — not the other way around.
-          </p>
-
-          <div class="timeline">
-            <div class="tl-step">
-              <div class="tl-dot">01</div>
-              <div class="tl-title">Scope &amp; Discovery</div>
-              <div class="tl-body">We align on network objectives, geography, technology layer, and deliverables before any work begins — so there are no surprises mid-project.</div>
-            </div>
-            <div class="tl-step">
-              <div class="tl-dot">02</div>
-              <div class="tl-title">Team Assembly</div>
-              <div class="tl-body">We assign engineers with direct experience in your technology stack — 5G NR, LTE, in-building, or private wireless — matched to the scope and timeline.</div>
-            </div>
-            <div class="tl-step">
-              <div class="tl-dot">03</div>
-              <div class="tl-title">Execution &amp; Reporting</div>
-              <div class="tl-body">Design, testing, optimization, or rollout support delivered with structured reporting, KPI tracking, and clear documentation at every milestone.</div>
-            </div>
-            <div class="tl-step">
-              <div class="tl-dot">04</div>
-              <div class="tl-title">Handoff &amp; Support</div>
-              <div class="tl-body">Clean deliverable handoff with full documentation. Ongoing optimization support available on a retainer or as-needed basis post-launch.</div>
-            </div>
-          </div>
-        </div>
-
+      <div class="section-head">
+        <span class="eyebrow">Engagement Model</span>
+        <h2 class="section-title">How we work with you</h2>
+        <p class="lead">Whether you need a full project team, a single expert to augment your existing staff, or ongoing optimization support, we structure engagements to fit your program — not the other way around.</p>
       </div>
-    </div>
-
-    <!-- Client Types (full-width) -->
-    <div data-os-animation="fadeIn" data-os-animation-delay="0.2s" class="os-animation client-banner">
-      <div class="container">
-        <div class="client-inner">
-          <div class="client-card">
-            <h4>Carriers &amp; Network Operators</h4>
-            <p>We support 5G rollout, LTE optimization, and capacity planning programs for Tier-1 and regional carriers — from individual market engagements to multi-region program support with dedicated RF engineering teams.</p>
-            <a href="mailto:info@medleynetworks.com" class="client-cta">Start a Conversation →</a>
-          </div>
-          <div class="client-card">
-            <h4>Infrastructure &amp; Program Partners</h4>
-            <p>Tower companies, neutral hosts, system integrators, and managed service providers partner with Medley for specialized RF expertise to augment existing teams — on project, contract, or staff augmentation terms.</p>
-            <a href="mailto:info@medleynetworks.com" class="client-cta">Discuss Your Program →</a>
-          </div>
+      <div class="steps">
+        <div class="step">
+          <div class="step-num">01</div>
+          <h4>Scope &amp; Discovery</h4>
+          <p>We align on network objectives, geography, technology layer, and deliverables before any work begins — so there are no surprises mid-project.</p>
+        </div>
+        <div class="step">
+          <div class="step-num">02</div>
+          <h4>Team Assembly</h4>
+          <p>We assign engineers with direct experience in your technology stack — 5G NR, LTE, in-building, or private wireless — matched to the scope and timeline.</p>
+        </div>
+        <div class="step">
+          <div class="step-num">03</div>
+          <h4>Execution &amp; Reporting</h4>
+          <p>Design, testing, optimization, or rollout support delivered with structured reporting, KPI tracking, and clear documentation at every milestone.</p>
+        </div>
+        <div class="step">
+          <div class="step-num">04</div>
+          <h4>Handoff &amp; Support</h4>
+          <p>Clean deliverable handoff with full documentation. Ongoing optimization support available on a retainer or as-needed basis post-launch.</p>
         </div>
       </div>
     </div>
+  </section>
 
+  <!-- Who we work with -->
+  <section class="section section-alt">
     <div class="container">
-      <div class="rfe-section">
-
-        <!-- Why Medley -->
-        <div data-os-animation="fadeIn" data-os-animation-delay="0.3s" class="os-animation cred-section">
-          <div class="rfe-eyebrow">Why Medley</div>
-          <div class="rfe-accent-bar"></div>
-          <h2 class="section-title">What Makes Our RF Practice Different</h2>
-          <p class="section-subtitle">
-            We're not a staffing agency that happens to place RF engineers, and we're not a large integrator where your project becomes one of hundreds. We're a specialist firm where RF engineering is a core practice — backed by people who've done the work.
-          </p>
-
-          <div class="cred-grid">
-            <div class="cred-card">
-              <h4>Hands-On Engineering Experience</h4>
-              <p>Our team has designed networks, run drive test campaigns, and optimized live systems for Tier-1 carriers. We bring practitioner knowledge — not just project management — to every engagement.</p>
-            </div>
-            <div class="cred-card">
-              <h4>Current on 5G &amp; Emerging Standards</h4>
-              <p>From C-Band densification and 5G NR parameter tuning to CBRS and private wireless design, our engineers are active on the technologies carriers are deploying today — not yesterday.</p>
-            </div>
-            <div class="cred-card">
-              <h4>Flexible Engagement Models</h4>
-              <p>Project-based, staff augmentation, or ongoing support — we adapt to your program structure. Need two engineers for a 90-day drive test campaign? Or a design team for a new market launch? We scale to fit.</p>
-            </div>
-          </div>
+      <div class="section-head">
+        <span class="eyebrow">Who We Support</span>
+        <h2 class="section-title">Built for the teams moving networks forward</h2>
+      </div>
+      <div class="duo">
+        <div class="duo-card">
+          <h3>Carriers &amp; Network Operators</h3>
+          <p>We support 5G rollout, LTE optimization, and capacity planning programs for Tier-1 and regional carriers — from individual market engagements to multi-region program support with dedicated RF engineering teams.</p>
+          <a class="btn btn-primary" href="mailto:info@medleynetworks.com">Start a Conversation</a>
         </div>
-
+        <div class="duo-card">
+          <h3>Infrastructure &amp; Program Partners</h3>
+          <p>Tower companies, neutral hosts, system integrators, and managed service providers partner with Medley for specialized RF expertise to augment existing teams — on project, contract, or staff augmentation terms.</p>
+          <a class="btn btn-dark" href="mailto:info@medleynetworks.com">Discuss Your Program</a>
+        </div>
       </div>
     </div>
-  </div>
+  </section>
+
+  <!-- Why Medley -->
+  <section class="section">
+    <div class="container">
+      <div class="section-head">
+        <span class="eyebrow">Why Medley</span>
+        <h2 class="section-title">What makes our RF practice different</h2>
+        <p class="lead">We're not a staffing agency that happens to place RF engineers, and we're not a large integrator where your project becomes one of hundreds. We're a specialist firm where RF engineering is a core practice — backed by people who've done the work.</p>
+      </div>
+      <div class="grid grid-3">
+        <div class="card accent-border">
+          <h3>Hands-On Engineering Experience</h3>
+          <p class="card-body">Our team has designed networks, run drive test campaigns, and optimized live systems for Tier-1 carriers. We bring practitioner knowledge — not just project management — to every engagement.</p>
+        </div>
+        <div class="card accent-border">
+          <h3>Current on 5G &amp; Emerging Standards</h3>
+          <p class="card-body">From C-Band densification and 5G NR parameter tuning to CBRS and private wireless design, our engineers are active on the technologies carriers are deploying today — not yesterday.</p>
+        </div>
+        <div class="card accent-border">
+          <h3>Flexible Engagement Models</h3>
+          <p class="card-body">Project-based, staff augmentation, or ongoing support — we adapt to your program structure. Need two engineers for a 90-day drive test campaign? Or a design team for a new market launch? We scale to fit.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="cta-band">
+    <div class="container">
+      <h2>Ready to strengthen your network engineering program?</h2>
+      <p>Talk directly with an RF engineer about your design, testing, or optimization needs.</p>
+      <a class="btn btn-primary btn-lg" href="mailto:info@medleynetworks.com">Talk to an RF Engineer</a>
+      <a class="btn btn-outline-light btn-lg" href="index.html#contact">Send a Message</a>
+    </div>
+  </section>
 
   <!-- Footer -->
-  <footer>
+  <footer class="site-footer">
     <div class="container">
-      <a href="#"><img alt="" src="images/logo1.png" /></a>
-      <p>2026 &copy; <a href="#">Medley Networks</a> All Rights Reserved.</p>
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a class="brand" href="index.html"><img src="images/logo-L.png" alt="Medley Networks"></a>
+          <p>End-to-end technology services and talent staffing for the telecommunications and IT industries — delivered by people who have done the work.</p>
+        </div>
+        <div>
+          <h4>Services</h4>
+          <ul>
+            <li><a href="rf-engineering.html">RF Engineering</a></li>
+            <li><a href="rf-compliance.html">RF Compliance</a></li>
+            <li><a href="staffing.html">Staffing Solutions</a></li>
+            <li><a href="it-services.html">IT Services</a></li>
+            <li><a href="field-services.html">Field Services</a></li>
+            <li><a href="emerging-technologies.html">Emerging Technologies</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Company</h4>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="index.html#about">About Us</a></li>
+            <li><a href="index.html#store">Store</a></li>
+            <li><a href="index.html#contact">Contact</a></li>
+            <li><a href="privacy-policy.html">Privacy Policy</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Contact</h4>
+          <ul>
+            <li>239 New Road, Suite B202</li>
+            <li>Parsippany, NJ 07054</li>
+            <li><a href="tel:+19739090919">(973) 909-0919</a></li>
+            <li><a href="mailto:info@medleynetworks.com">info@medleynetworks.com</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <div class="container">
+          <p>&copy; 2026 Medley Networks Inc. All rights reserved.</p>
+          <p>Parsippany, New Jersey</p>
+        </div>
+      </div>
     </div>
   </footer>
 
-  <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
-  <script src="js/waypoints.min.js"></script>
-  <script src="js/script.js"></script>
-  <script src="js/bootstrap.min.js"></script>
+  <script src="js/main.js"></script>
 </body>
-
 </html>

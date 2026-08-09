@@ -1,759 +1,258 @@
 <!doctype html>
-<html>
-
+<html lang="en">
 <head>
   <meta charset="utf-8">
-  <title>Medley Networks</title>
-
-  <!--META-->
-  <meta name="viewport" content="width=device-width initial-scale=1.0">
-
-  <!--FONTS-->
-  <link href='https://fonts.googleapis.com/css?family=Raleway:900,300,700' rel='stylesheet' type='text/css'>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Montserrat:wght@700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.2/css/font-awesome.min.css">
-  <!--CSS-->
-  <link rel="stylesheet" type="text/css" href="css/grid.css">
-  <link rel="stylesheet" type="text/css" href="style.css">
-  <link rel="stylesheet" type="text/css" href="css/layout.css">
-  <link rel="stylesheet" type="text/css" href="css/style2.css" />
-  <link rel="stylesheet" type="text/css" href="css/jquery.bxslider.css">
-  <link rel="stylesheet" type="text/css" href="css/responsive.css">
-  <link rel="stylesheet" type="text/css" href="css/animate.css">
-  <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
-  <!--<link rel="stylesheet" type="text/css" href="css/custom.css">-->
-  <link rel="stylesheet" type="text/css" href="css/ionicons.min.css">
-  <link rel="preload" href="images/banner.jpg" as="image">
-
-  <style>
-    .imgDescription2 {
-      background: rgba(0,0,0,0.6) !important;
-      border: none !important;
-      visibility: visible !important;
-      opacity: 1 !important;
-    }
-    .imgDescription2InnerContent {
-      visibility: visible !important;
-      opacity: 1 !important;
-      padding-top: 0 !important;
-    }
-    .imgDescription2InnerContent ul {
-      display: none !important;
-    }
-  </style>
-
-  <!--JS-->
-  <script type="text/javascript">
-    var embedCode = '<iframe src="https://www.youtube.com/embed/-CpvBYE-rd8?rel=0&autoplay=1" frameborder="0" allowfullscreen></iframe>'
-  </script>
-  <script src="js/modernizr.custom.js"></script>
-
-
-  <style>
-    .disableClick {
-      pointer-events: none;
-    }
-
-    .button {
-      background-color: #d84012;
-      border: none;
-      color: white;
-      padding: 10px;
-      text-align: center;
-      text-decoration: none;
-      /*text-transform: lowercase;*/
-      line-height: 12px;
-      display: block;
-      font-family: 'Shonar Bangla';
-      font-size: 18px;
-      margin: 0;
-      cursor: pointer;
-    }
-
-    .button2 {
-      background-color: #4CAF50;
-      /* Green */
-      border: none;
-      color: white;
-      padding: 15px 32px;
-      text-align: center;
-      text-decoration: none;
-      display: inline-block;
-      font-size: 16px;
-    }
-
-    input[type="file"] {
-      border: none;
-      color: #F30;
-      padding: 0px 0px;
-      text-align: center;
-      text-decoration: none;
-      display: inline-block;
-      font-family: 'Shonar Bangla';
-      font-size: 16px;
-      margin: 0px auto;
-      cursor: pointer;
-      display: inline-block;
-    }
-
-    .custom-file-upload {
-      /*border: 1px solid #ccc;
-        display: inline-block;
-        padding: 6px 12px;
-        cursor: pointer;*/
-      background-color: #d84012;
-      border: none;
-      color: white;
-      padding: 0px 15px;
-      text-align: center;
-      text-decoration: none;
-      display: inline-block;
-      font-size: 14px;
-      margin: 0px 0px;
-      cursor: pointer;
-      display: inline-block;
-    }
-
-    /* Style the buttons that are used to open and close the accordion panel */
-    .accordion {
-      background-color: #eee;
-      color: #444;
-      cursor: pointer;
-      padding: 18px;
-      width: 100%;
-      text-align: left;
-      border: none;
-      outline: none;
-      transition: 0.4s;
-    }
-
-    .active,
-    .accordion:hover {
-      background-color: #ccc;
-    }
-
-    .panel {
-      padding: 0 18px;
-      background-color: white;
-      display: none;
-      overflow: hidden;
-    }
-
-    .navbar-brand img {
-      max-width: 100px;
-      height: auto;
-    }
-
-    .homebanner img {
-      max-width: 100%;
-      height: auto;
-    }
-
-    #rf_hazard_accordion {
-      width: 100%;
-    }
-
-    .panel img {
-      max-width: 100%;
-      height: auto;
-      display: block;
-      margin: 15px auto;
-      border: 1px solid #ddd;
-    }
-
-    .images {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 2%;
-    }
-
-    .images img {
-      width: 25%;
-      height: auto;
-      object-fit: contain;
-      margin: 1rem;
-    }
-
-    .service-pills {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 10px;
-      margin-top: 30px;
-    }
-
-    .service-pill {
-      display: inline-block;
-      padding: 8px 18px;
-      font-size: 13px;
-      font-weight: 600;
-      color: #fff;
-      background: #d84012;
-      border-radius: 20px;
-      white-space: nowrap;
-    }
-  </style>
-
-  <style>
-    /* ===== Services tiles (from service-tiles-photos.html) ===== */
-    #portfoliolist.grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 22px;
-      max-width: 1080px;
-      margin: 0 auto;
-    }
-
-    #portfoliolist .tile {
-      background: #ffffff;
-      border-radius: 16px;
-      overflow: hidden;
-      border: 1px solid #dde8f0;
-      box-shadow: 0 4px 18px rgba(26, 58, 92, .07);
-      display: flex;
-      flex-direction: column;
-      transition: transform .22s ease, box-shadow .22s ease;
-      cursor: pointer;
-    }
-
-    #portfoliolist .tile:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 14px 36px rgba(26, 58, 92, .15);
-    }
-
-    #portfoliolist .tile-img-wrap {
-      width: 100%;
-      aspect-ratio: 16/9;
-      overflow: hidden;
-      background: #d0dce8;
-      position: relative;
-    }
-
-    #portfoliolist .tile-img-wrap img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      display: block;
-      transition: transform .4s ease;
-    }
-
-    #portfoliolist .tile:hover .tile-img-wrap img {
-      transform: scale(1.05);
-    }
-
-    #portfoliolist .tile-img-wrap::before {
-      content: '';
-      position: absolute;
-      inset: 0;
-      background: linear-gradient(to bottom, transparent 40%, rgba(10, 20, 40, .55) 100%);
-      z-index: 1;
-    }
-
-    #portfoliolist .tile-label {
-      position: absolute;
-      bottom: 12px;
-      left: 14px;
-      z-index: 2;
-      font-family: 'Montserrat', 'Raleway', sans-serif;
-      font-size: 12px;
-      font-weight: 800;
-      letter-spacing: .08em;
-      text-transform: uppercase;
-      color: #fff;
-      background: var(--accent, #1e6fa5);
-      padding: 4px 10px;
-      border-radius: 4px;
-    }
-
-    #portfoliolist .tile:nth-child(1) { --accent: #1e6fa5; }
-    #portfoliolist .tile:nth-child(2) { --accent: #2e9fd8; }
-    #portfoliolist .tile:nth-child(3) { --accent: #f0932b; }
-    #portfoliolist .tile:nth-child(4) { --accent: #6c5ce7; }
-    #portfoliolist .tile:nth-child(5) { --accent: #1abc9c; }
-    #portfoliolist .tile:nth-child(6) { --accent: #27ae60; }
-
-    #portfoliolist .tile-img-wrap::after {
-      content: '';
-      position: absolute;
-      bottom: 0;
-      left: 0;
-      right: 0;
-      height: 3px;
-      background: var(--accent, #1e6fa5);
-      z-index: 3;
-    }
-
-    #portfoliolist .tile-body {
-      padding: 18px 20px 20px;
-      flex: 1;
-      display: flex;
-      flex-direction: column;
-    }
-
-    #portfoliolist .tile-body h3 {
-      font-family: 'Montserrat', 'Raleway', sans-serif;
-      font-size: 15px;
-      font-weight: 800;
-      letter-spacing: normal;
-      text-transform: none;
-      color: #1a3a5c;
-      margin-bottom: 6px;
-      line-height: 1.25;
-    }
-
-    #portfoliolist .tile-body p {
-      font-family: 'Inter', 'Raleway', sans-serif;
-      font-size: 13px;
-      color: #4a5e72;
-      line-height: 1.6;
-      flex: 1;
-      margin-bottom: 14px;
-    }
-
-    #portfoliolist .tile-link {
-      font-family: 'Inter', 'Raleway', sans-serif;
-      font-size: 12px;
-      font-weight: 700;
-      color: #1e6fa5;
-      text-decoration: none;
-      align-self: flex-start;
-      border-bottom: 2px solid transparent;
-      padding-bottom: 1px;
-      transition: color .2s, border-color .2s;
-    }
-
-    #portfoliolist .tile-link:hover {
-      color: #f0932b;
-      border-color: #f0932b;
-    }
-
-    @media (max-width: 720px) {
-      #portfoliolist.grid {
-        grid-template-columns: 1fr 1fr;
-      }
-    }
-
-    @media (max-width: 460px) {
-      #portfoliolist.grid {
-        grid-template-columns: 1fr;
-      }
-    }
-  </style>
-
-
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Medley Networks | Telecom, IT & Staffing Solutions</title>
+  <meta name="description" content="Medley Networks delivers RF engineering, RF compliance, field services, IT solutions, and talent staffing to carriers, tower companies, and enterprises across the United States.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/site.css">
 </head>
+<body>
 
-<body> <!-- Paste this code after body tag -->
+  <header class="site-header" id="siteHeader">
+    <div class="container header-inner">
+      <a class="brand" href="index.html" aria-label="Medley Networks home">
+        <img src="images/logo-L.png" alt="Medley Networks">
+      </a>
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle menu" aria-expanded="false" aria-controls="siteNav">
+        <span></span><span></span><span></span>
+      </button>
+      <nav class="site-nav" id="siteNav" aria-label="Primary">
+        <ul class="nav-list">
+          <li class="active"><a class="nav-link" href="index.html">Home</a></li>
+          <li class="has-dropdown">
+            <a class="nav-link" href="#services">Services</a>
+            <ul class="dropdown">
+              <li><a href="rf-engineering.html">RF Engineering</a></li>
+              <li><a href="rf-compliance.html">RF Compliance</a></li>
+              <li><a href="staffing.html">Staffing Solutions</a></li>
+              <li><a href="it-services.html">IT Services</a></li>
+              <li><a href="field-services.html">Field Services</a></li>
+              <li><a href="emerging-technologies.html">Emerging Technologies</a></li>
+            </ul>
+          </li>
+          <li><a class="nav-link" href="#store">Store</a></li>
+          <li><a class="nav-link" href="#contact">Contact</a></li>
+          <li><a class="btn btn-primary btn-sm nav-cta" href="mailto:info@medleynetworks.com">Get in Touch</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
 
-  <div class="se-pre-con">
-    <div class="cssload-square">
-      <div>
+  <!-- Hero -->
+  <section class="hero">
+    <div class="container">
+      <div class="brand-mark"><img src="images/logo-L.png" alt="Medley Networks"></div>
+      <h1>Engineering solutions for the networks that connect us.</h1>
+      <p class="hero-sub">RF engineering, RF compliance, field services, IT, and talent staffing — delivered by people who have built, tested, and optimized the networks themselves.</p>
+      <div class="hero-actions">
+        <a class="btn btn-primary btn-lg" href="#services">Explore Our Services</a>
+        <a class="btn btn-outline-light btn-lg" href="#contact">Contact Us</a>
+      </div>
+    </div>
+    <div class="hero-scroll">Scroll</div>
+  </section>
+
+  <!-- Introduction -->
+  <section id="introduction" class="section">
+    <div class="container">
+      <div class="section-head center">
+        <span class="eyebrow">Who We Are</span>
+        <h2 class="section-title">Full-service technology and staffing, one partner</h2>
+        <p class="lead">Medley Networks delivers end-to-end solutions across Telecommunications, Information Technology, and Talent Staffing. Our professionals bring deep, hands-on experience across the full network lifecycle — from 4G LTE and 5G NR deployments to Private Wireless Networks, C-RAN, and Fixed Wireless Access — as well as software development, cloud infrastructure, data analytics, and AI-driven applications.</p>
+        <p class="lead">Beyond technology, we are a people business. Medley's staffing division places skilled professionals — RF engineers, field technicians, IT specialists, finance professionals, and administrative staff — with some of the most recognized names in the telecom and technology industries. Whether you need a technical team to deliver a project or the right hire to grow your organization, Medley Networks is your trusted partner.</p>
+        <p class="lead">Headquartered in Parsippany, NJ, we combine the agility of a specialized firm with the capabilities of a full-service technology and staffing organization — built on a commitment to quality, speed, and lasting client relationships.</p>
+      </div>
+      <div class="tags text-center" style="justify-content:center;">
+        <span class="tag">5G &amp; 4G LTE</span>
+        <span class="tag">RF Engineering</span>
+        <span class="tag">RF Compliance</span>
+        <span class="tag">Field Services</span>
+        <span class="tag">IT &amp; Cloud</span>
+        <span class="tag">Talent Staffing</span>
+        <span class="tag">AI &amp; Emerging Tech</span>
+        <span class="tag">Private Wireless</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- About -->
+  <section id="about" class="section section-alt">
+    <div class="container">
+      <div class="section-head">
+        <span class="eyebrow">About Us</span>
+        <h2 class="section-title">A partner that understands the work, because we've done it</h2>
+      </div>
+      <div class="grid grid-wide mb-48">
         <div>
+          <p>Medley Networks is an independent provider of technology services, staffing solutions, and specialized expertise — operating at the intersection of Telecommunications, Information Technology, and Workforce Solutions. Headquartered in Parsippany, NJ, we serve carriers, tower companies, technology firms, and enterprises across the United States.</p>
+          <p>We are not a single-service company. Our professionals support the full project lifecycle — from RF design and 5G network optimization to field construction, RF compliance, IT application development, cloud services, and AI-powered solutions. Alongside our technical services, our staffing division places skilled professionals across Telecom, IT, Healthcare, Finance, and Professional Services — on contract, contract-to-hire, and direct placement engagements.</p>
+          <p>What sets Medley apart is domain depth. Our team has built networks, designed RF solutions, and managed projects from the ground up. That firsthand expertise shapes the way we deliver services and the way we evaluate talent — ensuring our clients and candidates are always working with people who understand the work at a technical level.</p>
+          <p>Medley Networks is built on three operating principles: client problems are our problems; complex processes reduce quality, so we simplify relentlessly; and people are the foundation of any organization — we develop ours, and we place the best in yours.</p>
+        </div>
+        <div class="grid">
+          <div class="card accent-border">
+            <h3>Client-First Mindset</h3>
+            <p class="card-body">Your challenges are our challenges. We align every engagement around delivering measurable outcomes — on time and within scope.</p>
+          </div>
+          <div class="card">
+            <h3>Process Excellence</h3>
+            <p class="card-body">We continuously simplify and improve how we work — so our teams deliver faster, and our clients experience fewer friction points.</p>
+          </div>
+          <div class="card">
+            <h3>People as a Priority</h3>
+            <p class="card-body">Great outcomes come from great people. We invest in developing our team and place only rigorously vetted professionals with our clients.</p>
+          </div>
+        </div>
+      </div>
+      <div class="card" style="background:var(--bg-soft); border-color:var(--line);">
+        <div class="grid grid-2" style="gap:40px; align-items:start;">
           <div>
-            <div>
-              <div></div>
+            <h3 style="font-size:20px;">AI-Powered Delivery &amp; Staffing</h3>
+            <p style="font-size:15px;">Medley Networks integrates AI-driven tools across both our project delivery and staffing operations. On the delivery side, we leverage AI for network performance analytics, RF optimization modeling, and automated reporting — enabling faster, more accurate outcomes for our telecom clients.</p>
+          </div>
+          <p style="font-size:15px; margin:0;">In staffing, our AI-assisted candidate sourcing and screening pipeline accelerates matching, reduces time-to-fill, and surfaces higher-quality candidates earlier in the process — so clients spend less time reviewing resumes and more time meeting the right people.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Services -->
+  <section id="services" class="section">
+    <div class="container">
+      <div class="section-head center">
+        <span class="eyebrow">What We Do</span>
+        <h2 class="section-title">Services across the full network lifecycle</h2>
+        <p class="lead">Six integrated practices — one accountable team, from design through deployment and beyond.</p>
+      </div>
+
+      <div class="grid grid-3">
+        <div class="tile">
+          <a href="rf-engineering.html">
+            <div class="tile-media">
+              <img src="images/ServicesEngneering.jpg" alt="RF engineer reviewing network design" loading="lazy"
+                onerror="this.onerror=null;this.src='https://images.unsplash.com/photo-1519389950473-47ba0277781c?w=640&q=80&fit=crop'">
             </div>
-          </div>
-        </div>
-      </div>
-      <div>
-        <div>
-          <div>
-            <div>
-              <div></div>
+            <div class="tile-body">
+              <h3>RF Engineering</h3>
+              <p>Network design, KPI optimization &amp; drive testing for 4G LTE, 5G NR, small cells &amp; in-building systems.</p>
+              <span class="tile-more">Learn more</span>
             </div>
-          </div>
+          </a>
         </div>
-      </div>
-    </div>
-    <div class="cssload-square cssload-two">
-      <div>
-        <div>
-          <div>
-            <div>
-              <div></div>
+
+        <div class="tile">
+          <a href="rf-compliance.html">
+            <div class="tile-media">
+              <img src="images/rf_compliance.webp" alt="RF compliance assessment on a tower site" loading="lazy"
+                onerror="this.onerror=null;this.src='https://images.unsplash.com/photo-1614064641938-3bbee52942c7?w=640&q=80&fit=crop'">
             </div>
-          </div>
-        </div>
-      </div>
-      <div>
-        <div>
-          <div>
-            <div>
-              <div></div>
+            <div class="tile-body">
+              <h3>RF Compliance</h3>
+              <p>FCC/OSHA RF exposure assessments, EME surveys, mitigation, jurisdictional reports &amp; compliant hazard signage.</p>
+              <span class="tile-more">Learn more</span>
             </div>
-          </div>
+          </a>
+        </div>
+
+        <div class="tile">
+          <a href="staffing.html">
+            <div class="tile-media">
+              <img src="images/ServicesManagement.jpg" alt="Professionals collaborating" loading="lazy"
+                onerror="this.onerror=null;this.src='https://images.unsplash.com/photo-1600880292203-757bb62b4baf?w=640&q=80&fit=crop'">
+            </div>
+            <div class="tile-body">
+              <h3>Staffing Solutions</h3>
+              <p>End-to-end talent placement across Telecom, IT, Healthcare, Finance &amp; Professional Services.</p>
+              <span class="tile-more">Learn more</span>
+            </div>
+          </a>
+        </div>
+
+        <div class="tile">
+          <a href="it-services.html">
+            <div class="tile-media">
+              <img src="images/cell-towers-1.jpg" alt="Network infrastructure" loading="lazy"
+                onerror="this.onerror=null;this.src='https://images.unsplash.com/photo-1461749280684-dccba630e2f6?w=640&q=80&fit=crop'">
+            </div>
+            <div class="tile-body">
+              <h3>IT Services</h3>
+              <p>Software development, cloud migration, cybersecurity, data analytics &amp; managed IT support.</p>
+              <span class="tile-more">Learn more</span>
+            </div>
+          </a>
+        </div>
+
+        <div class="tile">
+          <a href="field-services.html">
+            <div class="tile-media">
+              <img src="images/field_services.webp" alt="Field technician servicing telecom equipment" loading="lazy"
+                onerror="this.onerror=null;this.src='https://images.unsplash.com/photo-1581092580497-e0d23cbdf1dc?w=640&q=80&fit=crop'">
+            </div>
+            <div class="tile-body">
+              <h3>Field Services</h3>
+              <p>BBU swaps, router migration, SiteBoss installation, optical integration &amp; functional call testing nationwide.</p>
+              <span class="tile-more">Learn more</span>
+            </div>
+          </a>
+        </div>
+
+        <div class="tile">
+          <a href="emerging-technologies.html">
+            <div class="tile-media">
+              <img src="images/emerging_technologies.jpg" alt="Emerging technology and innovation" loading="lazy"
+                onerror="this.onerror=null;this.src='https://images.unsplash.com/photo-1677442136019-21780ecad995?w=640&q=80&fit=crop'">
+            </div>
+            <div class="tile-body">
+              <h3>Emerging Technologies</h3>
+              <p>AI &amp; ML, private wireless, fixed wireless access, edge computing, SDN/NFV &amp; cloud-native infrastructure.</p>
+              <span class="tile-more">Learn more</span>
+            </div>
+          </a>
         </div>
       </div>
     </div>
-  </div> <!-- Ends -->
+  </section>
 
-  <section id="navigation">
-    <nav role="navigation" class="navbar navbar-default navbar-fixed-top">
-      <div class="container-fluid">
-        <div class="navbar-header"> <button data-toggle="collapse" data-target="#bs-example-navbar-collapse-1"
-            class="navbar-toggle" type="button">&nbsp;</button> <a
-            style="margin: 0px; padding: 5px 0px 0px; vertical-align: middle !important;" class="navbar-brand"
-            href="#home"> <img alt=""
-              style="height: 40px; width: 100px; margin: 0px; padding: 0px; vertical-align: middle !important;"
-              src="images/logo-L.png" /> </a>
-        </div> <!-- Office address section -->
-        <!--
-      
-      
-      
-      
-      
-      
-      
-      <div style="font-size: small; padding-left: 20px; padding-right: 20px; display: block; line-height: 1.2em;" class="clearfix navbar-static-top navbar-right"> 
-        <div style="margin: 0px; vertical-align: bottom; padding: 0px;">                        181 New Road, Suite#304,
-                        Parsippany NJ 07054
-                    
-        
-        
-        
-        
-        
-        
-        
-        </div> 
-        <div style="margin: 0px; vertical-align: bottom; padding: 0px;">                        Phone: (973)909-0919
-                    
-        
-        
-        
-        
-        
-        
-        
-        </div> 
-        <div style="margin: 0px; vertical-align: bottom; padding: 0px;">                        Email: sgupta@medleynetworks.com
-                    
-        
-        
-        
-        
-        
-        
-        
-        </div> 
-      </div>-->
-        <!-- Office address section Ends -->
-
-
-
-
-
-
-
-
-        <div id="bs-example-navbar-collapse-1" class="collapse navbar-collapse">
-          <ul style="vertical-align: bottom !important;" class="nav navbar-nav navbar-right">
-            <li style="font-size: 14px; font-family: Arial, sans-serif;"><a href="#home">Home</a></li>
-            <li style="font-size: 14px; font-family: Arial, sans-serif;"><a href="#services">Services</a></li>
-            <li style="font-size: 14px; font-family: Arial, sans-serif;"><a href="/rf-engineering.html">RF Engineering</a></li>
-            <li style="font-size: 14px; font-family: Arial, sans-serif;"><a href="/rf-compliance.html">RF Compliance</a></li>
-            <li style="font-size: 14px; font-family: Arial, sans-serif;"><a href="/staffing.html">Staffing</a></li>
-            <li style="font-size: 14px; font-family: Arial, sans-serif;"><a href="/it-services.html">IT Services</a></li>
-            <li style="font-size: 14px; font-family: Arial, sans-serif;"><a href="/field-services.html">Field Services</a></li>
-            <li style="font-size: 14px; font-family: Arial, sans-serif;"><a href="/emerging-technologies.html">Emerging Technologies</a></li>
-            <li style="font-size: 14px; font-family: Arial, sans-serif;"><a href="#store">Store</a></li>
-            <li style="font-size: 14px; font-family: Arial, sans-serif;"><a href="#ContactUs">Contact Us</a></li>
-            <li style="font-size: 14px; font-family: Arial, sans-serif;"><a href="/privacy-policy.html">Privacy Policy</a></li>
-          </ul>
-        </div> <!-- collapse navbar-collapse -->
-
-
-
-
-
-
-
-
-      </div> <!-- container-fluid -->
-    </nav> <!-- navbar -->
-  </section> <!-- #navigation -->
-
-  <div id="home" class="homebanner">
+  <!-- Clients -->
+  <section id="clients" class="section section-alt">
     <div class="container">
-      <p>&nbsp;</p> <img alt="Medley Networks Logo" src="images/logo-L.png" />
-      <!--<h1 data-os-animation="bounceIn" data-os-animation-delay="0.2s" class="os-animation"><span style="color: rgb(216, 64, 18);">M</span>edley <span style="color: rgb(216, 64, 18);">N</span>etworks</h1>-->
-      <br />
-      <p data-os-animation="bounceIn" data-os-animation-delay="0.6s" class="os-animation">&nbsp;</p> <a
-        data-os-animation="bounceIn" data-os-animation-delay="0.8s" class="os-animation" href="#introduction"> <img
-          alt="" src="images/mouse.png" /> </a>
-    </div>
-  </div>
-  <div id="introduction" class="intro">
-    <div class="container">
-      <h2 data-os-animation="zoomIn" data-os-animation-delay="0.3s" class="os-animation">Introduction</h2>
-      <div><br /></div>
-      <p data-os-animation="zoomIn" data-os-animation-delay="0.5s" style="text-align: justify; margin-bottom: 15px;"
-        class="os-animation">
-        Medley Networks delivers end-to-end solutions across Telecommunications, Information Technology, and Talent
-        Staffing. Our professionals bring deep, hands-on experience across the full network lifecycle — from 4G LTE and
-        5G NR deployments to Private Wireless Networks, C-RAN, and Fixed Wireless Access — as well as software
-        development, cloud infrastructure, data analytics, and AI-driven applications.
-      </p>
-      <p data-os-animation="zoomIn" data-os-animation-delay="0.7s" style="text-align: justify; margin-bottom: 15px;"
-        class="os-animation">
-        Beyond technology, we are a people business. Medley's staffing division places skilled professionals — RF
-        engineers, field technicians, IT specialists, finance professionals, and administrative staff — with some of the
-        most recognized names in the telecom and technology industries. Whether you need a technical team to deliver a
-        project or the right hire to grow your organization, Medley Networks is your trusted partner.
-      </p>
-      <p data-os-animation="zoomIn" data-os-animation-delay="0.9s" style="text-align: justify;" class="os-animation">
-        Headquartered in Parsippany, NJ, we combine the agility of a specialized firm with the capabilities of a
-        full-service technology and staffing organization — built on a commitment to quality, speed, and lasting client
-        relationships.
-      </p>
-      <div data-os-animation="zoomIn" data-os-animation-delay="1.1s" class="os-animation service-pills">
-        <span class="service-pill">5G &amp; 4G LTE</span>
-        <span class="service-pill">RF Engineering</span>
-        <span class="service-pill">RF Compliance</span>
-        <span class="service-pill">Field Services</span>
-        <span class="service-pill">IT &amp; Cloud</span>
-        <span class="service-pill">Talent Staffing</span>
-        <span class="service-pill">AI &amp; Emerging Tech</span>
-        <span class="service-pill">Private Wireless</span>
+      <div class="section-head center">
+        <span class="eyebrow">Our Clients</span>
+        <h2 class="section-title">Trusted by leaders across telecom &amp; technology</h2>
+      </div>
+      <div class="logos">
+        <img src="images/adroit.png" alt="Adroit" loading="lazy">
+        <img src="images/arium_networks.png" alt="Arium Networks" loading="lazy">
+        <img src="images/crown_castle_logo.png" alt="Crown Castle" loading="lazy">
+        <img src="images/ericsson_logo.png" alt="Ericsson" loading="lazy">
+        <img src="images/Tmobile_logo.png" alt="T-Mobile" loading="lazy">
+        <img src="images/ucs.png" alt="UCS" loading="lazy">
+        <img src="images/verizon_logo.png" alt="Verizon" loading="lazy">
+        <img src="images/yupana_logo.png" alt="Yupana" loading="lazy">
       </div>
     </div>
-  </div>
-  <div class="lapy"> <a data-os-animation="flipInX" data-os-animation-delay="0.5s" class="os-animation disableClick"
-      href="#">Pure Creativity</a>
-  </div>
-  <div id="AboutUs" class="intro">
+  </section>
+
+  <!-- Store: RF Hazard Signs -->
+  <section id="store" class="section">
     <div class="container">
-      <h2 data-os-animation="flash" data-os-animation-delay="0.3s" class="os-animation">About Us</h2>
-      <br /><br />
-      <p data-os-animation="fadeIn" data-os-animation-delay="0.5s" style="text-align: justify; margin-bottom: 15px;"
-        class="os-animation">
-        Medley Networks is an independent provider of technology services, staffing solutions, and specialized expertise
-        — operating at the intersection of Telecommunications, Information Technology, and Workforce Solutions.
-        Headquartered in Parsippany, NJ, we serve carriers, tower companies, technology firms, and enterprises across
-        the United States.
-      </p>
-      <p data-os-animation="fadeIn" data-os-animation-delay="0.7s" style="text-align: justify; margin-bottom: 15px;"
-        class="os-animation">
-        We are not a single-service company. Our professionals support the full project lifecycle — from RF design and
-        5G network optimization to field construction, RF compliance, IT application development, cloud services, and
-        AI-powered solutions. Alongside our technical services, our staffing division places skilled professionals
-        across Telecom, IT, Healthcare, Finance, and Professional Services — on contract, contract-to-hire, and direct
-        placement engagements.
-      </p>
-      <p data-os-animation="fadeIn" data-os-animation-delay="0.9s" style="text-align: justify; margin-bottom: 15px;"
-        class="os-animation">
-        What sets Medley apart is domain depth. Our team has built networks, designed RF solutions, and managed projects
-        from the ground up. That firsthand expertise shapes the way we deliver services and the way we evaluate talent —
-        ensuring our clients and candidates are always working with people who understand the work at a technical level.
-      </p>
-
-      <!-- Three Principles (Bootstrap row matching existing site grid) -->
-      <div class="row os-animation" data-os-animation="fadeIn" data-os-animation-delay="1.1s"
-        style="margin-top: 40px; margin-bottom: 30px;">
-        <div class="col-md-4" style="text-align: left; margin-bottom: 25px;">
-          <h3 style="font-size: 18px; color: #d87843; margin-bottom: 10px;">Client-First Mindset</h3>
-          <span class="line2" style="margin: 0 0 15px 0;"></span>
-          <p style="font-size: 20px; line-height: 32px;">Your challenges are our challenges. We align every engagement
-            around delivering measurable outcomes — on time and within scope.</p>
-        </div>
-        <div class="col-md-4" style="text-align: left; margin-bottom: 25px;">
-          <h3 style="font-size: 18px; color: #222; margin-bottom: 10px;">Process Excellence</h3>
-          <span class="line2" style="margin: 0 0 15px 0;"></span>
-          <p style="font-size: 20px; line-height: 32px;">We continuously simplify and improve how we work — so our teams
-            deliver faster, and our clients experience fewer friction points.</p>
-        </div>
-        <div class="col-md-4" style="text-align: left; margin-bottom: 25px;">
-          <h3 style="font-size: 18px; color: #d87843; margin-bottom: 10px;">People as a Priority</h3>
-          <span class="line2" style="margin: 0 0 15px 0;"></span>
-          <p style="font-size: 20px; line-height: 32px;">Great outcomes come from great people. We invest in developing
-            our team and place only rigorously vetted professionals with our clients.</p>
-        </div>
+      <div class="section-head">
+        <span class="eyebrow">Store</span>
+        <h2 class="section-title">RF Hazard Signs &amp; Material</h2>
+        <p class="lead">FCC-compliant RF safety signage manufactured to ANSI Z535 and IEEE C95.2 standards for carriers, tower owners, and site operators.</p>
       </div>
 
-      <p data-os-animation="fadeIn" data-os-animation-delay="1.3s" style="text-align: justify; margin-bottom: 30px;"
-        class="os-animation">
-        Medley Networks is built on three operating principles: client problems are our problems; complex processes
-        reduce quality, so we simplify relentlessly; and people are the foundation of any organization — we develop
-        ours, and we place the best in yours.
-      </p>
+      <div class="accordion">
 
-      <!-- AI section styled to match the site's existing .hire box -->
-      <div class="os-animation" data-os-animation="fadeIn" data-os-animation-delay="1.5s"
-        style="padding: 30px 40px 30px; text-align: left; margin-top: 10px; margin-bottom: 10px; background: #f4f4f4;">
-        <h3 style="font-size: 22px; letter-spacing: 3px; color: #222; margin-bottom: 15px;">AI-Powered Delivery &amp;
-          Staffing</h3>
-        <span class="line2" style="margin: 0 0 20px 0;"></span>
-        <p style="font-size: 20px; line-height: 32px; text-align: justify;">
-          Medley Networks integrates AI-driven tools across both our project delivery and staffing operations. On the
-          delivery side, we leverage AI for network performance analytics, RF optimization modeling, and automated
-          reporting — enabling faster, more accurate outcomes for our telecom clients. In staffing, our AI-assisted
-          candidate sourcing and screening pipeline accelerates matching, reduces time-to-fill, and surfaces
-          higher-quality candidates earlier in the process — so clients spend less time reviewing resumes and more time
-          meeting the right people.
-        </p>
-      </div>
-    </div>
-  </div>
-  <div id="services" class="intro">
-    <div class="container">
-      <h2 data-os-animation="flash" data-os-animation-delay="0.3s" class="os-animation">Services</h2>
-      <br /><br />
-      <div id="portfoliolist" class="grid">
-
-        <div class="tile">
-          <a href="/rf-engineering.html" style="display: block; text-decoration: none; color: inherit;">
-          <div class="tile-img-wrap">
-            <img
-              src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?w=640&q=80&fit=crop&crop=top"
-              alt="RF Engineering – network planning"
-              onerror="this.src='https://images.unsplash.com/photo-1504384308090-c894fdcc538d?w=640&q=80&fit=crop'"
-              loading="lazy"
-            />
-            <span class="tile-label">RF Engineering</span>
-          </div>
-          <div class="tile-body">
-            <h3>RF Engineering</h3>
-            <p>Network design, KPI optimization &amp; drive testing for 4G LTE, 5G NR, small cells &amp; in-building systems.</p>
-          </div>
-          </a>
-        </div>
-
-        <div class="tile">
-          <a href="/rf-compliance.html" style="display: block; text-decoration: none; color: inherit;">
-          <div class="tile-img-wrap">
-            <img
-              src="images/rf_compliance.jpeg"
-              alt="RF Compliance – antenna measurement"
-              onerror="this.src='https://images.unsplash.com/photo-1614064641938-3bbee52942c7?w=640&q=80&fit=crop&crop=center'"
-              loading="lazy"
-            />
-            <span class="tile-label">RF Compliance</span>
-          </div>
-          <div class="tile-body">
-            <h3>RF Compliance</h3>
-            <p>FCC/OSHA RF exposure assessments, EME surveys, mitigation, jurisdictional reports &amp; compliant hazard signage.</p>
-          </div>
-          </a>
-        </div>
-
-        <div class="tile">
-          <a href="/staffing.html" style="display: block; text-decoration: none; color: inherit;">
-          <div class="tile-img-wrap">
-            <img
-              src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?w=640&q=80&fit=crop&crop=top"
-              alt="Staffing – professional team"
-              onerror="this.src='https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=640&q=80&fit=crop'"
-              loading="lazy"
-            />
-            <span class="tile-label">Staffing Solutions</span>
-          </div>
-          <div class="tile-body">
-            <h3>Staffing Solutions</h3>
-            <p>End-to-end talent placement across Telecom, IT, Healthcare, Finance &amp; Professional Services.</p>
-          </div>
-          </a>
-        </div>
-
-        <div class="tile">
-          <a href="/it-services.html" style="display: block; text-decoration: none; color: inherit;">
-          <div class="tile-img-wrap">
-            <img
-              src="https://images.unsplash.com/photo-1461749280684-dccba630e2f6?w=640&q=80&fit=crop&crop=center"
-              alt="IT Services – software development"
-              onerror="this.src='https://images.unsplash.com/photo-1518770660439-4636190af475?w=640&q=80&fit=crop'"
-              loading="lazy"
-            />
-            <span class="tile-label">IT Services</span>
-          </div>
-          <div class="tile-body">
-            <h3>IT Services</h3>
-            <p>Software development, cloud migration, cybersecurity, data analytics &amp; managed IT support.</p>
-          </div>
-          </a>
-        </div>
-
-        <div class="tile">
-          <a href="/field-services.html" style="display: block; text-decoration: none; color: inherit;">
-          <div class="tile-img-wrap">
-            <img
-              src="images/field_services.jpeg"
-              alt="Field Services – technician equipment"
-              onerror="this.src='https://images.unsplash.com/photo-1581092580497-e0d23cbdf1dc?w=640&q=80&fit=crop&crop=center'"
-              loading="lazy"
-            />
-            <span class="tile-label">Field Services</span>
-          </div>
-          <div class="tile-body">
-            <h3>Field Services</h3>
-            <p>BBU swaps, router migration, SiteBoss installation, optical integration &amp; functional call testing nationwide.</p>
-          </div>
-          </a>
-        </div>
-
-        <div class="tile">
-          <a href="/emerging-technologies.html" style="display: block; text-decoration: none; color: inherit;">
-          <div class="tile-img-wrap">
-            <img
-              src="https://images.unsplash.com/photo-1677442136019-21780ecad995?w=640&q=80&fit=crop&crop=center"
-              alt="Emerging Technologies – AI 5G innovation"
-              onerror="this.src='https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=640&q=80&fit=crop'"
-              loading="lazy"
-            />
-            <span class="tile-label">Emerging Technologies</span>
-          </div>
-          <div class="tile-body">
-            <h3>Emerging Technologies</h3>
-            <p>AI &amp; ML, private wireless, fixed wireless access, edge computing, SDN/NFV &amp; cloud-native infrastructure.</p>
-          </div>
-          </a>
-        </div>
-
-      </div>
-    </div> <!--<a class="view" href="#">Show me more</a>-->
-  </div>
-
-  <div class="help"> <a data-os-animation="flipInX" data-os-animation-delay="0.5s" class="os-animation disableClick"
-      href="#">We’re here to help.</a>
-  </div>
-  <div id="clients" class="clients">
-    <div class="container">
-      <h2 data-os-animation="zoomIn" data-os-animation-delay="0.3s" class="os-animation">our clients</h2>
-      <div><br />
-      </div>
-      <div class="images">
-        <img data-os-animation="fadeIn" data-os-animation-delay="0.3s" alt="" class="os-animation"
-          src="images/adroit.png" loading="lazy" />
-        <img data-os-animation="fadeIn" data-os-animation-delay="0.5s" alt="" class="os-animation"
-          src="images/arium_networks.png" loading="lazy" />
-        <img data-os-animation="fadeIn" data-os-animation-delay="0.7s" alt="" class="os-animation"
-          src="images/crown_castle_logo.png" loading="lazy" />
-        <img data-os-animation="fadeIn" data-os-animation-delay="0.9s" alt="" class="os-animation"
-          src="images/ericsson_logo.png" loading="lazy" />
-        <br /> <br />
-        <img data-os-animation="fadeIn" data-os-animation-delay="1.1s" alt="" class="os-animation"
-          src="images/Tmobile_logo.png" loading="lazy" />
-        <img data-os-animation="fadeIn" data-os-animation-delay="1.3s" alt="" class="os-animation"
-          src="images/ucs.png" loading="lazy" />
-        <img data-os-animation="fadeIn" data-os-animation-delay="1.5s" alt="" class="os-animation"
-          src="images/verizon_logo.png" loading="lazy" />
-        <img data-os-animation="fadeIn" data-os-animation-delay="1.7s" alt="" class="os-animation"
-          src="images/yupana_logo.png" loading="lazy" />
-      </div>
-    </div>
-  </div>
-
-
-  <div id="store" class="intro">
-    <div class="container">
-      <h2 data-os-animation="zoomIn" data-os-animation-delay="0.3s" class="os-animation">RF Hazard Signs & Material</h2>
-      <br />
-      <div id="rf_hazard_accordion">
-        <div class="accordion-item">
-          <button class="accordion" id="rf_safety_signage_guidelines">RF Safety Signage: Guidelines</button>
-          <div class="panel">
+        <div class="acc-item">
+          <button class="acc-head" id="rf_safety_signage_guidelines" type="button">
+            RF Safety Signage: Guidelines <span class="acc-icon"></span>
+          </button>
+          <div class="acc-panel"><div class="acc-panel-inner">
             <b>7.5"(W) x 6"(H) VERIZON RF GUDIELINE SIGN (G7560AL)</b>
             <p>These aluminum GUIDELINE signs measure 7.5"(W) x 6"(H) with two 3/8" holes, one at the
               top and one at the bottom are coated with an industrial strength UV inhibitor for added
@@ -765,14 +264,15 @@
               the access point along with the NOC sign to inform of the general radio frequency safety
               guidelines.
             </p>
-            <img src="assets/rf_signs/rf_safety_signage_guidelines.png" alt="RF Assessment" loading="lazy">
-          </div>
+            <img src="assets/rf_signs/rf_safety_signage_guidelines.webp" alt="RF Safety Signage Guidelines" loading="lazy">
+          </div></div>
         </div>
 
-        <div class="accordion-item">
-          <button class="accordion" id="rf_information_signage_access_point_noc">RF Information Signage: Access Point
-            (NOC)</button>
-          <div class="panel">
+        <div class="acc-item">
+          <button class="acc-head" id="rf_information_signage_access_point_noc" type="button">
+            RF Information Signage: Access Point (NOC) <span class="acc-icon"></span>
+          </button>
+          <div class="acc-panel"><div class="acc-panel-inner">
             <b>7.5"(W) x 6"(H) VERIZON RF NOC SIGN (I7560AL)</b>
             <p>These aluminum NOC signs measure 7.5"(W) x 6"(H) with two 3/8" holes, one at the top and
               one at the bottom are coated with an industrial strength UV inhibitor for added
@@ -786,13 +286,15 @@
               exposure-related inquiries. In order for the NOC to properly identify the site, the
               mentioned signage elements must be placed in appropriate fields on all signage.
             </p>
-            <img src="assets/rf_signs/rf_information_signage_access_point_noc.png" alt="RF Assessment" loading="lazy">
-          </div>
+            <img src="assets/rf_signs/rf_information_signage_access_point_noc.webp" alt="RF Information Signage Access Point" loading="lazy">
+          </div></div>
         </div>
 
-        <div class="accordion-item">
-          <button class="accordion" id="notice_sign_landscape">Notice Sign (Landscape)</button>
-          <div class="panel">
+        <div class="acc-item">
+          <button class="acc-head" id="notice_sign_landscape" type="button">
+            Notice Sign (Landscape) <span class="acc-icon"></span>
+          </button>
+          <div class="acc-panel"><div class="acc-panel-inner">
             <b>7.5"(W) x 6"(H) VERIZON RF NOTICE SIGN (N7560AL)</b>
             <p>These aluminum NOTICE signs measure 7.5"(W) x 6"(H) with two 3/8" holes, one at the top
               and one at the bottom are coated with an industrial-strength UV inhibitor for added
@@ -804,13 +306,15 @@
               working in an area with a blue "NOTICE" must be supervised by an occupational worker
               with proper training.
             </p>
-            <img src="assets/rf_signs/notice_sign_landscape.png" alt="RF Assessment" loading="lazy">
-          </div>
+            <img src="assets/rf_signs/notice_sign_landscape.webp" alt="Notice Sign Landscape" loading="lazy">
+          </div></div>
         </div>
 
-        <div class="accordion-item">
-          <button class="accordion" id="notice_sign_portrait">Notice Sign (Portrait)</button>
-          <div class="panel">
+        <div class="acc-item">
+          <button class="acc-head" id="notice_sign_portrait" type="button">
+            Notice Sign (Portrait) <span class="acc-icon"></span>
+          </button>
+          <div class="acc-panel"><div class="acc-panel-inner">
             <b>6"(W) x 7.5 "(H) VERIZON RF NOTICE SIGN</b>
             <p>These aluminum NOTICE signs measure 6"(W) x 7.5 "(H) with two 3/8" holes, one at the top
               and one at the bottom are coated with an industrial strength UV inhibitor for added
@@ -822,13 +326,15 @@
               working in an area with a blue "NOTICE" must be supervised by an occupational worker
               with proper training.
             </p>
-            <img src="assets/rf_signs/notice_sign_portrait.png" alt="RF Assessment" loading="lazy">
-          </div>
+            <img src="assets/rf_signs/notice_sign_portrait.webp" alt="Notice Sign Portrait" loading="lazy">
+          </div></div>
         </div>
 
-        <div class="accordion-item">
-          <button class="accordion" id="notice_sign_left_arrow">Notice Sign (Left Arrow)</button>
-          <div class="panel">
+        <div class="acc-item">
+          <button class="acc-head" id="notice_sign_left_arrow" type="button">
+            Notice Sign (Left Arrow) <span class="acc-icon"></span>
+          </button>
+          <div class="acc-panel"><div class="acc-panel-inner">
             <b>7.5 "(W) x 6"(H) VERIZON RF NOTICE SIGN (NL6075AL)</b>
             <p>These aluminum NOTICE signs measure 7.5"(H) x 6 "(W) with two 3/8" holes, one at the top
               and one at the bottom are coated with an industrial strength UV inhibitor for added
@@ -843,13 +349,15 @@
               Trained transient personnel working in an area with a blue "NOTICE" must be supervised
               by an occupational worker with proper training.
             </p>
-            <img src="assets/rf_signs/notice_sign_left_arrow.png" alt="RF Assessment" loading="lazy">
-          </div>
+            <img src="assets/rf_signs/notice_sign_left_arrow.webp" alt="Notice Sign Left Arrow" loading="lazy">
+          </div></div>
         </div>
 
-        <div class="accordion-item">
-          <button class="accordion" id="notice_sign_right_arrow">Notice Sign (Right Arrow)</button>
-          <div class="panel">
+        <div class="acc-item">
+          <button class="acc-head" id="notice_sign_right_arrow" type="button">
+            Notice Sign (Right Arrow) <span class="acc-icon"></span>
+          </button>
+          <div class="acc-panel"><div class="acc-panel-inner">
             <b>7.5 "(W) x 6"(H) VERIZON RF NOTICE SIGN (NR6075AL)</b>
             <p>These aluminum NOTICE signs measure 7.5"(W) x 6 "(H) with two 3/8" holes, one at the top
               and one at the bottom are coated with an industrial strength UV inhibitor for added
@@ -864,13 +372,15 @@
               Trained transient personnel working in an area with a blue "NOTICE" must be supervised
               by an occupational worker with proper training.
             </p>
-            <img src="assets/rf_signs/notice_sign_right_arrow.png" alt="RF Assessment" loading="lazy">
-          </div>
+            <img src="assets/rf_signs/notice_sign_right_arrow.webp" alt="Notice Sign Right Arrow" loading="lazy">
+          </div></div>
         </div>
 
-        <div class="accordion-item">
-          <button class="accordion" id="stay_back_notice_small">Stay Back Notice (Small)</button>
-          <div class="panel">
+        <div class="acc-item">
+          <button class="acc-head" id="stay_back_notice_small" type="button">
+            Stay Back Notice (Small) <span class="acc-icon"></span>
+          </button>
+          <div class="acc-panel"><div class="acc-panel-inner">
             <b>7.5"(W) x 6"(H) VERIZON RF StayBack Notice SIGN (NS7560AL)</b>
             <p>These aluminum Stay Back Notice signs measure 7.5"(W) x 6"(H) with two 3/8" holes, one at the top
               and one at the bottom are coated with an industrial strength UV inhibitor for added
@@ -884,13 +394,15 @@
               When the primary means of administrative controls (i.e. barriers) cannot be feasibly
               installed due to various reasons, Stay Back should be used.
             </p>
-            <img src="assets/rf_signs/stay_back_notice_small.png" alt="RF Assessment" loading="lazy">
-          </div>
+            <img src="assets/rf_signs/stay_back_notice_small.webp" alt="Stay Back Notice Small" loading="lazy">
+          </div></div>
         </div>
 
-        <div class="accordion-item">
-          <button class="accordion" id="stay_back_notice_large">Stay Back Notice (Large)</button>
-          <div class="panel">
+        <div class="acc-item">
+          <button class="acc-head" id="stay_back_notice_large" type="button">
+            Stay Back Notice (Large) <span class="acc-icon"></span>
+          </button>
+          <div class="acc-panel"><div class="acc-panel-inner">
             <b>10"(W) x 7"(H) VERIZON RF StayBack Notice SIGN (NS1070AL)</b>
             <p>These aluminum Stay Back Notice signs measure 10"(W) x 7"(H) with two 3/8" holes, one at the top
               and one at the bottom are coated with an industrial strength UV inhibitor for added
@@ -904,13 +416,15 @@
               When the primary means of administrative controls (i.e. barriers) cannot be feasibly
               installed due to various reasons, Stay Back should be used.
             </p>
-            <img src="assets/rf_signs/stay_back_notice_large.png" alt="RF Assessment" loading="lazy">
-          </div>
+            <img src="assets/rf_signs/stay_back_notice_large.webp" alt="Stay Back Notice Large" loading="lazy">
+          </div></div>
         </div>
 
-        <div class="accordion-item">
-          <button class="accordion" id="caution_sign_portrait">Caution Sign (Portrait)</button>
-          <div class="panel">
+        <div class="acc-item">
+          <button class="acc-head" id="caution_sign_portrait" type="button">
+            Caution Sign (Portrait) <span class="acc-icon"></span>
+          </button>
+          <div class="acc-panel"><div class="acc-panel-inner">
             <b>7.5"(W) x 6"(H) VERIZON RF CAUTION SIGN (C7560AL)</b>
             <p>These aluminum CAUTION signs measure 6"(W) x 7.5 "(H) with two 3/8" holes, one at the top
               and one at the bottom are coated with an industrial strength UV inhibitor for added
@@ -925,13 +439,15 @@
               Trained transient personnel working in an area with a Yellow "CAUTION" must be
               supervised by an occupational worker with proper training.
             </p>
-            <img src="assets/rf_signs/caution_sign_portrait.png" alt="RF Assessment" loading="lazy">
-          </div>
+            <img src="assets/rf_signs/caution_sign_portrait.webp" alt="Caution Sign Portrait" loading="lazy">
+          </div></div>
         </div>
 
-        <div class="accordion-item">
-          <button class="accordion" id="caution_sign_landscape">Caution Sign (Landscape)</button>
-          <div class="panel">
+        <div class="acc-item">
+          <button class="acc-head" id="caution_sign_landscape" type="button">
+            Caution Sign (Landscape) <span class="acc-icon"></span>
+          </button>
+          <div class="acc-panel"><div class="acc-panel-inner">
             <b>7.5"(W) x 6"(H) VERIZON RF CAUTION SIGN (C7560AL)</b>
             <p>These aluminum CAUTION signs measure 7.5"(W) x 6"(H) with two 3/8" holes one at the top
               and one at the bottom and are coated with an industrial strength UV inhibitor for added
@@ -946,13 +462,15 @@
               Trained transient personnel working in an area with a Yellow "CAUTION" must be
               supervised by an occupational worker with proper training.
             </p>
-            <img src="assets/rf_signs/caution_sign_landscape.png" alt="RF Assessment" loading="lazy">
-          </div>
+            <img src="assets/rf_signs/caution_sign_landscape.webp" alt="Caution Sign Landscape" loading="lazy">
+          </div></div>
         </div>
 
-        <div class="accordion-item">
-          <button class="accordion" id="caution_sign_right_arrow">Caution Sign (Right Arrow)</button>
-          <div class="panel">
+        <div class="acc-item">
+          <button class="acc-head" id="caution_sign_right_arrow" type="button">
+            Caution Sign (Right Arrow) <span class="acc-icon"></span>
+          </button>
+          <div class="acc-panel"><div class="acc-panel-inner">
             <b>7.5 "(W) x 6"(H) VERIZON RF CAUTION SIGN(CR6075AL)</b>
             <p>These aluminum CAUTION signs measure 7.5"(W) x 6 "(H) with two 3/8" holes, one at the top
               and one at the bottom are coated with an industrial strength UV inhibitor for added
@@ -967,13 +485,15 @@
               Trained transient personnel working in an area with a Yellow "CAUTION" must be
               supervised by an occupational worker with proper training.
             </p>
-            <img src="assets/rf_signs/caution_sign_right_arrow.png" alt="RF Assessment" loading="lazy">
-          </div>
+            <img src="assets/rf_signs/caution_sign_right_arrow.webp" alt="Caution Sign Right Arrow" loading="lazy">
+          </div></div>
         </div>
 
-        <div class="accordion-item">
-          <button class="accordion" id="caution_sign_left_arrow">Caution Sign (Left Arrow)</button>
-          <div class="panel">
+        <div class="acc-item">
+          <button class="acc-head" id="caution_sign_left_arrow" type="button">
+            Caution Sign (Left Arrow) <span class="acc-icon"></span>
+          </button>
+          <div class="acc-panel"><div class="acc-panel-inner">
             <b>7.5 "(W) x 6"(H) VERIZON RF CAUTION SIGN(CL6075AL)</b>
             <p>These aluminum CAUTION signs measure 7.5"(W) x 6 "(H) with two 3/8" holes, one at the top
               and one at the bottom are coated with an industrial strength UV inhibitor for added
@@ -988,13 +508,15 @@
               Trained transient personnel working in an area with a Yellow "CAUTION" must be
               supervised by an occupational worker with proper training.
             </p>
-            <img src="assets/rf_signs/caution_sign_left_arrow.png" alt="RF Assessment" loading="lazy">
-          </div>
+            <img src="assets/rf_signs/caution_sign_left_arrow.webp" alt="Caution Sign Left Arrow" loading="lazy">
+          </div></div>
         </div>
 
-        <div class="accordion-item">
-          <button class="accordion" id="stay_back_caution_small">Stay Back Caution (Small)</button>
-          <div class="panel">
+        <div class="acc-item">
+          <button class="acc-head" id="stay_back_caution_small" type="button">
+            Stay Back Caution (Small) <span class="acc-icon"></span>
+          </button>
+          <div class="acc-panel"><div class="acc-panel-inner">
             <b>7.5"(W) x 6"(H) VERIZON RF StayBack Caution SIGN (CS7560AL)</b>
             <p>These aluminum Stay Back Caution signs measure 7.5"(W) x 6"(H) with two 3/8" holes, one at the top
               and one at the bottom are coated with an industrial strength UV inhibitor for added
@@ -1009,13 +531,15 @@
               When the primary means of administrative controls (i.e. barriers) cannot be feasibly
               installed due to various reasons, Stay Back should be used.
             </p>
-            <img src="assets/rf_signs/stay_back_caution_small.png" alt="RF Assessment" loading="lazy">
-          </div>
+            <img src="assets/rf_signs/stay_back_caution_small.webp" alt="Stay Back Caution Small" loading="lazy">
+          </div></div>
         </div>
 
-        <div class="accordion-item">
-          <button class="accordion" id="stay_back_caution_big">Stay Back Caution (Big)</button>
-          <div class="panel">
+        <div class="acc-item">
+          <button class="acc-head" id="stay_back_caution_big" type="button">
+            Stay Back Caution (Big) <span class="acc-icon"></span>
+          </button>
+          <div class="acc-panel"><div class="acc-panel-inner">
             <b>10"(W) x 7"(H) VERIZON RF StayBack Caution SIGN (CS1070AL)</b>
             <p>These aluminum Stay Back Caution signs measure 10"(W) x 7"(H) with two 3/8" holes, one at the top
               and one at the bottom are coated with an industrial strength UV inhibitor for added
@@ -1030,13 +554,15 @@
               When the primary means of administrative controls (i.e. barriers) cannot be feasibly
               installed due to various reasons, Stay Back should be used.
             </p>
-            <img src="assets/rf_signs/stay_back_caution_big.png" alt="RF Assessment" loading="lazy">
-          </div>
+            <img src="assets/rf_signs/stay_back_caution_big.webp" alt="Stay Back Caution Big" loading="lazy">
+          </div></div>
         </div>
 
-        <div class="accordion-item">
-          <button class="accordion" id="warning_sign_portrait">Warning Sign (Portrait)</button>
-          <div class="panel">
+        <div class="acc-item">
+          <button class="acc-head" id="warning_sign_portrait" type="button">
+            Warning Sign (Portrait) <span class="acc-icon"></span>
+          </button>
+          <div class="acc-panel"><div class="acc-panel-inner">
             <b>7.5"(H) x 6"(W) VERIZON RF WARNING SIGN (W7560AL)</b>
             <p>These aluminum WARNING signs measure 7.5"(H) x 6"(W) with two 3/8" holes one at the top
               and one at the bottom are coated with an industrial strength UV inhibitor for added
@@ -1050,13 +576,15 @@
               Trained transient personnel working in an area with a Red "WARNING" must be supervised
               by an occupational worker with proper training.
             </p>
-            <img src="assets/rf_signs/warning_sign_portrait.png" alt="RF Assessment" loading="lazy">
-          </div>
+            <img src="assets/rf_signs/warning_sign_portrait.webp" alt="Warning Sign Portrait" loading="lazy">
+          </div></div>
         </div>
 
-        <div class="accordion-item">
-          <button class="accordion" id="warning_sign_landscape">Warning Sign (Landscape)</button>
-          <div class="panel">
+        <div class="acc-item">
+          <button class="acc-head" id="warning_sign_landscape" type="button">
+            Warning Sign (Landscape) <span class="acc-icon"></span>
+          </button>
+          <div class="acc-panel"><div class="acc-panel-inner">
             <b>7.5"(W) x 6"(H) VERIZON RF WARNING SIGN (W7560AL)</b>
             <p>These aluminum WARNING signs measure 7.5"(W) x 6"(H) with two 3/8" holes, one at the top
               and one at the bottom are coated with an industrial strength UV inhibitor for added
@@ -1070,13 +598,15 @@
               Trained transient personnel working in an area with a Red "WARNING" must be supervised
               by an occupational worker with proper training.
             </p>
-            <img src="assets/rf_signs/warning_sign_landscape.png" alt="RF Assessment" loading="lazy">
-          </div>
+            <img src="assets/rf_signs/warning_sign_landscape.webp" alt="Warning Sign Landscape" loading="lazy">
+          </div></div>
         </div>
 
-        <div class="accordion-item">
-          <button class="accordion" id="warning_sign_left_arrow">WARNING Sign (Left Arrow)</button>
-          <div class="panel">
+        <div class="acc-item">
+          <button class="acc-head" id="warning_sign_left_arrow" type="button">
+            WARNING Sign (Left Arrow) <span class="acc-icon"></span>
+          </button>
+          <div class="acc-panel"><div class="acc-panel-inner">
             <b>7.5 "(W) x 6"(H) VERIZON RF WARNING SIGN(WL6075AL)</b>
             <p>These aluminum WARNING signs measure 7.5"(W) x 6 "(H) with two 3/8" holes, one at the top
               and one at the bottom are coated with an industrial strength UV inhibitor for added
@@ -1091,13 +621,15 @@
               Trained transient personnel working in an area with a Red "WARNING" must be supervised
               by an occupational worker with proper training.
             </p>
-            <img src="assets/rf_signs/warning_sign_left_arrow.png" alt="RF Assessment" loading="lazy">
-          </div>
+            <img src="assets/rf_signs/warning_sign_left_arrow.webp" alt="Warning Sign Left Arrow" loading="lazy">
+          </div></div>
         </div>
 
-        <div class="accordion-item">
-          <button class="accordion" id="warning_sign_right_arrow">WARNING Sign (Right Arrow)</button>
-          <div class="panel">
+        <div class="acc-item">
+          <button class="acc-head" id="warning_sign_right_arrow" type="button">
+            WARNING Sign (Right Arrow) <span class="acc-icon"></span>
+          </button>
+          <div class="acc-panel"><div class="acc-panel-inner">
             <b>7.5 "(W) x 6"(H) VERIZON RF WARNING SIGN(WR6075AL)</b>
             <p>These aluminum WARNING signs measure 7.5"(W) x 6 "(H) with two 3/8" holes, one at the top
               and one at the bottom are coated with an industrial strength UV inhibitor for added
@@ -1112,13 +644,15 @@
               Trained transient personnel working in an area with a Red "WARNING" must be supervised
               by an occupational worker with proper training.
             </p>
-            <img src="assets/rf_signs/warning_sign_right_arrow.png" alt="RF Assessment" loading="lazy">
-          </div>
+            <img src="assets/rf_signs/warning_sign_right_arrow.webp" alt="Warning Sign Right Arrow" loading="lazy">
+          </div></div>
         </div>
 
-        <div class="accordion-item">
-          <button class="accordion" id="stay_back_warning_small">Stay Back Warning (Small)</button>
-          <div class="panel">
+        <div class="acc-item">
+          <button class="acc-head" id="stay_back_warning_small" type="button">
+            Stay Back Warning (Small) <span class="acc-icon"></span>
+          </button>
+          <div class="acc-panel"><div class="acc-panel-inner">
             <b>7.5"(W) x 6"(H) VERIZON RF StayBack Warning SIGN (WS7560AL)</b>
             <p>These aluminum Stay Back Warning signs measure 7.5"(W) x 6"(H) with two 3/8" holes, one at the top
               and one at the bottom are coated with an industrial strength UV inhibitor for added
@@ -1132,13 +666,15 @@
               When the primary means of administrative controls (i.e. barriers) cannot be feasibly
               installed due to various reasons, Stay Back should be used.
             </p>
-            <img src="assets/rf_signs/stay_back_warning_small.png" alt="RF Assessment" loading="lazy">
-          </div>
+            <img src="assets/rf_signs/stay_back_warning_small.webp" alt="Stay Back Warning Small" loading="lazy">
+          </div></div>
         </div>
 
-        <div class="accordion-item">
-          <button class="accordion" id="stay_back_warning_big">Stay Back Warning (Big)</button>
-          <div class="panel">
+        <div class="acc-item">
+          <button class="acc-head" id="stay_back_warning_big" type="button">
+            Stay Back Warning (Big) <span class="acc-icon"></span>
+          </button>
+          <div class="acc-panel"><div class="acc-panel-inner">
             <b>10"(W) x 7"(H) VERIZON RF StayBack Warning SIGN (WS1070AL)</b>
             <p>These aluminum Stay Back Warning signs measure 10"(W) x 7"(H) with two 3/8" holes, one at the top
               and one at the bottom are coated with an industrial strength UV inhibitor for added
@@ -1152,445 +688,224 @@
               When the primary means of administrative controls (i.e. barriers) cannot be feasibly
               installed due to various reasons, Stay Back should be used.
             </p>
-            <img src="assets/rf_signs/stay_back_warning_big.png" alt="RF Assessment" loading="lazy">
-          </div>
+            <img src="assets/rf_signs/stay_back_warning_big.webp" alt="Stay Back Warning Big" loading="lazy">
+          </div></div>
         </div>
 
-        <div class="accordion-item">
-          <button class="accordion" id="notice_up_arrow">Notice Up Arrow</button>
-          <div class="panel">
+        <div class="acc-item">
+          <button class="acc-head" id="notice_up_arrow" type="button">
+            Notice Up Arrow <span class="acc-icon"></span>
+          </button>
+          <div class="acc-panel"><div class="acc-panel-inner">
             <b>6"(W) x 7.5"(H) VERIZON RF Notice Up Arrow SIGN (NU6075AL)</b>
             <p>These aluminum Notice Up Arrow signs measure 6"(W) x 7.5"(H) with two 3/8" holes, one at the top and one
               at the bottom are coated with an industrial-strength UV inhibitor for added longevity. This surface mount
               sign printed in color on a white background, is UV, chemical, abrasion, and moisture resistant. RF energy
               advisory symbol, text fonts, sizes, and colors per ANSI Z535-1998 and IEEE Std. C95.2-1999.
             </p>
-            <img src="assets/rf_signs/notice_up_arrow.png" alt="RF Assessment" loading="lazy">
-          </div>
+            <img src="assets/rf_signs/notice_up_arrow.webp" alt="Notice Up Arrow" loading="lazy">
+          </div></div>
         </div>
 
-        <div class="accordion-item">
-          <button class="accordion" id="caution_up_arrow">Caution Up Arrow</button>
-          <div class="panel">
+        <div class="acc-item">
+          <button class="acc-head" id="caution_up_arrow" type="button">
+            Caution Up Arrow <span class="acc-icon"></span>
+          </button>
+          <div class="acc-panel"><div class="acc-panel-inner">
             <b>6"(W) x 7.5"(H) VERIZON RF CAUTION Up Arrow SIGN (CU6075AL)</b>
             <p>These aluminum Caution Up Arrow signs measure 6"(W) x 7.5"(H) with two 3/8" holes, one at the top and one
               at the bottom are coated with an industrial-strength UV inhibitor for added longevity. This surface mount
               sign, printed in color on a white background, is UV, chemical, abrasion, and moisture resistant. RF energy
               advisory symbol, text fonts, sizes, and colors per ANSI Z535-1998 and IEEE Std. C95.2-1999.
             </p>
-            <img src="assets/rf_signs/caution_up_arrow.png" alt="RF Assessment" loading="lazy">
-          </div>
+            <img src="assets/rf_signs/caution_up_arrow.webp" alt="Caution Up Arrow" loading="lazy">
+          </div></div>
         </div>
 
-        <div class="accordion-item">
-          <button class="accordion" id="warning_up_arrow">Warning Up Arrow</button>
-          <div class="panel">
+        <div class="acc-item">
+          <button class="acc-head" id="warning_up_arrow" type="button">
+            Warning Up Arrow <span class="acc-icon"></span>
+          </button>
+          <div class="acc-panel"><div class="acc-panel-inner">
             <b>6"(W) x 7.5"(H) VERIZON RF WARNING Up Arrow SIGN (WU6075AL)</b>
             <p>These aluminum Warning Up Arrow signs measure 7.5"(W) x 6"(H) with two 3/8" holes, one at the top and one
               at the bottom are coated with an industrial-strength UV inhibitor for added longevity. This surface mount
               sign printed in color on a white background, is UV, chemical, abrasion, and moisture resistant. RF energy
               advisory symbol, text fonts, sizes, and colors per ANSI Z535-1998 and IEEE Std. C95.2-1999.
             </p>
-            <img src="assets/rf_signs/warning_up_arrow.png" alt="RF Assessment" loading="lazy">
-          </div>
+            <img src="assets/rf_signs/warning_up_arrow.webp" alt="Warning Up Arrow" loading="lazy">
+          </div></div>
         </div>
 
-        <div class="accordion-item">
-          <button class="accordion" id="bilingual">Bilingual</button>
-          <div class="panel">
+        <div class="acc-item">
+          <button class="acc-head" id="bilingual" type="button">
+            Bilingual <span class="acc-icon"></span>
+          </button>
+          <div class="acc-panel"><div class="acc-panel-inner">
             <b>12"(W) x 18"(H) VERIZON RF BILINGUAL SIGN</b>
             <p>These BILINGUAL SIGN measures 12"(W) x 18"(H) are coated with an industrial-strength UV inhibitor for
               added longevity. This surface mount sign, printed in color on a white background, is UV, chemical,
               abrasion, and moisture resistant. RF energy advisory symbol, text fonts, sizes, and colors per ANSI
               Z535-1998 and IEEE Std. C95.2-1999.
             </p>
-            <img src="assets/rf_signs/bilingual.png" alt="RF Assessment" loading="lazy">
-          </div>
+            <img src="assets/rf_signs/bilingual.webp" alt="Bilingual Sign" loading="lazy">
+          </div></div>
         </div>
+
       </div>
     </div>
-  </div>
+  </section>
 
-
-  <div class="quotes"> <a data-os-animation="flipInX" data-os-animation-delay="0.5s" class="os-animation disableClick"
-      href="#">To Know Us</a>
-  </div>
-  <div id="ContactUs" class="intro">
+  <!-- Contact -->
+  <section id="contact" class="section section-alt">
     <div class="container">
-      <div class="row">
-        <div class="col-lg-12">
-          <h2 data-os-animation="zoomIn" data-os-animation-delay="0.3s" class="os-animation">Contact Us</h2>
-          <div><br />
-          </div>
-          <div id="contact" class="contactus clearfix">
-            <div data-os-animation="fadeInLeft" data-os-animation-delay="0.5s" class="left clearfix os-animation">
-              <div style="text-align: left;" class="datacon">
-                <h3>Our Location</h3>
-                <p style="line-height:1.5;">
-                  <b style="font-weight: bold;">Head Office </b><br />
-                  <!-- Old Address changed on 06 Dec, 2020
-			  8 The Green,<br />Suite#7393,<br /> Dover, DE 19901<br />
-			<b style="font-weight: bold;">Phone: </b>(302)401-6519<br /> 
-			-->
-                  <!--  Address changed on 20 Feb, 2025-->
-                  239 New Road,<br />Suite B202,<br />Parsippany,<br />New Jersey 07054<br />
-                  <b style="font-weight: bold;">Phone: </b>(973)909-0919<br />
-                  <!--  New Address changed on 06 Dec, 2020-->
-                  <b style="font-weight: bold;">Email: </b>info@medleynetworks.com<br />
-                  <br /><br />
-                </p>
-              </div>
+      <div class="section-head">
+        <span class="eyebrow">Contact Us</span>
+        <h2 class="section-title">Let's talk about your project</h2>
+        <p class="lead">Whether you need a technical team, a compliance assessment, or the right hire to grow your organization — we'd like to hear from you.</p>
+      </div>
+
+      <div class="contact-layout">
+        <div class="contact-info">
+          <h3>Our Location</h3>
+          <div class="contact-line">
+            <div class="ci-icon">&#9673;</div>
+            <div>
+              <strong>Head Office</strong>
+              <p>239 New Road, Suite B202<br>Parsippany, NJ 07054</p>
             </div>
-            <div data-os-animation="fadeInRight" data-os-animation-delay="0.5s" style="text-align: left;"
-              class="right clearfix os-animation">
-              <h3>Get In Touch</h3>
-              <div class="fielddata">
-                <form name="htmlform" method="post" action="form_send.php">
-                  <div class="row">
-                    <div class="col-lg-6"> <input name="Name" placeholder="Name" type="text" />
-                    </div>
-                    <div class="col-lg-6"> <input name="CompanyName" placeholder="Company Name" type="text" />
-                    </div>
-                  </div>
-                  <div class="row">
-                    <div class="col-lg-6"> <input name="Address" placeholder="Address" type="text" />
-                    </div>
-                    <div class="col-lg-6"> <input name="City" placeholder="City" type="text" />
-                    </div>
-                  </div>
-                  <div class="row">
-                    <div class="col-lg-6"> <input name="State/Prov" placeholder="State/Prov" type="text" />
-                    </div>
-                    <div class="col-lg-6"> <select name="country" placeholder="country"
-                        style="color: rgb(119, 119, 119) !important;" type="select-one" value="Country...">
-                        <option value="Country...">Country...</option>
-                        <option value="Afganistan">Afghanistan</option>
-                        <option value="Albania">Albania</option>
-                        <option value="Algeria">Algeria</option>
-                        <option value="American Samoa">American Samoa</option>
-                        <option value="Andorra">Andorra</option>
-                        <option value="Angola">Angola</option>
-                        <option value="Anguilla">Anguilla</option>
-                        <option value="Antigua & Barbuda">Antigua &amp; Barbuda</option>
-                        <option value="Argentina">Argentina</option>
-                        <option value="Armenia">Armenia</option>
-                        <option value="Aruba">Aruba</option>
-                        <option value="Australia">Australia</option>
-                        <option value="Austria">Austria</option>
-                        <option value="Azerbaijan">Azerbaijan</option>
-                        <option value="Bahamas">Bahamas</option>
-                        <option value="Bahrain">Bahrain</option>
-                        <option value="Bangladesh">Bangladesh</option>
-                        <option value="Barbados">Barbados</option>
-                        <option value="Belarus">Belarus</option>
-                        <option value="Belgium">Belgium</option>
-                        <option value="Belize">Belize</option>
-                        <option value="Benin">Benin</option>
-                        <option value="Bermuda">Bermuda</option>
-                        <option value="Bhutan">Bhutan</option>
-                        <option value="Bolivia">Bolivia</option>
-                        <option value="Bonaire">Bonaire</option>
-                        <option value="Bosnia & Herzegovina">Bosnia &amp; Herzegovina</option>
-                        <option value="Botswana">Botswana</option>
-                        <option value="Brazil">Brazil</option>
-                        <option value="British Indian Ocean Ter">British Indian Ocean Ter</option>
-                        <option value="Brunei">Brunei</option>
-                        <option value="Bulgaria">Bulgaria</option>
-                        <option value="Burkina Faso">Burkina Faso</option>
-                        <option value="Burundi">Burundi</option>
-                        <option value="Cambodia">Cambodia</option>
-                        <option value="Cameroon">Cameroon</option>
-                        <option value="Canada">Canada</option>
-                        <option value="Canary Islands">Canary Islands</option>
-                        <option value="Cape Verde">Cape Verde</option>
-                        <option value="Cayman Islands">Cayman Islands</option>
-                        <option value="Central African Republic">Central African Republic</option>
-                        <option value="Chad">Chad</option>
-                        <option value="Channel Islands">Channel Islands</option>
-                        <option value="Chile">Chile</option>
-                        <option value="China">China</option>
-                        <option value="Christmas Island">Christmas Island</option>
-                        <option value="Cocos Island">Cocos Island</option>
-                        <option value="Colombia">Colombia</option>
-                        <option value="Comoros">Comoros</option>
-                        <option value="Congo">Congo</option>
-                        <option value="Cook Islands">Cook Islands</option>
-                        <option value="Costa Rica">Costa Rica</option>
-                        <option value="Cote DIvoire">Cote D'Ivoire</option>
-                        <option value="Croatia">Croatia</option>
-                        <option value="Cuba">Cuba</option>
-                        <option value="Curaco">Curacao</option>
-                        <option value="Cyprus">Cyprus</option>
-                        <option value="Czech Republic">Czech Republic</option>
-                        <option value="Denmark">Denmark</option>
-                        <option value="Djibouti">Djibouti</option>
-                        <option value="Dominica">Dominica</option>
-                        <option value="Dominican Republic">Dominican Republic</option>
-                        <option value="East Timor">East Timor</option>
-                        <option value="Ecuador">Ecuador</option>
-                        <option value="Egypt">Egypt</option>
-                        <option value="El Salvador">El Salvador</option>
-                        <option value="Equatorial Guinea">Equatorial Guinea</option>
-                        <option value="Eritrea">Eritrea</option>
-                        <option value="Estonia">Estonia</option>
-                        <option value="Ethiopia">Ethiopia</option>
-                        <option value="Falkland Islands">Falkland Islands</option>
-                        <option value="Faroe Islands">Faroe Islands</option>
-                        <option value="Fiji">Fiji</option>
-                        <option value="Finland">Finland</option>
-                        <option value="France">France</option>
-                        <option value="French Guiana">French Guiana</option>
-                        <option value="French Polynesia">French Polynesia</option>
-                        <option value="French Southern Ter">French Southern Ter</option>
-                        <option value="Gabon">Gabon</option>
-                        <option value="Gambia">Gambia</option>
-                        <option value="Georgia">Georgia</option>
-                        <option value="Germany">Germany</option>
-                        <option value="Ghana">Ghana</option>
-                        <option value="Gibraltar">Gibraltar</option>
-                        <option value="Great Britain">Great Britain</option>
-                        <option value="Greece">Greece</option>
-                        <option value="Greenland">Greenland</option>
-                        <option value="Grenada">Grenada</option>
-                        <option value="Guadeloupe">Guadeloupe</option>
-                        <option value="Guam">Guam</option>
-                        <option value="Guatemala">Guatemala</option>
-                        <option value="Guinea">Guinea</option>
-                        <option value="Guyana">Guyana</option>
-                        <option value="Haiti">Haiti</option>
-                        <option value="Hawaii">Hawaii</option>
-                        <option value="Honduras">Honduras</option>
-                        <option value="Hong Kong">Hong Kong</option>
-                        <option value="Hungary">Hungary</option>
-                        <option value="Iceland">Iceland</option>
-                        <option value="India">India</option>
-                        <option value="Indonesia">Indonesia</option>
-                        <option value="Iran">Iran</option>
-                        <option value="Iraq">Iraq</option>
-                        <option value="Ireland">Ireland</option>
-                        <option value="Isle of Man">Isle of Man</option>
-                        <option value="Israel">Israel</option>
-                        <option value="Italy">Italy</option>
-                        <option value="Jamaica">Jamaica</option>
-                        <option value="Japan">Japan</option>
-                        <option value="Jordan">Jordan</option>
-                        <option value="Kazakhstan">Kazakhstan</option>
-                        <option value="Kenya">Kenya</option>
-                        <option value="Kiribati">Kiribati</option>
-                        <option value="Korea North">Korea North</option>
-                        <option value="Korea Sout">Korea South</option>
-                        <option value="Kuwait">Kuwait</option>
-                        <option value="Kyrgyzstan">Kyrgyzstan</option>
-                        <option value="Laos">Laos</option>
-                        <option value="Latvia">Latvia</option>
-                        <option value="Lebanon">Lebanon</option>
-                        <option value="Lesotho">Lesotho</option>
-                        <option value="Liberia">Liberia</option>
-                        <option value="Libya">Libya</option>
-                        <option value="Liechtenstein">Liechtenstein</option>
-                        <option value="Lithuania">Lithuania</option>
-                        <option value="Luxembourg">Luxembourg</option>
-                        <option value="Macau">Macau</option>
-                        <option value="Macedonia">Macedonia</option>
-                        <option value="Madagascar">Madagascar</option>
-                        <option value="Malaysia">Malaysia</option>
-                        <option value="Malawi">Malawi</option>
-                        <option value="Maldives">Maldives</option>
-                        <option value="Mali">Mali</option>
-                        <option value="Malta">Malta</option>
-                        <option value="Marshall Islands">Marshall Islands</option>
-                        <option value="Martinique">Martinique</option>
-                        <option value="Mauritania">Mauritania</option>
-                        <option value="Mauritius">Mauritius</option>
-                        <option value="Mayotte">Mayotte</option>
-                        <option value="Mexico">Mexico</option>
-                        <option value="Midway Islands">Midway Islands</option>
-                        <option value="Moldova">Moldova</option>
-                        <option value="Monaco">Monaco</option>
-                        <option value="Mongolia">Mongolia</option>
-                        <option value="Montserrat">Montserrat</option>
-                        <option value="Morocco">Morocco</option>
-                        <option value="Mozambique">Mozambique</option>
-                        <option value="Myanmar">Myanmar</option>
-                        <option value="Nambia">Nambia</option>
-                        <option value="Nauru">Nauru</option>
-                        <option value="Nepal">Nepal</option>
-                        <option value="Netherland Antilles">Netherland Antilles</option>
-                        <option value="Netherlands">Netherlands (Holland, Europe)</option>
-                        <option value="Nevis">Nevis</option>
-                        <option value="New Caledonia">New Caledonia</option>
-                        <option value="New Zealand">New Zealand</option>
-                        <option value="Nicaragua">Nicaragua</option>
-                        <option value="Niger">Niger</option>
-                        <option value="Nigeria">Nigeria</option>
-                        <option value="Niue">Niue</option>
-                        <option value="Norfolk Island">Norfolk Island</option>
-                        <option value="Norway">Norway</option>
-                        <option value="Oman">Oman</option>
-                        <option value="Pakistan">Pakistan</option>
-                        <option value="Palau Island">Palau Island</option>
-                        <option value="Palestine">Palestine</option>
-                        <option value="Panama">Panama</option>
-                        <option value="Papua New Guinea">Papua New Guinea</option>
-                        <option value="Paraguay">Paraguay</option>
-                        <option value="Peru">Peru</option>
-                        <option value="Phillipines">Philippines</option>
-                        <option value="Pitcairn Island">Pitcairn Island</option>
-                        <option value="Poland">Poland</option>
-                        <option value="Portugal">Portugal</option>
-                        <option value="Puerto Rico">Puerto Rico</option>
-                        <option value="Qatar">Qatar</option>
-                        <option value="Republic of Montenegro">Republic of Montenegro</option>
-                        <option value="Republic of Serbia">Republic of Serbia</option>
-                        <option value="Reunion">Reunion</option>
-                        <option value="Romania">Romania</option>
-                        <option value="Russia">Russia</option>
-                        <option value="Rwanda">Rwanda</option>
-                        <option value="St Barthelemy">St Barthelemy</option>
-                        <option value="St Eustatius">St Eustatius</option>
-                        <option value="St Helena">St Helena</option>
-                        <option value="St Kitts-Nevis">St Kitts-Nevis</option>
-                        <option value="St Lucia">St Lucia</option>
-                        <option value="St Maarten">St Maarten</option>
-                        <option value="St Pierre & Miquelon">St Pierre &amp; Miquelon</option>
-                        <option value="St Vincent & Grenadines">St Vincent &amp; Grenadines</option>
-                        <option value="Saipan">Saipan</option>
-                        <option value="Samoa">Samoa</option>
-                        <option value="Samoa American">Samoa American</option>
-                        <option value="San Marino">San Marino</option>
-                        <option value="Sao Tome & Principe">Sao Tome &amp; Principe</option>
-                        <option value="Saudi Arabia">Saudi Arabia</option>
-                        <option value="Senegal">Senegal</option>
-                        <option value="Serbia">Serbia</option>
-                        <option value="Seychelles">Seychelles</option>
-                        <option value="Sierra Leone">Sierra Leone</option>
-                        <option value="Singapore">Singapore</option>
-                        <option value="Slovakia">Slovakia</option>
-                        <option value="Slovenia">Slovenia</option>
-                        <option value="Solomon Islands">Solomon Islands</option>
-                        <option value="Somalia">Somalia</option>
-                        <option value="South Africa">South Africa</option>
-                        <option value="Spain">Spain</option>
-                        <option value="Sri Lanka">Sri Lanka</option>
-                        <option value="Sudan">Sudan</option>
-                        <option value="Suriname">Suriname</option>
-                        <option value="Swaziland">Swaziland</option>
-                        <option value="Sweden">Sweden</option>
-                        <option value="Switzerland">Switzerland</option>
-                        <option value="Syria">Syria</option>
-                        <option value="Tahiti">Tahiti</option>
-                        <option value="Taiwan">Taiwan</option>
-                        <option value="Tajikistan">Tajikistan</option>
-                        <option value="Tanzania">Tanzania</option>
-                        <option value="Thailand">Thailand</option>
-                        <option value="Togo">Togo</option>
-                        <option value="Tokelau">Tokelau</option>
-                        <option value="Tonga">Tonga</option>
-                        <option value="Trinidad & Tobago">Trinidad &amp; Tobago</option>
-                        <option value="Tunisia">Tunisia</option>
-                        <option value="Turkey">Turkey</option>
-                        <option value="Turkmenistan">Turkmenistan</option>
-                        <option value="Turks & Caicos Is">Turks &amp; Caicos Is</option>
-                        <option value="Tuvalu">Tuvalu</option>
-                        <option value="Uganda">Uganda</option>
-                        <option value="Ukraine">Ukraine</option>
-                        <option value="United Arab Erimates">United Arab Emirates</option>
-                        <option value="United Kingdom">United Kingdom</option>
-                        <option value="United States of America">United States of America</option>
-                        <option value="Uraguay">Uruguay</option>
-                        <option value="Uzbekistan">Uzbekistan</option>
-                        <option value="Vanuatu">Vanuatu</option>
-                        <option value="Vatican City State">Vatican City State</option>
-                        <option value="Venezuela">Venezuela</option>
-                        <option value="Vietnam">Vietnam</option>
-                        <option value="Virgin Islands (Brit)">Virgin Islands (Brit)</option>
-                        <option value="Virgin Islands (USA)">Virgin Islands (USA)</option>
-                        <option value="Wake Island">Wake Island</option>
-                        <option value="Wallis & Futana Is">Wallis &amp; Futana Is</option>
-                        <option value="Yemen">Yemen</option>
-                        <option value="Zaire">Zaire</option>
-                        <option value="Zambia">Zambia</option>
-                        <option value="Zimbabwe">Zimbabwe</option>
-                      </select>
-                    </div>
-                  </div>
-                  <div class="row">
-                    <div class="col-lg-6"> <input name="Zip" placeholder="Zip" type="text" />
-                    </div>
-                    <div class="col-lg-6"> <input name="PhoneNo" placeholder="Phone No" type="text" />
-                    </div>
-                  </div>
-                  <div class="row">
-                    <div class="col-lg-6"> <input name="Fax" placeholder="Fax" type="text" />
-                    </div>
-                    <div class="col-lg-6"> <input name="Email" placeholder="Email" type="email" />
-                    </div>
-                  </div>
-                  <div class="row">
-                    <div class="col-lg-12"> <textarea name="textarea" placeholder="Message" type="textarea"></textarea>
-                    </div>
-                  </div>
-                  <div class="row">
-                    <div class="col-lg-12"> <input shonar="" bangla";="" text-align:="" center;="" text-decoration:=""
-                        none;="" display:="" inline-block;"=""
-                        style="width: 100%; background-color: rgb(216, 64, 18); border: none; color: white; padding: 15px 32px;"
-                        type="submit" value="submit" />
-                    </div>
-                  </div> <!--<a href="#">Send</a>-->
-                </form>
-              </div>
+          </div>
+          <div class="contact-line">
+            <div class="ci-icon">&#9742;</div>
+            <div>
+              <strong>Phone</strong>
+              <p><a href="tel:+19739090919">(973) 909-0919</a></p>
+            </div>
+          </div>
+          <div class="contact-line">
+            <div class="ci-icon">&#9993;</div>
+            <div>
+              <strong>Email</strong>
+              <p><a href="mailto:info@medleynetworks.com">info@medleynetworks.com</a></p>
             </div>
           </div>
         </div>
+
+        <form class="card" name="htmlform" method="post" action="form_send.php" style="padding:32px;">
+          <div class="form-grid">
+            <div class="field">
+              <label for="f-name">Name</label>
+              <input id="f-name" name="Name" type="text" placeholder="Your name" required>
+            </div>
+            <div class="field">
+              <label for="f-company">Company Name</label>
+              <input id="f-company" name="CompanyName" type="text" placeholder="Company" required>
+            </div>
+            <div class="field">
+              <label for="f-email">Email</label>
+              <input id="f-email" name="Email" type="email" placeholder="you@company.com" required>
+            </div>
+            <div class="field">
+              <label for="f-phone">Phone No</label>
+              <input id="f-phone" name="PhoneNo" type="tel" placeholder="(555) 555-5555">
+            </div>
+            <div class="field">
+              <label for="f-address">Address</label>
+              <input id="f-address" name="Address" type="text" placeholder="Street address" required>
+            </div>
+            <div class="field">
+              <label for="f-city">City</label>
+              <input id="f-city" name="City" type="text" placeholder="City" required>
+            </div>
+            <div class="field">
+              <label for="f-state">State / Province</label>
+              <input id="f-state" name="State/Prov" type="text" placeholder="State" required>
+            </div>
+            <div class="field">
+              <label for="f-zip">Zip</label>
+              <input id="f-zip" name="Zip" type="text" placeholder="Postal code" required>
+            </div>
+            <div class="field">
+              <label for="f-country">Country</label>
+              <select id="f-country" name="country">
+                <option value="United States" selected>United States</option>
+                <option value="Canada">Canada</option>
+                <option value="Mexico">Mexico</option>
+                <option value="United Kingdom">United Kingdom</option>
+                <option value="Australia">Australia</option>
+                <option value="India">India</option>
+                <option value="Germany">Germany</option>
+                <option value="France">France</option>
+                <option value="United Arab Emirates">United Arab Emirates</option>
+                <option value="Singapore">Singapore</option>
+                <option value="Other">Other</option>
+              </select>
+            </div>
+            <div class="field">
+              <label for="f-fax">Fax</label>
+              <input id="f-fax" name="Fax" type="text" placeholder="Fax (optional)">
+            </div>
+            <div class="field full">
+              <label for="f-message">Message</label>
+              <textarea id="f-message" name="Message" placeholder="Tell us about your project or needs" required></textarea>
+            </div>
+            <div class="field full">
+              <button class="btn btn-primary btn-lg" type="submit" value="submit">Submit Inquiry</button>
+            </div>
+          </div>
+        </form>
       </div>
     </div>
-  </div>
-  <footer>
-    <div class="container"> <a href="#">       <img alt="" src="images/logo1.png" loading="lazy" /> </a>
-      <p>2026 © <a href="#">Medley Networks</a> All Rights Reserved.</p>
+  </section>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a class="brand" href="index.html"><img src="images/logo-L.png" alt="Medley Networks"></a>
+          <p>End-to-end technology services and talent staffing for the telecommunications and IT industries — delivered by people who have done the work.</p>
+        </div>
+        <div>
+          <h4>Services</h4>
+          <ul>
+            <li><a href="rf-engineering.html">RF Engineering</a></li>
+            <li><a href="rf-compliance.html">RF Compliance</a></li>
+            <li><a href="staffing.html">Staffing Solutions</a></li>
+            <li><a href="it-services.html">IT Services</a></li>
+            <li><a href="field-services.html">Field Services</a></li>
+            <li><a href="emerging-technologies.html">Emerging Technologies</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Company</h4>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="index.html#about">About Us</a></li>
+            <li><a href="index.html#store">Store</a></li>
+            <li><a href="index.html#contact">Contact</a></li>
+            <li><a href="privacy-policy.html">Privacy Policy</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Contact</h4>
+          <ul>
+            <li>239 New Road, Suite B202</li>
+            <li>Parsippany, NJ 07054</li>
+            <li><a href="tel:+19739090919">(973) 909-0919</a></li>
+            <li><a href="mailto:info@medleynetworks.com">info@medleynetworks.com</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <div class="container">
+          <p>&copy; 2026 Medley Networks Inc. All rights reserved.</p>
+          <p>Parsippany, New Jersey</p>
+        </div>
+      </div>
     </div>
   </footer>
 
-  <script>
-    var acc = document.getElementsByClassName("accordion");
-    var i;
-
-    for (i = 0; i < acc.length; i++) {
-      acc[i].addEventListener("click", function () {
-        this.classList.toggle("active");
-        var panel = this.nextElementSibling;
-        if (panel.style.display === "block") {
-          panel.style.display = "none";
-        } else {
-          panel.style.display = "block";
-        }
-      });
-    }
-  </script>
-
-  <script>
-    document.addEventListener("DOMContentLoaded", function () {
-      var hash = window.location.hash.substring(1);
-      if (hash) {
-        var targetAccordion = document.getElementById(hash);
-        if (targetAccordion && targetAccordion.classList.contains("accordion")) {
-          targetAccordion.classList.add("active");
-          var panel = targetAccordion.nextElementSibling;
-          panel.style.display = "block";
-          targetAccordion.scrollIntoView({ behavior: "smooth", block: "center" });
-        }
-      }
-    });
-  </script>
-
+  <script src="js/main.js"></script>
 </body>
-<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
-<script src="js/classie.js"></script>
-<script src="js/borderMenu.js"></script>
-<script src="js/jquery.mixitup.min.js"></script>
-<script src="js/jquery.bxslider.js"></script>
-<script src="js/waypoints.min.js"></script>
-<script src="js/script.js"></script>
-<script src="js/bootstrap.min.js"></script>
-
 </html>

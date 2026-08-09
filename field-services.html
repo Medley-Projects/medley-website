@@ -1,798 +1,305 @@
 <!doctype html>
 <html lang="en">
-
 <head>
   <meta charset="utf-8">
-  <title>Field Services | Medley Networks</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  <link rel="stylesheet" type="text/css" href="css/grid.css">
-  <link rel="stylesheet" type="text/css" href="style.css">
-  <link rel="stylesheet" type="text/css" href="css/layout.css">
-  <link rel="stylesheet" type="text/css" href="css/responsive.css">
-  <link rel="stylesheet" type="text/css" href="css/animate.css">
-  <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
-
-  <style>
-    body {
-      padding-top: 70px;
-      font-family: 'Shonar Bangla', 'amblelight', sans-serif;
-    }
-
-    .navbar-brand img {
-      max-width: 100px;
-      height: auto;
-    }
-
-    #field-services .os-animation {
-      opacity: 1 !important;
-    }
-
-    #field-services .section-title {
-      color: #222 !important;
-      line-height: 1.15 !important;
-    }
-
-    #field-services .section-subtitle {
-      color: #555 !important;
-    }
-
-    .fs-section {
-      text-align: left;
-    }
-
-    .fs-section .fs-eyebrow {
-      text-transform: uppercase;
-      letter-spacing: .14em;
-      font-size: 13px;
-      font-weight: 700;
-      color: #d87843;
-      margin-bottom: 10px;
-    }
-
-    .fs-section .fs-accent-bar {
-      width: 52px;
-      height: 4px;
-      background: #d87843;
-      margin-bottom: 20px;
-    }
-
-    .fs-section .section-title {
-      font-size: 30px;
-      font-weight: 900;
-      letter-spacing: 4px;
-      text-transform: uppercase;
-      color: #222;
-      line-height: 1.15;
-      margin-bottom: 16px;
-    }
-
-    .fs-section .section-subtitle {
-      font-size: 16px;
-      color: #555;
-      max-width: 680px;
-      line-height: 1.7;
-      margin-bottom: 40px;
-    }
-
-    /* Stats */
-    .hero-stats {
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      gap: 12px;
-      margin-top: 10px;
-    }
-
-    .stat-box {
-      background: #f4f4f4;
-      padding: 18px;
-      text-align: center;
-    }
-
-    .stat-box .stat-num {
-      font-size: 1.6rem;
-      font-weight: 700;
-      color: #d84012;
-      display: block;
-    }
-
-    .stat-box .stat-label {
-      font-size: 11px;
-      color: #777;
-      text-transform: uppercase;
-      letter-spacing: .08em;
-      margin-top: 4px;
-    }
-
-    .cta-btn {
-      display: inline-block;
-      padding: 10px 25px;
-      font-size: 13px;
-      font-weight: 700;
-      text-decoration: none;
-      background: #d84012;
-      color: #fff;
-      border: none;
-      transition: background .2s;
-      letter-spacing: 1px;
-    }
-
-    .cta-btn:hover { background: #222; color: #fff; text-decoration: none; }
-
-    /* Capabilities grid */
-    .cap-section {
-      padding: 50px 0;
-    }
-
-    .cap-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 16px;
-    }
-
-    .cap-card {
-      background: #f4f4f4;
-      border-left: 4px solid #d87843;
-      padding: 22px 18px;
-      transition: box-shadow .2s;
-    }
-
-    .cap-card:hover {
-      box-shadow: 0 4px 16px rgba(0,0,0,.08);
-    }
-
-    .cap-tag {
-      font-size: 10px;
-      letter-spacing: .12em;
-      text-transform: uppercase;
-      font-weight: 700;
-      color: #d87843;
-      margin-bottom: 8px;
-    }
-
-    .cap-card h4 {
-      font-size: 15px;
-      font-weight: 700;
-      color: #222;
-      margin-bottom: 10px;
-      line-height: 1.3;
-    }
-
-    .cap-card ul {
-      list-style: none;
-      padding: 0;
-    }
-
-    .cap-card ul li {
-      font-size: 13px;
-      color: #555;
-      padding: 3px 0 3px 14px;
-      position: relative;
-      line-height: 1.5;
-      border-bottom: 1px solid #ddd;
-    }
-
-    .cap-card ul li:last-child { border-bottom: none; }
-
-    .cap-card ul li::before {
-      content: '—';
-      position: absolute;
-      left: 0;
-      color: #d87843;
-    }
-
-    /* OEM strip */
-    .oem-strip {
-      background: #f4f4f4;
-      padding: 50px 0;
-    }
-
-    .oem-inner {
-      display: grid;
-      grid-template-columns: 1fr 2fr;
-      gap: 50px;
-      align-items: start;
-    }
-
-    .oem-lede h3 {
-      font-size: 20px;
-      font-weight: 700;
-      color: #222;
-      line-height: 1.25;
-      margin-bottom: 12px;
-    }
-
-    .oem-lede p {
-      font-size: 14px;
-      color: #555;
-      line-height: 1.7;
-    }
-
-    .oem-tags {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 8px;
-    }
-
-    .oem-tag {
-      background: #fff;
-      border: 1px solid #ddd;
-      color: #222;
-      font-size: 12px;
-      padding: 6px 12px;
-    }
-
-    /* Track record */
-    .track-section {
-      padding: 50px 0;
-    }
-
-    .track-grid {
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      gap: 14px;
-      margin-bottom: 30px;
-    }
-
-    .track-card {
-      background: #f4f4f4;
-      padding: 20px 16px;
-      text-align: center;
-      border-top: 3px solid #d84012;
-    }
-
-    .track-card:nth-child(2) { border-top-color: #d87843; }
-    .track-card:nth-child(3) { border-top-color: #222; }
-    .track-card:nth-child(4) { border-top-color: #d84012; }
-    .track-card:nth-child(5) { border-top-color: #d87843; }
-    .track-card:nth-child(6) { border-top-color: #222; }
-    .track-card:nth-child(7) { border-top-color: #d84012; }
-    .track-card:nth-child(8) { border-top-color: #d87843; }
-
-    .track-num {
-      font-size: 1.8rem;
-      font-weight: 700;
-      color: #222;
-      display: block;
-      line-height: 1;
-      margin-bottom: 6px;
-    }
-
-    .track-scope {
-      font-size: 13px;
-      font-weight: 700;
-      color: #222;
-      margin-bottom: 4px;
-    }
-
-    .track-detail {
-      font-size: 12px;
-      color: #777;
-      line-height: 1.4;
-    }
-
-    .carrier-note {
-      font-size: 14px;
-      color: #555;
-      background: #f4f4f4;
-      padding: 12px 18px;
-      margin-bottom: 30px;
-      line-height: 1.6;
-    }
-
-    .carrier-note strong { color: #222; }
-
-    /* Field team */
-    .team-strip {
-      background: #f4f4f4;
-      padding: 50px 0;
-    }
-
-    .team-inner {
-      max-width: 1100px;
-      margin: 0 auto;
-    }
-
-    .team-intro {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 40px;
-      align-items: start;
-      margin-bottom: 30px;
-    }
-
-    .team-intro p {
-      font-size: 14px;
-      color: #555;
-      line-height: 1.75;
-    }
-
-    .team-highlights {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 10px;
-    }
-
-    .th-item {
-      background: #fff;
-      padding: 12px 14px;
-      display: flex;
-      align-items: flex-start;
-      gap: 10px;
-    }
-
-    .th-text {
-      font-size: 13px;
-      color: #555;
-      line-height: 1.5;
-    }
-
-    .th-text strong { color: #222; display: block; margin-bottom: 2px; }
-
-    /* Engagement timeline */
-    .engage-section {
-      padding: 50px 0;
-    }
-
-    .timeline {
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      gap: 20px;
-      margin-top: 30px;
-    }
-
-    .tl-step {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      padding: 0 12px;
-      text-align: center;
-    }
-
-    .tl-dot {
-      width: 40px;
-      height: 40px;
-      border-radius: 50%;
-      background: #222;
-      border: 2px solid #d87843;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 14px;
-      font-weight: 700;
-      color: #d87843;
-      margin-bottom: 16px;
-      flex-shrink: 0;
-    }
-
-    .tl-step:nth-child(2) .tl-dot { border-color: #d84012; color: #d84012; }
-    .tl-step:nth-child(3) .tl-dot { border-color: #222; color: #fff; }
-    .tl-step:nth-child(4) .tl-dot { border-color: #d87843; color: #d87843; }
-
-    .tl-title {
-      font-size: 14px;
-      font-weight: 700;
-      color: #222;
-      margin-bottom: 8px;
-      line-height: 1.3;
-    }
-
-    .tl-body {
-      font-size: 13px;
-      color: #555;
-      line-height: 1.6;
-    }
-
-    /* Why Medley */
-    .cred-section {
-      padding: 50px 0 60px;
-    }
-
-    .cred-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 20px;
-      margin-top: 30px;
-    }
-
-    .cred-card {
-      padding: 24px 20px;
-      background: #f4f4f4;
-      border-left: 4px solid #d87843;
-    }
-
-    .cred-card:nth-child(2) { border-left-color: #d84012; }
-    .cred-card:nth-child(3) { border-left-color: #222; }
-
-    .cred-card h4 {
-      font-size: 15px;
-      font-weight: 700;
-      color: #222;
-      margin-bottom: 10px;
-    }
-
-    .cred-card p {
-      font-size: 14px;
-      color: #555;
-      line-height: 1.65;
-    }
-
-    @media (max-width: 960px) {
-      .cap-grid { grid-template-columns: 1fr 1fr; }
-      .oem-inner { grid-template-columns: 1fr; gap: 28px; }
-      .track-grid { grid-template-columns: repeat(2, 1fr); }
-      .team-intro { grid-template-columns: 1fr; }
-      .timeline { grid-template-columns: 1fr 1fr; gap: 28px; }
-      .cred-grid { grid-template-columns: 1fr; }
-      .hero-stats { grid-template-columns: repeat(2, 1fr); }
-    }
-
-    @media (max-width: 600px) {
-      .cap-grid { grid-template-columns: 1fr; }
-      .track-grid { grid-template-columns: 1fr 1fr; }
-      .team-highlights { grid-template-columns: 1fr; }
-      .timeline { grid-template-columns: 1fr; }
-      .hero-stats { grid-template-columns: 1fr 1fr; }
-    }
-  </style>
+  <title>Field Services | Medley Networks</title>
+  <meta name="description" content="Field services from Medley Networks — structured cabling, backhaul, equipment install, in-building upgrades, and network construction with certified technicians nationwide.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/site.css">
 </head>
-
 <body>
 
-  <!-- Navigation -->
-  <section id="navigation">
-    <nav role="navigation" class="navbar navbar-default navbar-fixed-top">
-      <div class="container-fluid">
-        <div class="navbar-header">
-          <button data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" class="navbar-toggle"
-            type="button">&nbsp;</button>
-          <a style="margin: 0px; padding: 5px 0px 0px; vertical-align: middle !important;" class="navbar-brand"
-            href="index.html#home">
-            <img alt=""
-              style="height: 40px; width: 100px; margin: 0px; padding: 0px; vertical-align: middle !important;"
-              src="images/logo-L.png" />
-          </a>
+  <header class="site-header" id="siteHeader">
+    <div class="container header-inner">
+      <a class="brand" href="index.html" aria-label="Medley Networks home">
+        <img src="images/logo-L.png" alt="Medley Networks">
+      </a>
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle menu" aria-expanded="false" aria-controls="siteNav">
+        <span></span><span></span><span></span>
+      </button>
+      <nav class="site-nav" id="siteNav" aria-label="Primary">
+        <ul class="nav-list">
+          <li><a class="nav-link" href="index.html">Home</a></li>
+          <li class="has-dropdown active">
+            <a class="nav-link" href="index.html#services">Services</a>
+            <ul class="dropdown">
+              <li><a href="rf-engineering.html">RF Engineering</a></li>
+              <li><a href="rf-compliance.html">RF Compliance</a></li>
+              <li><a href="staffing.html">Staffing Solutions</a></li>
+              <li><a href="it-services.html">IT Services</a></li>
+              <li class="active"><a href="field-services.html">Field Services</a></li>
+              <li><a href="emerging-technologies.html">Emerging Technologies</a></li>
+            </ul>
+          </li>
+          <li><a class="nav-link" href="index.html#store">Store</a></li>
+          <li><a class="nav-link" href="index.html#contact">Contact</a></li>
+          <li><a class="btn btn-primary btn-sm nav-cta" href="mailto:info@medleynetworks.com">Get in Touch</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Page hero -->
+  <section class="page-hero">
+    <div class="container">
+      <span class="eyebrow">Field Services</span>
+      <h1>Skilled technicians. Safe work. Nationwide.</h1>
+      <p class="page-intro">Medley Networks delivers field services across the telecom and network infrastructure lifecycle — from structured cabling and backhaul to 5G in-building upgrades and equipment installation. Our carrier-certified technicians complete quality work safely, in every state in the U.S.</p>
+    </div>
+  </section>
+
+  <!-- Stats -->
+  <section class="section section-tight">
+    <div class="container">
+      <div class="stat-grid">
+        <div class="stat">
+          <span class="stat-num">50</span>
+          <span class="stat-label">States Covered</span>
         </div>
-        <div id="bs-example-navbar-collapse-1" class="collapse navbar-collapse">
-          <ul style="vertical-align: bottom !important;" class="nav navbar-nav navbar-right">
-            <li style="font-size: 14px; font-family: Arial, sans-serif;"><a href="index.html#home">Home</a></li>
-            <li style="font-size: 14px; font-family: Arial, sans-serif;"><a href="index.html#services">Services</a></li>
-            <li style="font-size: 14px; font-family: Arial, sans-serif;"><a href="/rf-engineering.html">RF Engineering</a></li>
-            <li style="font-size: 14px; font-family: Arial, sans-serif;"><a href="/rf-compliance.html">RF Compliance</a></li>
-            <li style="font-size: 14px; font-family: Arial, sans-serif;"><a href="/staffing.html">Staffing</a></li>
-            <li style="font-size: 14px; font-family: Arial, sans-serif;"><a href="/it-services.html">IT Services</a></li>
-            <li style="font-size: 14px; font-family: Arial, sans-serif;"><a href="/field-services.html">Field Services</a></li>
-            <li style="font-size: 14px; font-family: Arial, sans-serif;"><a href="/emerging-technologies.html">Emerging Technologies</a></li>
-            <li style="font-size: 14px; font-family: Arial, sans-serif;"><a href="index.html#store">Store</a></li>
-            <li style="font-size: 14px; font-family: Arial, sans-serif;"><a href="index.html#ContactUs">Contact Us</a></li>
-            <li style="font-size: 14px; font-family: Arial, sans-serif;"><a href="/privacy-policy.html">Privacy Policy</a></li>
+        <div class="stat">
+          <span class="stat-num">5G</span>
+          <span class="stat-label">In-Building Upgrades</span>
+        </div>
+        <div class="stat">
+          <span class="stat-num">Certified</span>
+          <span class="stat-label">Carrier Technicians</span>
+        </div>
+        <div class="stat">
+          <span class="stat-num">Safety</span>
+          <span class="stat-label">First Culture</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Capabilities -->
+  <section class="section">
+    <div class="container">
+      <div class="section-head">
+        <span class="eyebrow">What We Deliver</span>
+        <h2 class="section-title">Field capabilities across the network</h2>
+        <p class="lead">Our technicians handle the full range of network construction, installation, and maintenance work — with documented quality checkpoints at every step.</p>
+      </div>
+
+      <div class="grid grid-3">
+        <div class="card">
+          <span class="eyebrow">Construction</span>
+          <h3>Structured Cabling &amp; Construction</h3>
+          <ul class="card-list">
+            <li>Structured cabling &amp; cable priming</li>
+            <li>Pre-insulated &amp; insulated copper lines</li>
+            <li>Fiber raceway installation</li>
+            <li>RF cabling &amp; UPoCC</li>
+            <li>Fiber &amp; optical jumper installation</li>
+            <li>A-cable assembly</li>
+            <li>Grounding, bonding &amp; testing</li>
+            <li>Civil &amp; structural work (duct bank, concrete, panels)</li>
+          </ul>
+        </div>
+
+        <div class="card">
+          <span class="eyebrow">Install</span>
+          <h3>Equipment Install &amp; Swaps</h3>
+          <ul class="card-list">
+            <li>BBU (baseband unit) swaps</li>
+            <li>Router migration &amp; swaps</li>
+            <li>SiteBoss installation</li>
+            <li>Optical transport installation</li>
+            <li>Microwave installation</li>
+            <li>Mobile &amp; fixed wireless installs</li>
+            <li>Seismic mounting &amp; brackets</li>
+            <li>In-building work authorizations (ISP)</li>
+          </ul>
+        </div>
+
+        <div class="card">
+          <span class="eyebrow">Testing</span>
+          <h3>Testing, Maintenance &amp; Backhaul</h3>
+          <ul class="card-list">
+            <li>Fiber testing &amp; troubleshooting (OTDR/OSA, power meter)</li>
+            <li>CAT6 / CAT6A cabling</li>
+            <li>Backhaul work orders (BHO)</li>
+            <li>Functional &amp; call testing</li>
+            <li>Pre- &amp; post-install verification</li>
+            <li>Remote PHY / HFC node work</li>
           </ul>
         </div>
       </div>
-    </nav>
+    </div>
   </section>
 
-  <div id="field-services" class="intro">
-
+  <!-- Technologies -->
+  <section class="section section-alt">
     <div class="container">
-      <div class="fs-section">
-
-        <!-- Header -->
-        <div data-os-animation="zoomIn" data-os-animation-delay="0.1s" class="os-animation">
-          <div class="fs-eyebrow">Field Services</div>
-          <div class="fs-accent-bar"></div>
-          <h2 class="section-title">Boots on the Ground.<br>Done Right, First Time.</h2>
-          <p class="section-subtitle">
-            Medley Networks deploys trained, certified field crews across the United States for installation, integration, commissioning, and testing of telecom infrastructure. From macro towers to data centers, we've delivered thousands of completed scopes for all three Tier-1 carriers — and we scale fast when programs demand it.
-          </p>
+      <div class="grid grid-wide" style="align-items:start;">
+        <div>
+          <span class="eyebrow">Technologies &amp; Equipment</span>
+          <h2 class="section-title">What our field teams work with</h2>
+          <p class="lead">Our technicians are trained and certified on the equipment, systems, and network technologies deployed across major carrier and OEM environments.</p>
         </div>
-
-        <div data-os-animation="fadeIn" data-os-animation-delay="0.2s" class="os-animation">
-          <div class="hero-stats" style="margin-bottom: 50px;">
-            <div class="stat-box">
-              <span class="stat-num">35</span>
-              <span class="stat-label">Active Field Crews Nationwide</span>
-            </div>
-            <div class="stat-box">
-              <span class="stat-num">10</span>
-              <span class="stat-label">States &amp; Markets Covered</span>
-            </div>
-            <div class="stat-box">
-              <span class="stat-num">Tier‑1</span>
-              <span class="stat-label">Carrier Experience — VzW, AT&amp;T, TMO</span>
-            </div>
-            <div class="stat-box">
-              <span class="stat-num">5000+</span>
-              <span class="stat-label">Deliverables Completed</span>
-            </div>
-          </div>
-          <a href="mailto:info@medleynetworks.com" class="cta-btn" style="margin-bottom: 50px; display: inline-block;">Discuss a Field Program →</a>
-        </div>
-
-        <!-- Capabilities -->
-        <div data-os-animation="fadeIn" data-os-animation-delay="0.3s" class="os-animation cap-section">
-          <div class="fs-eyebrow">What We Do</div>
-          <div class="fs-accent-bar"></div>
-          <h2 class="section-title">Field Services Capabilities</h2>
-          <p class="section-subtitle" style="margin-bottom: 30px;">
-            Our field teams are trained and certified across all major telecom OEM platforms — supporting everything from baseband swaps and router migrations to optical integration, C-RAN deployments, and functional call testing.
-          </p>
-
-          <div class="cap-grid">
-            <div class="cap-card">
-              <div class="cap-tag">Integration</div>
-              <h4>Baseband &amp; Radio Integration</h4>
-              <ul>
-                <li>BBU swap, install &amp; integrate</li>
-                <li>NR, LTE, GSM, C-Band baseband upgrades</li>
-                <li>C-RAN deployments &amp; integration</li>
-                <li>Anchor cabinet prep &amp; configuration</li>
-                <li>Scripting &amp; remote integration support</li>
-              </ul>
-            </div>
-            <div class="cap-card">
-              <div class="cap-tag">Optical &amp; Routers</div>
-              <h4>Packet-Optical &amp; Router Services</h4>
-              <ul>
-                <li>Packet-optical platform install (Ciena 6500, Wave Server)</li>
-                <li>Site survey, DND &amp; IDP creation</li>
-                <li>Commission, test, turnup &amp; integrate</li>
-                <li>IXRe Nokia &amp; Cisco ASR router install &amp; migration</li>
-                <li>Cabinet &amp; rack installation (optical &amp; RF)</li>
-              </ul>
-            </div>
-            <div class="cap-card">
-              <div class="cap-tag">Network Equipment</div>
-              <h4>SiteBoss &amp; Network Monitoring</h4>
-              <ul>
-                <li>SiteBoss installation, testing &amp; commissioning</li>
-                <li>SAU alarm identification &amp; resolution</li>
-                <li>Internal &amp; external alarm troubleshooting</li>
-                <li>GPS install, sweep &amp; survey</li>
-                <li>Remote monitoring integration</li>
-              </ul>
-            </div>
-            <div class="cap-card">
-              <div class="cap-tag">Data Center</div>
-              <h4>Data Center Services</h4>
-              <ul>
-                <li>Router &amp; MGW install, commission &amp; decommission</li>
-                <li>Hub &amp; switch infrastructure support</li>
-                <li>Data center cabling &amp; rack installation</li>
-                <li>Equipment migration &amp; decommissioning</li>
-                <li>Power &amp; connectivity verification</li>
-              </ul>
-            </div>
-            <div class="cap-card">
-              <div class="cap-tag">Testing</div>
-              <h4>Functional &amp; Call Testing</h4>
-              <ul>
-                <li>PSAP / functional call testing</li>
-                <li>E-911 call routing verification</li>
-                <li>Pre- &amp; post-integration test sweeps</li>
-                <li>Drive testing support post-integration</li>
-                <li>Site acceptance testing</li>
-              </ul>
-            </div>
-            <div class="cap-card">
-              <div class="cap-tag">Tower &amp; Site</div>
-              <h4>Tower &amp; Site Support</h4>
-              <ul>
-                <li>Tower &amp; ground crew field support</li>
-                <li>Broadband infrastructure (Dish, Comcast)</li>
-                <li>Site survey &amp; documentation</li>
-                <li>Structural &amp; equipment access coordination</li>
-                <li>Safety compliance &amp; site prep</li>
-              </ul>
-            </div>
-          </div>
-        </div>
-
-      </div>
-    </div>
-
-    <!-- OEM Equipment (full-width) -->
-    <div data-os-animation="fadeIn" data-os-animation-delay="0.3s" class="os-animation oem-strip">
-      <div class="container">
-        <div class="oem-inner">
-          <div class="oem-lede">
-            <h3>OEM Platforms We Work On</h3>
-            <p>
-              Our field technicians are trained and certified across all major telecom OEM equipment. Whatever platform your network runs on, our crews know the hardware.
-            </p>
-          </div>
-          <div class="oem-tags">
-            <span class="oem-tag">Nokia</span>
-            <span class="oem-tag">Ericsson</span>
-            <span class="oem-tag">Huawei</span>
-            <span class="oem-tag">Samsung</span>
-            <span class="oem-tag">Ciena</span>
-            <span class="oem-tag">Asentria</span>
-            <span class="oem-tag">Cisco ASR</span>
-            <span class="oem-tag">Ciena 6500</span>
-            <span class="oem-tag">Wave Server</span>
-            <span class="oem-tag">SiteBoss</span>
-          </div>
+        <div class="tags">
+          <span class="tag">4G LTE</span>
+          <span class="tag">5G NR</span>
+          <span class="tag">Routers &amp; Switches</span>
+          <span class="tag">Optical / Fiber</span>
+          <span class="tag">Structured Cabling</span>
+          <span class="tag">Hybrid Fiber Coax (HFC)</span>
+          <span class="tag">Remote PHY</span>
+          <span class="tag">rPDC / rMAC</span>
+          <span class="tag">Ericsson</span>
+          <span class="tag">Nokia</span>
+          <span class="tag">Samsung</span>
+          <span class="tag">Cisco</span>
+          <span class="tag">JMA</span>
+          <span class="tag">Corning</span>
+          <span class="tag">SiteBoss</span>
+          <span class="tag">T-Mobile / Verizon / AT&amp;T</span>
         </div>
       </div>
     </div>
+  </section>
 
+  <!-- Engagement model -->
+  <section class="section">
     <div class="container">
-      <div class="fs-section">
-
-        <!-- Track Record -->
-        <div data-os-animation="fadeIn" data-os-animation-delay="0.1s" class="os-animation track-section">
-          <div class="fs-eyebrow">Project Track Record</div>
-          <div class="fs-accent-bar"></div>
-          <h2 class="section-title">Completed Scopes — by the Numbers</h2>
-          <p class="section-subtitle">
-            We've delivered field programs at scale for all three Tier-1 mobile operators across the US. These are completed units — not estimates.
-          </p>
-
-          <div class="carrier-note">
-            <strong>Carrier coverage (Direct and Indirect):</strong> Verizon (VzW) · AT&amp;T · T-Mobile (TMO) &nbsp;|&nbsp;
-            <strong>Regions:</strong> West (CA, WA) · Central (TX, Midwest) · East (NJ, NY, FL, GA)
-          </div>
-
-          <div class="track-grid">
-            <div class="track-card">
-              <span class="track-num">700+</span>
-              <div class="track-scope">BB Swap &amp; Integration</div>
-              <div class="track-detail">NR, LTE, GSM, C-Band — VzW West</div>
-            </div>
-            <div class="track-card">
-              <span class="track-num">500+</span>
-              <div class="track-scope">BB Swap &amp; Integration</div>
-              <div class="track-detail">TMO East coast deployments</div>
-            </div>
-            <div class="track-card">
-              <span class="track-num">900</span>
-              <div class="track-scope">SiteBoss Installs</div>
-              <div class="track-detail">VzW West — install &amp; integration</div>
-            </div>
-            <div class="track-card">
-              <span class="track-num">430</span>
-              <div class="track-scope">Cabinet / Rack Installs</div>
-              <div class="track-detail">Optical &amp; RF — VzW West</div>
-            </div>
-            <div class="track-card">
-              <span class="track-num">250</span>
-              <div class="track-scope">Router Migrations</div>
-              <div class="track-detail">VzW West &amp; TMO East</div>
-            </div>
-            <div class="track-card">
-              <span class="track-num">250</span>
-              <div class="track-scope">Alarm Troubleshooting</div>
-              <div class="track-detail">Internal &amp; external — VzW West / East</div>
-            </div>
-            <div class="track-card">
-              <span class="track-num">200</span>
-              <div class="track-scope">SAU Alarms</div>
-              <div class="track-detail">VzW West</div>
-            </div>
-            <div class="track-card">
-              <span class="track-num">150</span>
-              <div class="track-scope">C-RAN Integration</div>
-              <div class="track-detail">AT&amp;T East coast deployments</div>
-            </div>
-          </div>
-
-          <p style="font-size: 14px; color: #555; line-height: 1.7;">
-            Additionally delivered call testing (PSAP &amp; functional) across VzW West, TMO West, AT&amp;T East, and TMO East — marked ALL markets complete.
-          </p>
-        </div>
-
+      <div class="section-head">
+        <span class="eyebrow">Engagement Model</span>
+        <h2 class="section-title">How we work with you</h2>
+        <p class="lead">From single-site projects to multi-market rollouts, we deploy crews sized to the work — with reporting that keeps you informed at every milestone.</p>
       </div>
-    </div>
-
-    <!-- Field Team Coverage (full-width) -->
-    <div data-os-animation="fadeIn" data-os-animation-delay="0.2s" class="os-animation team-strip">
-      <div class="container">
-        <div class="team-inner">
-          <div class="fs-eyebrow">Field Team Coverage</div>
-          <div class="fs-accent-bar"></div>
-          <h2 class="section-title">35 Crews. 10 Markets. Ready to Scale.</h2>
-
-          <div class="team-intro">
-            <p>
-              Our field team of 35 highly skilled technicians is distributed across 10 US markets — managed by 5 dedicated project managers and coordinators. The team is trained and certified to support installations, integrations, and site surveys at cell sites, hubs, switches, and data centers — with the ability to ramp up or enter a new market quickly when programs demand it.
-            </p>
-            <div class="team-highlights">
-              <div class="th-item">
-                <div class="th-text"><strong>5 Project Managers</strong>Coordinating field crews across all active markets</div>
-              </div>
-              <div class="th-item">
-                <div class="th-text"><strong>35 Field Technicians</strong>Expertise across all major telecom OEM platforms</div>
-              </div>
-              <div class="th-item">
-                <div class="th-text"><strong>10 Back-Office Engineers</strong>Manages logistics, quality control and COP delivery</div>
-              </div>
-              <div class="th-item">
-                <div class="th-text"><strong>Rapid Ramp Capability</strong>Can quickly scale up or launch into new markets as needed</div>
-              </div>
-            </div>
-          </div>
+      <div class="steps">
+        <div class="step">
+          <div class="step-num">01</div>
+          <h4>Scope &amp; Crewing</h4>
+          <p>We align on the work scope, site access, and timeline — then crew with certified technicians matched to the technology and requirements.</p>
+        </div>
+        <div class="step">
+          <div class="step-num">02</div>
+          <h4>Safe Execution</h4>
+          <p>Work is performed to carrier specifications with documented safety protocols and quality checkpoints at every phase of the install.</p>
+        </div>
+        <div class="step">
+          <div class="step-num">03</div>
+          <h4>Testing &amp; Closeout</h4>
+          <p>Every job is tested, verified, and documented — with photos, test results, and sign-off so there's no ambiguity at handoff.</p>
+        </div>
+        <div class="step">
+          <div class="step-num">04</div>
+          <h4>Reporting &amp; Support</h4>
+          <p>Structured project reporting keeps your program team informed, and we remain available for punch list and warranty work.</p>
         </div>
       </div>
     </div>
+  </section>
 
+  <!-- Who we work with -->
+  <section class="section section-alt">
     <div class="container">
-      <div class="fs-section">
-
-        <!-- Engagement Model -->
-        <div data-os-animation="fadeIn" data-os-animation-delay="0.3s" class="os-animation engage-section">
-          <div class="fs-eyebrow">Engagement Model</div>
-          <div class="fs-accent-bar"></div>
-          <h2 class="section-title">How We Mobilize for Your Program</h2>
-          <p class="section-subtitle">
-            From initial scoping to final site acceptance, we manage the full field operations lifecycle — so your program team stays focused on outcomes, not logistics.
-          </p>
-
-          <div class="timeline">
-            <div class="tl-step">
-              <div class="tl-dot">01</div>
-              <div class="tl-title">Scope &amp; Crew Match</div>
-              <div class="tl-body">We review the program scope, site list, OEM platform, and target market — then assign crews with the right certifications and experience for your specific scope.</div>
-            </div>
-            <div class="tl-step">
-              <div class="tl-dot">02</div>
-              <div class="tl-title">Mobilization &amp; Scheduling</div>
-              <div class="tl-body">Crews are briefed, badged, and scheduled. We coordinate access, equipment staging, and any carrier-specific onboarding requirements before first day on site.</div>
-            </div>
-            <div class="tl-step">
-              <div class="tl-dot">03</div>
-              <div class="tl-title">Field Execution</div>
-              <div class="tl-body">Installation, integration, testing, and commissioning executed to carrier specs — with daily status reporting and PM oversight throughout the program.</div>
-            </div>
-            <div class="tl-step">
-              <div class="tl-dot">04</div>
-              <div class="tl-title">Closeout &amp; Handoff</div>
-              <div class="tl-body">Site acceptance documentation, punch-list resolution, and clean handoff — with post-integration support available for any follow-up troubleshooting.</div>
-            </div>
-          </div>
+      <div class="section-head">
+        <span class="eyebrow">Who We Support</span>
+        <h2 class="section-title">Partners who need work done right</h2>
+      </div>
+      <div class="duo">
+        <div class="duo-card">
+          <h3>Carriers &amp; Program Teams</h3>
+          <p>We deploy certified crews for network rollouts, 5G in-building upgrades, and modernization programs — with the reporting and quality controls large programs demand.</p>
+          <a class="btn btn-primary" href="mailto:info@medleynetworks.com">Scope a Project</a>
         </div>
-
-        <!-- Why Medley -->
-        <div data-os-animation="fadeIn" data-os-animation-delay="0.1s" class="os-animation cred-section">
-          <div class="fs-eyebrow">Why Medley</div>
-          <div class="fs-accent-bar"></div>
-          <h2 class="section-title">What Sets Our Field Practice Apart</h2>
-          <p class="section-subtitle">
-            We don't subcontract. Every crew we deploy is vetted, trained, and managed by Medley's own project managers — which means consistent quality, accountability, and communication from first scope to final closeout.
-          </p>
-
-          <div class="cred-grid">
-            <div class="cred-card">
-              <h4>Proven at Scale with Tier-1 Carriers</h4>
-              <p>We've completed thousands of field scopes for Verizon, AT&amp;T, and T-Mobile — across macro integration, C-RAN, optical, router migration, SiteBoss, and functional testing programs. The numbers speak for themselves.</p>
-            </div>
-            <div class="cred-card">
-              <h4>Nationwide Footprint, HQ Accountability</h4>
-              <p>39 crews across 10 states, all managed from our Parsippany, NJ headquarters. You have one point of contact for scheduling, reporting, and escalation — regardless of how many markets you're running simultaneously.</p>
-            </div>
-            <div class="cred-card">
-              <h4>Rapid Ramp &amp; Market Entry</h4>
-              <p>Carrier programs move fast. Our crews are pre-certified, badged, and ready to mobilize — and we have the operational infrastructure to launch into a new market quickly when your program demands it.</p>
-            </div>
-          </div>
+        <div class="duo-card">
+          <h3>Contractors &amp; Integrators</h3>
+          <p>We supply qualified field technicians and full crews to support your projects when capacity demands it — nationwide, on your schedule and your standards.</p>
+          <a class="btn btn-dark" href="mailto:info@medleynetworks.com">Add Field Capacity</a>
         </div>
-
       </div>
     </div>
-  </div>
+  </section>
+
+  <!-- Why Medley -->
+  <section class="section">
+    <div class="container">
+      <div class="section-head">
+        <span class="eyebrow">Why Medley</span>
+        <h2 class="section-title">What makes our field services different</h2>
+        <p class="lead">Field work succeeds or fails on people, process, and accountability. We build all three into every crew we dispatch.</p>
+      </div>
+      <div class="grid grid-3">
+        <div class="card accent-border">
+          <h3>Nationwide Reach</h3>
+          <p class="card-body">Qualified technicians in all 50 states, backed by clear communication and structured project reporting — one accountable point of contact for your program.</p>
+        </div>
+        <div class="card accent-border">
+          <h3>Safety-First Culture</h3>
+          <p class="card-body">Every technician is trained and certified to industry safety standards. Safety isn't a checklist on our jobs — it's how we run every single one.</p>
+        </div>
+        <div class="card accent-border">
+          <h3>Carrier-Certified Technicians</h3>
+          <p class="card-body">Work is performed by certified technicians on major carrier and OEM equipment, following manufacturer specifications — so installs pass inspection the first time.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="cta-band">
+    <div class="container">
+      <h2>Need a field team on the ground?</h2>
+      <p>Talk to our operations team about your rollout, install, or maintenance scope.</p>
+      <a class="btn btn-primary btn-lg" href="mailto:info@medleynetworks.com">Talk to Our Team</a>
+      <a class="btn btn-outline-light btn-lg" href="index.html#contact">Send a Message</a>
+    </div>
+  </section>
 
   <!-- Footer -->
-  <footer>
+  <footer class="site-footer">
     <div class="container">
-      <a href="#"><img alt="" src="images/logo1.png" /></a>
-      <p>2026 &copy; <a href="#">Medley Networks</a> All Rights Reserved.</p>
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a class="brand" href="index.html"><img src="images/logo-L.png" alt="Medley Networks"></a>
+          <p>End-to-end technology services and talent staffing for the telecommunications and IT industries — delivered by people who have done the work.</p>
+        </div>
+        <div>
+          <h4>Services</h4>
+          <ul>
+            <li><a href="rf-engineering.html">RF Engineering</a></li>
+            <li><a href="rf-compliance.html">RF Compliance</a></li>
+            <li><a href="staffing.html">Staffing Solutions</a></li>
+            <li><a href="it-services.html">IT Services</a></li>
+            <li><a href="field-services.html">Field Services</a></li>
+            <li><a href="emerging-technologies.html">Emerging Technologies</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Company</h4>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="index.html#about">About Us</a></li>
+            <li><a href="index.html#store">Store</a></li>
+            <li><a href="index.html#contact">Contact</a></li>
+            <li><a href="privacy-policy.html">Privacy Policy</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Contact</h4>
+          <ul>
+            <li>239 New Road, Suite B202</li>
+            <li>Parsippany, NJ 07054</li>
+            <li><a href="tel:+19739090919">(973) 909-0919</a></li>
+            <li><a href="mailto:info@medleynetworks.com">info@medleynetworks.com</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <div class="container">
+          <p>&copy; 2026 Medley Networks Inc. All rights reserved.</p>
+          <p>Parsippany, New Jersey</p>
+        </div>
+      </div>
     </div>
   </footer>
 
-  <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
-  <script src="js/waypoints.min.js"></script>
-  <script src="js/script.js"></script>
-  <script src="js/bootstrap.min.js"></script>
+  <script src="js/main.js"></script>
 </body>
-
 </html>

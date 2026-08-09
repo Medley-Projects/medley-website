@@ -1,563 +1,341 @@
 <!doctype html>
 <html lang="en">
-
 <head>
   <meta charset="utf-8">
-  <title>IT Services | Medley Networks</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  <link rel="stylesheet" type="text/css" href="css/grid.css">
-  <link rel="stylesheet" type="text/css" href="style.css">
-  <link rel="stylesheet" type="text/css" href="css/layout.css">
-  <link rel="stylesheet" type="text/css" href="css/responsive.css">
-  <link rel="stylesheet" type="text/css" href="css/animate.css">
-  <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
-
-  <style>
-    body {
-      padding-top: 70px;
-      font-family: 'Shonar Bangla', 'amblelight', sans-serif;
-    }
-
-    .navbar-brand img {
-      max-width: 100px;
-      height: auto;
-    }
-
-    #it-services .os-animation {
-      opacity: 1 !important;
-    }
-
-    #it-services .section-title {
-      color: #222 !important;
-      line-height: 1.15 !important;
-    }
-
-    #it-services .section-subtitle {
-      color: #555 !important;
-    }
-
-    .its-section {
-      text-align: left;
-    }
-
-    .its-section .its-eyebrow {
-      text-transform: uppercase;
-      letter-spacing: .14em;
-      font-size: 13px;
-      font-weight: 700;
-      color: #d87843;
-      margin-bottom: 10px;
-    }
-
-    .its-section .its-accent-bar {
-      width: 52px;
-      height: 4px;
-      background: #d87843;
-      margin-bottom: 20px;
-    }
-
-    .its-section .section-title {
-      font-size: 30px;
-      font-weight: 900;
-      letter-spacing: 4px;
-      text-transform: uppercase;
-      color: #222;
-      line-height: 1.15;
-      margin-bottom: 16px;
-    }
-
-    .its-section .section-subtitle {
-      font-size: 16px;
-      color: #555;
-      max-width: 680px;
-      line-height: 1.7;
-      margin-bottom: 40px;
-    }
-
-    /* Dual CTA */
-    .dual-cta {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 20px;
-      margin-bottom: 50px;
-    }
-
-    .cta-card {
-      padding: 36px;
-      text-align: left;
-      background: #f4f4f4;
-      display: flex;
-      flex-direction: column;
-    }
-
-    .cta-card .cta-btn {
-      margin-top: auto;
-    }
-
-    .cta-card h3 {
-      font-size: 18px;
-      letter-spacing: 2px;
-      margin-bottom: 10px;
-      color: #d84012;
-    }
-
-    .cta-card.enterprise h3 {
-      color: #222;
-    }
-
-    .cta-card p {
-      font-size: 16px;
-      line-height: 26px;
-      color: #555;
-      margin-bottom: 22px;
-    }
-
-    .cta-btn {
-      display: inline-block;
-      padding: 10px 25px;
-      font-size: 13px;
-      font-weight: 700;
-      text-decoration: none;
-      background: #d84012;
-      color: #fff;
-      border: none;
-      transition: background .2s;
-      letter-spacing: 1px;
-    }
-
-    .cta-btn:hover { background: #222; color: #fff; text-decoration: none; }
-
-    .cta-card.enterprise .cta-btn {
-      background: #222;
-    }
-
-    .cta-card.enterprise .cta-btn:hover {
-      background: #d84012;
-    }
-
-    /* Services grid */
-    .services-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 16px;
-      margin-bottom: 50px;
-    }
-
-    .service-card {
-      background: #f4f4f4;
-      padding: 22px 18px;
-    }
-
-    .service-card h4 {
-      font-size: 15px;
-      font-weight: 700;
-      color: #222;
-      margin-bottom: 10px;
-      line-height: 1.3;
-    }
-
-    .service-card ul {
-      list-style: none;
-      padding: 0;
-    }
-
-    .service-card ul li {
-      font-size: 13px;
-      color: #555;
-      padding: 3px 0 3px 14px;
-      position: relative;
-      line-height: 1.5;
-    }
-
-    .service-card ul li::before {
-      content: '—';
-      position: absolute;
-      left: 0;
-      color: #d87843;
-    }
-
-    /* How we work */
-    .how-we-work {
-      background: #f4f4f4;
-      padding: 50px 40px;
-      margin-bottom: 50px;
-    }
-
-    .process-intro {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 40px;
-      align-items: center;
-      margin-bottom: 40px;
-    }
-
-    .process-intro p {
-      font-size: 14px;
-      color: #555;
-      line-height: 1.75;
-    }
-
-    .process-stats {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 12px;
-    }
-
-    .stat-box {
-      background: #fff;
-      padding: 18px;
-      text-align: center;
-    }
-
-    .stat-box .stat-num {
-      font-size: 1.6rem;
-      font-weight: 700;
-      color: #d84012;
-      display: block;
-    }
-
-    .stat-box .stat-label {
-      font-size: 11px;
-      color: #777;
-      text-transform: uppercase;
-      letter-spacing: .08em;
-      margin-top: 4px;
-    }
-
-    .process-steps {
-      display: grid;
-      grid-template-columns: repeat(5, 1fr);
-      gap: 16px;
-    }
-
-    .step {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      text-align: center;
-    }
-
-    .step-circle {
-      width: 60px;
-      height: 60px;
-      border-radius: 50%;
-      background: #222;
-      border: 3px solid #d87843;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 1.2rem;
-      font-weight: 700;
-      color: #d87843;
-      margin-bottom: 14px;
-      flex-shrink: 0;
-    }
-
-    .step:nth-child(2) .step-circle { border-color: #d84012; color: #d84012; }
-    .step:nth-child(3) .step-circle { border-color: #222; color: #fff; }
-    .step:nth-child(4) .step-circle { border-color: #d87843; color: #d87843; }
-    .step:nth-child(5) .step-circle { border-color: #d84012; color: #d84012; }
-
-    .step-title {
-      font-size: 13px;
-      font-weight: 700;
-      color: #222;
-      margin-bottom: 6px;
-      line-height: 1.3;
-    }
-
-    .step-body {
-      font-size: 12px;
-      color: #555;
-      line-height: 1.55;
-    }
-
-    /* Why Medley */
-    .why-medley {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 20px;
-      margin-bottom: 40px;
-    }
-
-    .value-card {
-      padding: 24px 20px;
-      border-left: 4px solid #d87843;
-      background: #f4f4f4;
-    }
-
-    .value-card:nth-child(2) { border-left-color: #d84012; }
-    .value-card:nth-child(3) { border-left-color: #222; }
-
-    .value-card h4 {
-      font-size: 15px;
-      font-weight: 700;
-      color: #222;
-      margin-bottom: 10px;
-    }
-
-    .value-card p {
-      font-size: 14px;
-      color: #555;
-      line-height: 1.65;
-    }
-
-    @media (max-width: 960px) {
-      .dual-cta { grid-template-columns: 1fr; }
-      .services-grid { grid-template-columns: 1fr 1fr; }
-      .process-intro { grid-template-columns: 1fr; }
-      .process-steps { grid-template-columns: repeat(3, 1fr); gap: 20px; }
-      .why-medley { grid-template-columns: 1fr; }
-    }
-
-    @media (max-width: 600px) {
-      .how-we-work { padding: 30px 20px; }
-      .services-grid { grid-template-columns: 1fr; }
-      .process-steps { grid-template-columns: 1fr 1fr; }
-      .process-stats { grid-template-columns: 1fr 1fr; }
-    }
-  </style>
+  <title>IT Services | Medley Networks</title>
+  <meta name="description" content="IT services from Medley Networks — application development, enterprise integration, cloud migration, data engineering, and managed support for growing businesses.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/site.css">
 </head>
-
 <body>
 
-  <!-- Navigation -->
-  <section id="navigation">
-    <nav role="navigation" class="navbar navbar-default navbar-fixed-top">
-      <div class="container-fluid">
-        <div class="navbar-header">
-          <button data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" class="navbar-toggle"
-            type="button">&nbsp;</button>
-          <a style="margin: 0px; padding: 5px 0px 0px; vertical-align: middle !important;" class="navbar-brand"
-            href="index.html#home">
-            <img alt=""
-              style="height: 40px; width: 100px; margin: 0px; padding: 0px; vertical-align: middle !important;"
-              src="images/logo-L.png" />
-          </a>
+  <header class="site-header" id="siteHeader">
+    <div class="container header-inner">
+      <a class="brand" href="index.html" aria-label="Medley Networks home">
+        <img src="images/logo-L.png" alt="Medley Networks">
+      </a>
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle menu" aria-expanded="false" aria-controls="siteNav">
+        <span></span><span></span><span></span>
+      </button>
+      <nav class="site-nav" id="siteNav" aria-label="Primary">
+        <ul class="nav-list">
+          <li><a class="nav-link" href="index.html">Home</a></li>
+          <li class="has-dropdown active">
+            <a class="nav-link" href="index.html#services">Services</a>
+            <ul class="dropdown">
+              <li><a href="rf-engineering.html">RF Engineering</a></li>
+              <li><a href="rf-compliance.html">RF Compliance</a></li>
+              <li><a href="staffing.html">Staffing Solutions</a></li>
+              <li class="active"><a href="it-services.html">IT Services</a></li>
+              <li><a href="field-services.html">Field Services</a></li>
+              <li><a href="emerging-technologies.html">Emerging Technologies</a></li>
+            </ul>
+          </li>
+          <li><a class="nav-link" href="index.html#store">Store</a></li>
+          <li><a class="nav-link" href="index.html#contact">Contact</a></li>
+          <li><a class="btn btn-primary btn-sm nav-cta" href="mailto:info@medleynetworks.com">Get in Touch</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Page hero -->
+  <section class="page-hero">
+    <div class="container">
+      <span class="eyebrow">IT Services</span>
+      <h1>Technology that powers your business</h1>
+      <p class="page-intro">Medley Networks helps businesses build, scale, and secure their technology — from cloud infrastructure and application development to data engineering, analytics, and managed support services. We deliver working systems that move your business forward.</p>
+    </div>
+  </section>
+
+  <!-- Stats -->
+  <section class="section section-tight">
+    <div class="container">
+      <div class="stat-grid">
+        <div class="stat">
+          <span class="stat-num">Cloud</span>
+          <span class="stat-label">Azure &amp; AWS</span>
         </div>
-        <div id="bs-example-navbar-collapse-1" class="collapse navbar-collapse">
-          <ul style="vertical-align: bottom !important;" class="nav navbar-nav navbar-right">
-            <li style="font-size: 14px; font-family: Arial, sans-serif;"><a href="index.html#home">Home</a></li>
-            <li style="font-size: 14px; font-family: Arial, sans-serif;"><a href="index.html#services">Services</a></li>
-            <li style="font-size: 14px; font-family: Arial, sans-serif;"><a href="/rf-engineering.html">RF Engineering</a></li>
-            <li style="font-size: 14px; font-family: Arial, sans-serif;"><a href="/rf-compliance.html">RF Compliance</a></li>
-            <li style="font-size: 14px; font-family: Arial, sans-serif;"><a href="/staffing.html">Staffing</a></li>
-            <li style="font-size: 14px; font-family: Arial, sans-serif;"><a href="/it-services.html">IT Services</a></li>
-            <li style="font-size: 14px; font-family: Arial, sans-serif;"><a href="/field-services.html">Field Services</a></li>
-            <li style="font-size: 14px; font-family: Arial, sans-serif;"><a href="/emerging-technologies.html">Emerging Technologies</a></li>
-            <li style="font-size: 14px; font-family: Arial, sans-serif;"><a href="index.html#store">Store</a></li>
-            <li style="font-size: 14px; font-family: Arial, sans-serif;"><a href="index.html#ContactUs">Contact Us</a></li>
-            <li style="font-size: 14px; font-family: Arial, sans-serif;"><a href="/privacy-policy.html">Privacy Policy</a></li>
+        <div class="stat">
+          <span class="stat-num">Data</span>
+          <span class="stat-label">Engineering &amp; Analytics</span>
+        </div>
+        <div class="stat">
+          <span class="stat-num">Modern</span>
+          <span class="stat-label">Web &amp; Integration Stacks</span>
+        </div>
+        <div class="stat">
+          <span class="stat-num">Managed</span>
+          <span class="stat-label">Support &amp; DevOps</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Capabilities -->
+  <section class="section">
+    <div class="container">
+      <div class="section-head">
+        <span class="eyebrow">What We Deliver</span>
+        <h2 class="section-title">IT capabilities, end to end</h2>
+        <p class="lead">From greenfield applications to legacy modernization, our teams deliver across the full software lifecycle — with a focus on maintainable systems and measurable outcomes.</p>
+      </div>
+
+      <div class="grid grid-3">
+        <div class="card">
+          <span class="eyebrow">Development</span>
+          <h3>Application Development</h3>
+          <ul class="card-list">
+            <li>Custom web applications</li>
+            <li>Enterprise application integration (EAI)</li>
+            <li>API &amp; microservices development</li>
+            <li>Legacy modernization &amp; re-platforming</li>
+            <li>Mobile &amp; responsive front-end builds</li>
+            <li>Database design &amp; management</li>
+          </ul>
+        </div>
+
+        <div class="card">
+          <span class="eyebrow">Cloud</span>
+          <h3>Cloud &amp; DevOps</h3>
+          <ul class="card-list">
+            <li>Cloud migration &amp; optimization</li>
+            <li>Infrastructure as code (IaC)</li>
+            <li>CI/CD pipeline implementation</li>
+            <li>Containerization (Docker, Kubernetes)</li>
+            <li>Cost optimization &amp; governance</li>
+            <li>Disaster recovery &amp; backup</li>
+          </ul>
+        </div>
+
+        <div class="card">
+          <span class="eyebrow">Data</span>
+          <h3>Data Engineering &amp; Analytics</h3>
+          <ul class="card-list">
+            <li>ETL / ELT data pipelines</li>
+            <li>Data warehouse &amp; lake design</li>
+            <li>Cloud data platforms (Snowflake, etc.)</li>
+            <li>Business intelligence dashboards</li>
+            <li>Reporting &amp; KPI tracking</li>
+            <li>Data quality &amp; governance</li>
+          </ul>
+        </div>
+
+        <div class="card">
+          <span class="eyebrow">Security</span>
+          <h3>Security &amp; Compliance</h3>
+          <ul class="card-list">
+            <li>Application security reviews</li>
+            <li>Secure cloud architecture</li>
+            <li>Identity &amp; access management</li>
+            <li>Penetration testing support</li>
+            <li>Compliance alignment (SOC 2, GDPR)</li>
+          </ul>
+        </div>
+
+        <div class="card">
+          <span class="eyebrow">Quality</span>
+          <h3>QA &amp; Test Automation</h3>
+          <ul class="card-list">
+            <li>Automated test frameworks</li>
+            <li>API &amp; regression testing</li>
+            <li>Performance &amp; load testing</li>
+            <li>Continuous testing in CI/CD</li>
+            <li>AI-assisted test generation</li>
+          </ul>
+        </div>
+
+        <div class="card">
+          <span class="eyebrow">Support</span>
+          <h3>Managed Services &amp; Support</h3>
+          <ul class="card-list">
+            <li>24/7 application &amp; infrastructure monitoring</li>
+            <li>Managed DevOps &amp; platform operations</li>
+            <li>Help desk &amp; end-user support</li>
+            <li>SLA-backed incident response</li>
+            <li>Proactive maintenance &amp; patching</li>
           </ul>
         </div>
       </div>
-    </nav>
+    </div>
   </section>
 
-  <div id="it-services" class="intro">
+  <!-- Technologies -->
+  <section class="section section-alt">
     <div class="container">
-      <div class="its-section">
-
-        <!-- Section header -->
-        <div data-os-animation="zoomIn" data-os-animation-delay="0.1s" class="os-animation">
-          <div class="its-eyebrow">IT Services</div>
-          <div class="its-accent-bar"></div>
-          <h2 class="section-title">Technology Solutions<br>Built Around Your Business</h2>
-          <p class="section-subtitle">
-            Medley Networks delivers Information Technology services that help businesses modernize, scale, and operate more efficiently. From custom software development and cloud infrastructure to cybersecurity, data analytics, and managed IT support — we bring the same structured, delivery-focused approach to technology that defines everything we do.
-          </p>
+      <div class="grid grid-wide" style="align-items:start;">
+        <div>
+          <span class="eyebrow">Technologies</span>
+          <h2 class="section-title">What we build with</h2>
+          <p class="lead">Our teams are current across the modern software stack — from established enterprise platforms to the tools teams are adopting today.</p>
         </div>
-
-        <!-- Dual CTA -->
-        <div data-os-animation="fadeIn" data-os-animation-delay="0.2s" class="os-animation dual-cta">
-          <div class="cta-card enterprise">
-            <h3>Enterprises &amp; Mid-Market Companies</h3>
-            <p>Looking to modernize your IT infrastructure, build out cloud capabilities, or develop custom software? Our team works with you to scope, design, and deliver solutions tailored to your business — not off-the-shelf templates.</p>
-            <a href="mailto:bd@medleynetworks.com" class="cta-btn">Discuss Your IT Needs →</a>
-          </div>
-          <div class="cta-card startups">
-            <h3>Telecom &amp; Technology Firms</h3>
-            <p>Already a Medley partner on engineering or staffing? Our IT services extend our support further into your organization — from OSS/BSS application development to network automation, data pipelines, and back-office systems.</p>
-            <a href="mailto:info@medleynetworks.com" class="cta-btn">Explore IT Partnership →</a>
-          </div>
+        <div class="tags">
+          <span class="tag">C# / .NET</span>
+          <span class="tag">Java / Spring</span>
+          <span class="tag">Python</span>
+          <span class="tag">JavaScript / TypeScript</span>
+          <span class="tag">Angular</span>
+          <span class="tag">React</span>
+          <span class="tag">SQL Server</span>
+          <span class="tag">PostgreSQL</span>
+          <span class="tag">Oracle</span>
+          <span class="tag">MongoDB</span>
+          <span class="tag">Azure</span>
+          <span class="tag">AWS</span>
+          <span class="tag">Kubernetes</span>
+          <span class="tag">Docker</span>
+          <span class="tag">Snowflake</span>
+          <span class="tag">Power BI</span>
+          <span class="tag">MuleSoft</span>
+          <span class="tag">Kafka</span>
+          <span class="tag">Git / GitHub Actions</span>
+          <span class="tag">Jira / Azure DevOps</span>
         </div>
-
-        <!-- Services We Offer -->
-        <div data-os-animation="fadeIn" data-os-animation-delay="0.1s" class="os-animation">
-          <div class="its-eyebrow">What We Offer</div>
-          <div class="its-accent-bar"></div>
-          <h2 class="section-title">IT Services &amp; Capabilities</h2>
-          <p class="section-subtitle">
-            Our IT services practice covers the core technology disciplines that modern businesses rely on — from application development and cloud migration to data management, cybersecurity, and managed services.
-          </p>
-        </div>
-
-        <div data-os-animation="fadeIn" data-os-animation-delay="0.2s" class="os-animation"><div class="services-grid">
-          <div class="service-card">
-            <h4>Software Development</h4>
-            <ul>
-              <li>Custom web &amp; mobile application development</li>
-              <li>API design, development &amp; integration</li>
-              <li>OSS / BSS application development</li>
-              <li>Legacy system modernization</li>
-              <li>QA testing &amp; quality assurance</li>
-            </ul>
-          </div>
-          <div class="service-card">
-            <h4>Cloud Services &amp; Migration</h4>
-            <ul>
-              <li>Cloud infrastructure design &amp; deployment</li>
-              <li>AWS, Azure &amp; Google Cloud migration</li>
-              <li>Hybrid &amp; multi-cloud architecture</li>
-              <li>Cloud cost optimization</li>
-              <li>DevOps &amp; CI/CD pipeline setup</li>
-            </ul>
-          </div>
-          <div class="service-card">
-            <h4>Data &amp; Analytics</h4>
-            <ul>
-              <li>Data pipeline design &amp; engineering</li>
-              <li>Business intelligence &amp; dashboards</li>
-              <li>Database design, migration &amp; optimization</li>
-              <li>Big data &amp; analytics platforms</li>
-              <li>AI-assisted reporting &amp; insights</li>
-            </ul>
-          </div>
-          <div class="service-card">
-            <h4>Cybersecurity</h4>
-            <ul>
-              <li>Security assessment &amp; gap analysis</li>
-              <li>Security protocol design &amp; implementation</li>
-              <li>Vulnerability scanning &amp; remediation</li>
-              <li>Compliance support (SOC 2, HIPAA, PCI)</li>
-              <li>Employee security awareness training</li>
-            </ul>
-          </div>
-          <div class="service-card">
-            <h4>Network &amp; Infrastructure</h4>
-            <ul>
-              <li>Network design, implementation &amp; support</li>
-              <li>Server &amp; virtualization management</li>
-              <li>Network monitoring &amp; performance tuning</li>
-              <li>VPN, firewall &amp; access control setup</li>
-              <li>Disaster recovery &amp; backup solutions</li>
-            </ul>
-          </div>
-          <div class="service-card">
-            <h4>Managed IT &amp; Support</h4>
-            <ul>
-              <li>IT helpdesk &amp; end-user support</li>
-              <li>System monitoring &amp; proactive maintenance</li>
-              <li>IT project management</li>
-              <li>Vendor management &amp; procurement</li>
-              <li>IT strategy &amp; roadmap consulting</li>
-            </ul>
-          </div>
-        </div>
-        </div>
-
-        <!-- How We Work -->
-        <div data-os-animation="fadeIn" data-os-animation-delay="0.3s" class="os-animation how-we-work">
-          <div class="its-eyebrow">Our Process</div>
-          <div class="its-accent-bar"></div>
-          <h2 class="section-title">How We Work</h2>
-
-          <div class="process-intro">
-            <p>
-              We approach every IT engagement with the same structured, delivery-focused methodology we use across our engineering services. We start by understanding your business objectives — not just your technical requirements — and build a roadmap that aligns technology investment with outcomes you can measure. As a growing IT practice, we work closely with each client to ensure our solutions fit precisely, without the overhead of a large consulting firm.
-            </p>
-            <div class="process-stats">
-              <div class="stat-box">
-                <span class="stat-num">5</span>
-                <span class="stat-label">Step Delivery Process</span>
-              </div>
-              <div class="stat-box">
-                <span class="stat-num">Agile</span>
-                <span class="stat-label">Delivery Methodology</span>
-              </div>
-              <div class="stat-box">
-                <span class="stat-num">Cloud</span>
-                <span class="stat-label">Native First Approach</span>
-              </div>
-              <div class="stat-box">
-                <span class="stat-num">Fixed</span>
-                <span class="stat-label">Scope &amp; T&amp;M Options</span>
-              </div>
-            </div>
-          </div>
-
-          <div class="process-steps">
-            <div class="step">
-              <div class="step-circle">1</div>
-              <div class="step-title">Discovery &amp; Requirements</div>
-              <div class="step-body">Understand your business goals, current technology environment, pain points, and priorities before any solution is proposed.</div>
-            </div>
-            <div class="step">
-              <div class="step-circle">2</div>
-              <div class="step-title">Solution Design</div>
-              <div class="step-body">Architect a tailored solution — technology stack, timeline, resource plan, and budget — aligned to your specific needs and constraints.</div>
-            </div>
-            <div class="step">
-              <div class="step-circle">3</div>
-              <div class="step-title">Development &amp; Build</div>
-              <div class="step-body">Agile delivery with regular checkpoints, sprint reviews, and transparent progress reporting so you stay informed at every stage.</div>
-            </div>
-            <div class="step">
-              <div class="step-circle">4</div>
-              <div class="step-title">Testing &amp; QA</div>
-              <div class="step-body">Rigorous testing across functionality, security, performance, and user experience before any solution goes live in your environment.</div>
-            </div>
-            <div class="step">
-              <div class="step-circle">5</div>
-              <div class="step-title">Deployment &amp; Support</div>
-              <div class="step-body">Smooth go-live with full documentation, training, and post-deployment support — so your team is set up for long-term success.</div>
-            </div>
-          </div>
-        </div>
-
-        <!-- Why Medley -->
-        <div data-os-animation="fadeIn" data-os-animation-delay="0.1s" class="os-animation">
-          <div class="its-eyebrow">Why Choose Us</div>
-          <div class="its-accent-bar"></div>
-          <h2 class="section-title">Why Bring Your IT Needs to Medley</h2>
-          <p class="section-subtitle">
-            We approach IT services the same way we approach everything at Medley — with a focus on quality over volume, and relationships over transactions. Every engagement is built around your specific objectives, not a generic playbook.
-          </p>
-        </div>
-
-        <div data-os-animation="fadeIn" data-os-animation-delay="0.2s" class="os-animation"><div class="why-medley">
-          <div class="value-card">
-            <h4>A Partner, Not Just a Vendor</h4>
-            <p>We invest time in understanding your business before recommending solutions. You won't get a templated proposal — you'll get a team that's genuinely committed to understanding your environment and delivering outcomes that matter to your organization.</p>
-          </div>
-          <div class="value-card">
-            <h4>Telecom-Rooted Technology Depth</h4>
-            <p>Our roots in telecom engineering mean we bring a strong understanding of network architecture, OSS/BSS systems, and data-intensive applications — making us a natural fit for technology companies and carriers seeking IT support that speaks their language.</p>
-          </div>
-          <div class="value-card">
-            <h4>Flexible Staffing &amp; Project Models</h4>
-            <p>Need a dedicated developer for six months, or a full project team to deliver a defined scope? We offer both staff augmentation and fixed-scope project delivery — giving you the flexibility to engage us in the way that works best for your organization.</p>
-          </div>
-        </div>
-        </div>
-
       </div>
     </div>
-  </div>
+  </section>
+
+  <!-- Engagement model -->
+  <section class="section">
+    <div class="container">
+      <div class="section-head">
+        <span class="eyebrow">Engagement Model</span>
+        <h2 class="section-title">How we work with you</h2>
+        <p class="lead">We tailor every engagement to your team and timeline — from dedicated delivery teams to specialists embedded in your existing squads.</p>
+      </div>
+      <div class="steps">
+        <div class="step">
+          <div class="step-num">01</div>
+          <h4>Discovery &amp; Strategy</h4>
+          <p>We start with your business goals, current systems, and constraints — then define a roadmap with clear priorities, milestones, and success measures.</p>
+        </div>
+        <div class="step">
+          <div class="step-num">02</div>
+          <h4>Architecture &amp; Design</h4>
+          <p>Solutions are architected for scale, security, and maintainability — documented and reviewed before a line of code is written.</p>
+        </div>
+        <div class="step">
+          <div class="step-num">03</div>
+          <h4>Build &amp; Integrate</h4>
+          <p>We ship iteratively in short sprints, with automated testing and continuous integration — so progress is visible and risk stays low.</p>
+        </div>
+        <div class="step">
+          <div class="step-num">04</div>
+          <h4>Deploy &amp; Support</h4>
+          <p>Clean deployment, documentation, and knowledge transfer — with ongoing managed support available after launch to keep systems healthy.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Who we work with -->
+  <section class="section section-alt">
+    <div class="container">
+      <div class="section-head">
+        <span class="eyebrow">Who We Support</span>
+        <h2 class="section-title">Teams building modern technology</h2>
+      </div>
+      <div class="duo">
+        <div class="duo-card">
+          <h3>Growing Businesses</h3>
+          <p>If your systems can't keep up with your growth, we modernize pragmatically — consolidating tooling, moving to the cloud, and building the apps and data foundations that scale with you.</p>
+          <a class="btn btn-primary" href="mailto:info@medleynetworks.com">Discuss Your Project</a>
+        </div>
+        <div class="duo-card">
+          <h3>IT &amp; Product Teams</h3>
+          <p>When your team needs capacity or specialized expertise, we embed senior engineers who deliver within your culture and tooling — as delivery teams, staff augmentation, or on-call support.</p>
+          <a class="btn btn-dark" href="mailto:info@medleynetworks.com">Augment Your Team</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Why Medley -->
+  <section class="section">
+    <div class="container">
+      <div class="section-head">
+        <span class="eyebrow">Why Medley</span>
+        <h2 class="section-title">What makes our IT practice different</h2>
+        <p class="lead">We're engineers who have shipped production systems — and we apply that discipline to every engagement, no matter the size.</p>
+      </div>
+      <div class="grid grid-3">
+        <div class="card accent-border">
+          <h3>Hands-On Expertise</h3>
+          <p class="card-body">Our consultants have built and run enterprise systems that handle real business. We bring practitioner experience, not just certifications.</p>
+        </div>
+        <div class="card accent-border">
+          <h3>Outcomes, Not Deliverables</h3>
+          <p class="card-body">We measure success by business impact — faster release cycles, lower cost, better data — not by volume of code or tickets.</p>
+        </div>
+        <div class="card accent-border">
+          <h3>Senior, Dedicated Teams</h3>
+          <p class="card-body">Work is done by senior engineers who understand your stack, communicate clearly, and stay engaged from kickoff through support.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="cta-band">
+    <div class="container">
+      <h2>Ready to modernize your technology?</h2>
+      <p>Talk to our team about your build, cloud, or data initiative.</p>
+      <a class="btn btn-primary btn-lg" href="mailto:info@medleynetworks.com">Start a Conversation</a>
+      <a class="btn btn-outline-light btn-lg" href="index.html#contact">Send a Message</a>
+    </div>
+  </section>
 
   <!-- Footer -->
-  <footer>
+  <footer class="site-footer">
     <div class="container">
-      <a href="#"><img alt="" src="images/logo1.png" /></a>
-      <p>2026 &copy; <a href="#">Medley Networks</a> All Rights Reserved.</p>
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a class="brand" href="index.html"><img src="images/logo-L.png" alt="Medley Networks"></a>
+          <p>End-to-end technology services and talent staffing for the telecommunications and IT industries — delivered by people who have done the work.</p>
+        </div>
+        <div>
+          <h4>Services</h4>
+          <ul>
+            <li><a href="rf-engineering.html">RF Engineering</a></li>
+            <li><a href="rf-compliance.html">RF Compliance</a></li>
+            <li><a href="staffing.html">Staffing Solutions</a></li>
+            <li><a href="it-services.html">IT Services</a></li>
+            <li><a href="field-services.html">Field Services</a></li>
+            <li><a href="emerging-technologies.html">Emerging Technologies</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Company</h4>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="index.html#about">About Us</a></li>
+            <li><a href="index.html#store">Store</a></li>
+            <li><a href="index.html#contact">Contact</a></li>
+            <li><a href="privacy-policy.html">Privacy Policy</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Contact</h4>
+          <ul>
+            <li>239 New Road, Suite B202</li>
+            <li>Parsippany, NJ 07054</li>
+            <li><a href="tel:+19739090919">(973) 909-0919</a></li>
+            <li><a href="mailto:info@medleynetworks.com">info@medleynetworks.com</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <div class="container">
+          <p>&copy; 2026 Medley Networks Inc. All rights reserved.</p>
+          <p>Parsippany, New Jersey</p>
+        </div>
+      </div>
     </div>
   </footer>
 
-  <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
-  <script src="js/waypoints.min.js"></script>
-  <script src="js/script.js"></script>
-  <script src="js/bootstrap.min.js"></script>
+  <script src="js/main.js"></script>
 </body>
-
 </html>
