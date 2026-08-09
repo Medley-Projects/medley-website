@@ -10,6 +10,7 @@
 
   <!--FONTS-->
   <link href='https://fonts.googleapis.com/css?family=Raleway:900,300,700' rel='stylesheet' type='text/css'>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Montserrat:wght@700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.2/css/font-awesome.min.css">
   <!--CSS-->
   <link rel="stylesheet" type="text/css" href="css/grid.css">
@@ -191,6 +192,152 @@
       background: #d84012;
       border-radius: 20px;
       white-space: nowrap;
+    }
+  </style>
+
+  <style>
+    /* ===== Services tiles (from service-tiles-photos.html) ===== */
+    #portfoliolist.grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 22px;
+      max-width: 1080px;
+      margin: 0 auto;
+    }
+
+    #portfoliolist .tile {
+      background: #ffffff;
+      border-radius: 16px;
+      overflow: hidden;
+      border: 1px solid #dde8f0;
+      box-shadow: 0 4px 18px rgba(26, 58, 92, .07);
+      display: flex;
+      flex-direction: column;
+      transition: transform .22s ease, box-shadow .22s ease;
+      cursor: pointer;
+    }
+
+    #portfoliolist .tile:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 14px 36px rgba(26, 58, 92, .15);
+    }
+
+    #portfoliolist .tile-img-wrap {
+      width: 100%;
+      aspect-ratio: 16/9;
+      overflow: hidden;
+      background: #d0dce8;
+      position: relative;
+    }
+
+    #portfoliolist .tile-img-wrap img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+      transition: transform .4s ease;
+    }
+
+    #portfoliolist .tile:hover .tile-img-wrap img {
+      transform: scale(1.05);
+    }
+
+    #portfoliolist .tile-img-wrap::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(to bottom, transparent 40%, rgba(10, 20, 40, .55) 100%);
+      z-index: 1;
+    }
+
+    #portfoliolist .tile-label {
+      position: absolute;
+      bottom: 12px;
+      left: 14px;
+      z-index: 2;
+      font-family: 'Montserrat', 'Raleway', sans-serif;
+      font-size: 12px;
+      font-weight: 800;
+      letter-spacing: .08em;
+      text-transform: uppercase;
+      color: #fff;
+      background: var(--accent, #1e6fa5);
+      padding: 4px 10px;
+      border-radius: 4px;
+    }
+
+    #portfoliolist .tile:nth-child(1) { --accent: #1e6fa5; }
+    #portfoliolist .tile:nth-child(2) { --accent: #2e9fd8; }
+    #portfoliolist .tile:nth-child(3) { --accent: #f0932b; }
+    #portfoliolist .tile:nth-child(4) { --accent: #6c5ce7; }
+    #portfoliolist .tile:nth-child(5) { --accent: #1abc9c; }
+    #portfoliolist .tile:nth-child(6) { --accent: #27ae60; }
+
+    #portfoliolist .tile-img-wrap::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      height: 3px;
+      background: var(--accent, #1e6fa5);
+      z-index: 3;
+    }
+
+    #portfoliolist .tile-body {
+      padding: 18px 20px 20px;
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+    }
+
+    #portfoliolist .tile-body h3 {
+      font-family: 'Montserrat', 'Raleway', sans-serif;
+      font-size: 15px;
+      font-weight: 800;
+      letter-spacing: normal;
+      text-transform: none;
+      color: #1a3a5c;
+      margin-bottom: 6px;
+      line-height: 1.25;
+    }
+
+    #portfoliolist .tile-body p {
+      font-family: 'Inter', 'Raleway', sans-serif;
+      font-size: 13px;
+      color: #4a5e72;
+      line-height: 1.6;
+      flex: 1;
+      margin-bottom: 14px;
+    }
+
+    #portfoliolist .tile-link {
+      font-family: 'Inter', 'Raleway', sans-serif;
+      font-size: 12px;
+      font-weight: 700;
+      color: #1e6fa5;
+      text-decoration: none;
+      align-self: flex-start;
+      border-bottom: 2px solid transparent;
+      padding-bottom: 1px;
+      transition: color .2s, border-color .2s;
+    }
+
+    #portfoliolist .tile-link:hover {
+      color: #f0932b;
+      border-color: #f0932b;
+    }
+
+    @media (max-width: 720px) {
+      #portfoliolist.grid {
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+
+    @media (max-width: 460px) {
+      #portfoliolist.grid {
+        grid-template-columns: 1fr;
+      }
     }
   </style>
 
@@ -454,143 +601,112 @@
     <div class="container">
       <h2 data-os-animation="flash" data-os-animation-delay="0.3s" class="os-animation">Services</h2>
       <br /><br />
-      <div id="portfoliolist" class="clearfix">
-        <div data-cat="app" class="portfolio app">
+      <div id="portfoliolist" class="grid">
+
+        <div class="tile">
           <a href="/rf-engineering.html" style="display: block; text-decoration: none; color: inherit;">
-          <div class="portfolio-wrapper"> <img alt="RF Engineering" style="width: 350px; height: 300px;"
-              src="images/ServicesEngneering.jpg" loading="lazy" />
-            <div class="imgDescription2">
-              <div class="imgDescription2InnerContent">
-                <h1 style="vertical-align: middle !important;">RF Engineering</h1>
-                <div class="orangeline"></div>
-                <ul
-                  style="display: block; margin: 0px; padding: 0px; line-height: 1.2em !important; vertical-align: middle !important;">
-                  <li>In-building Walk Testing</li>
-                  <li>Macro/Small Cells Drive Testing</li>
-                  <li>RF Design (Macro & Small Cells)</li>
-                  <li>Site Rollout Readiness</li>
-                  <li>Site Tuning, KPI monitoring & Parameter Optimization</li>
-                  <li>Traffic Planning</li>
-                </ul>
-              </div>
-            </div>
+          <div class="tile-img-wrap">
+            <img
+              src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?w=640&q=80&fit=crop&crop=top"
+              alt="RF Engineering – network planning"
+              onerror="this.src='https://images.unsplash.com/photo-1504384308090-c894fdcc538d?w=640&q=80&fit=crop'"
+              loading="lazy"
+            />
+            <span class="tile-label">RF Engineering</span>
+          </div>
+          <div class="tile-body">
+            <h3>RF Engineering</h3>
+            <p>Network design, KPI optimization &amp; drive testing for 4G LTE, 5G NR, small cells &amp; in-building systems.</p>
           </div>
           </a>
         </div>
-        <div data-cat="app" class="portfolio app">
+
+        <div class="tile">
           <a href="/rf-compliance.html" style="display: block; text-decoration: none; color: inherit;">
-          <div class="portfolio-wrapper"> <img alt="RF Compliance" style="width: 350px; height: 300px;"
-              src="images/rf_compliance.jpeg" loading="lazy" />
-            <div class="imgDescription2">
-              <div class="imgDescription2InnerContent">
-                <h1>RF Compliance</h1>
-                <div class="orangeline"></div>
-                <ul
-                  style="display: block; margin: 0px; padding: 0px; line-height: 1.2em !important; vertical-align: middle !important;">
-                  <li>FCC Compliance/Mitigation</li>
-                  <li>FCC Compliance Training</li>
-                  <li>Health & Safety Testimony</li>
-                  <li>Jurisdictional Report Creation</li>
-                  <li>RF Exposure Analysis (Pre/Post)</li>
-                  <li>RF Field Measurements</li>
-                  <li>RF Hazard Signs</li>
-                </ul>
-              </div>
-            </div>
+          <div class="tile-img-wrap">
+            <img
+              src="images/rf_compliance.jpeg"
+              alt="RF Compliance – antenna measurement"
+              onerror="this.src='https://images.unsplash.com/photo-1614064641938-3bbee52942c7?w=640&q=80&fit=crop&crop=center'"
+              loading="lazy"
+            />
+            <span class="tile-label">RF Compliance</span>
+          </div>
+          <div class="tile-body">
+            <h3>RF Compliance</h3>
+            <p>FCC/OSHA RF exposure assessments, EME surveys, mitigation, jurisdictional reports &amp; compliant hazard signage.</p>
           </div>
           </a>
         </div>
-        <div data-cat="card" class="portfolio card">
+
+        <div class="tile">
           <a href="/staffing.html" style="display: block; text-decoration: none; color: inherit;">
-            <div class="portfolio-wrapper"> <img alt="Staffing" style="width: 350px; height: 300px;"
-                src="images/ServicesSit.jpg" loading="lazy" />
-              <div class="imgDescription2">
-                <div class="imgDescription2InnerContent">
-                  <h1>Staffing</h1>
-                  <div class="orangeline"></div>
-                  <ul
-                    style="display: block; margin: 0px; padding: 0px; line-height: 1.2em !important; vertical-align: middle !important;">
-                    <li>Admin/Office</li>
-                    <li>Finance</li>
-                    <li>Healthcare</li>
-                    <li>Information Technology</li>
-                    <li>Networking</li>
-                    <li>RF Engineering</li>
-                    <li>Telecom Construction</li>
-                  </ul>
-                </div>
-              </div>
-            </div>
+          <div class="tile-img-wrap">
+            <img
+              src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?w=640&q=80&fit=crop&crop=top"
+              alt="Staffing – professional team"
+              onerror="this.src='https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=640&q=80&fit=crop'"
+              loading="lazy"
+            />
+            <span class="tile-label">Staffing Solutions</span>
+          </div>
+          <div class="tile-body">
+            <h3>Staffing Solutions</h3>
+            <p>End-to-end talent placement across Telecom, IT, Healthcare, Finance &amp; Professional Services.</p>
+          </div>
           </a>
         </div>
 
-        <div data-cat="app" class="portfolio app">
+        <div class="tile">
           <a href="/it-services.html" style="display: block; text-decoration: none; color: inherit;">
-          <div class="portfolio-wrapper"> <img alt="IT Services" style="width: 350px; height: 300px;"
-              src="images/cell-towers-1.jpg" loading="lazy" />
-            <div class="imgDescription2">
-              <div class="imgDescription2InnerContent">
-                <h1>IT Services</h1>
-                <div class="orangeline"></div>
-                <ul
-                  style="display: block; margin: 0px; padding: 0px; line-height: 1.2em !important; vertical-align: middle !important;">
-                  <li>Application Development</li>
-                  <li>Big Data Analytics</li>
-                  <li>Cloud Services</li>
-                  <li>Data Warehousing</li>
-                  <li>Networking</li>
-                  <li>Network Security</li>
-                  <li>System Integration</li>
-                  <li>Virtualization & Database Management</li>
-                </ul>
-              </div>
-            </div>
+          <div class="tile-img-wrap">
+            <img
+              src="https://images.unsplash.com/photo-1461749280684-dccba630e2f6?w=640&q=80&fit=crop&crop=center"
+              alt="IT Services – software development"
+              onerror="this.src='https://images.unsplash.com/photo-1518770660439-4636190af475?w=640&q=80&fit=crop'"
+              loading="lazy"
+            />
+            <span class="tile-label">IT Services</span>
+          </div>
+          <div class="tile-body">
+            <h3>IT Services</h3>
+            <p>Software development, cloud migration, cybersecurity, data analytics &amp; managed IT support.</p>
           </div>
           </a>
         </div>
 
-        <div data-cat="app" class="portfolio app">
+        <div class="tile">
           <a href="/field-services.html" style="display: block; text-decoration: none; color: inherit;">
-          <div class="portfolio-wrapper"> <img alt="Field Services" style="width: 350px; height: 300px;"
-              src="images/ServicesConstruction.jpg" loading="lazy" />
-            <div class="imgDescription2">
-              <div class="imgDescription2InnerContent">
-                <h1>Field Services</h1>
-                <div class="orangeline"></div>
-                <ul
-                  style="display: block; margin: 0px; padding: 0px; line-height: 1.2em !important; vertical-align: middle !important;">
-                  <li>Anchor Cabinet Prep</li>
-                  <li>BBU Swap, Install & Integrate</li>
-                  <li>C-RAN, C-Band</li>
-                  <li>GPS Install and Sweep/Survey</li>
-                  <li>PSAP / Functional Call Testing</li>
-                  <li>Router Migration (IXRE)</li>
-                  <li>SiteBoss Installation and testing</li>
-                </ul>
-              </div>
-            </div>
+          <div class="tile-img-wrap">
+            <img
+              src="images/field_services.jpeg"
+              alt="Field Services – technician equipment"
+              onerror="this.src='https://images.unsplash.com/photo-1581092580497-e0d23cbdf1dc?w=640&q=80&fit=crop&crop=center'"
+              loading="lazy"
+            />
+            <span class="tile-label">Field Services</span>
+          </div>
+          <div class="tile-body">
+            <h3>Field Services</h3>
+            <p>BBU swaps, router migration, SiteBoss installation, optical integration &amp; functional call testing nationwide.</p>
           </div>
           </a>
         </div>
 
-        <div data-cat="app" class="portfolio app">
+        <div class="tile">
           <a href="/emerging-technologies.html" style="display: block; text-decoration: none; color: inherit;">
-          <div class="portfolio-wrapper"> <img alt="Emerging Technologies" style="width: 350px; height: 300px;"
-              src="images/emerging_technologies.jpg" loading="lazy" />
-            <div class="imgDescription2">
-              <div class="imgDescription2InnerContent">
-                <h1>Emerging Technologies</h1>
-                <div class="orangeline"></div>
-                <ul
-                  style="display: block; margin: 0px; padding: 0px; line-height: 1.2em !important; vertical-align: middle !important;">
-                  <li>AI & ML</li>
-                  <li>Fixed Wireless Access</li>
-                  <li>Multi Access EDGE Computing</li>
-                  <li>Private Wireless Networks - 5G, LTE</li>
-                  <li>SDN & NFV</li>
-                </ul>
-              </div>
-            </div>
+          <div class="tile-img-wrap">
+            <img
+              src="https://images.unsplash.com/photo-1677442136019-21780ecad995?w=640&q=80&fit=crop&crop=center"
+              alt="Emerging Technologies – AI 5G innovation"
+              onerror="this.src='https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=640&q=80&fit=crop'"
+              loading="lazy"
+            />
+            <span class="tile-label">Emerging Technologies</span>
+          </div>
+          <div class="tile-body">
+            <h3>Emerging Technologies</h3>
+            <p>AI &amp; ML, private wireless, fixed wireless access, edge computing, SDN/NFV &amp; cloud-native infrastructure.</p>
           </div>
           </a>
         </div>
