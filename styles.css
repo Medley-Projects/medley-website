@@ -380,6 +380,11 @@ h5,
   box-shadow: var(--mn-shadow-sm);
 }
 
+.accordion.site-accordion .accordion-header,
+.accordion.site-accordion .accordion-collapse {
+  scroll-margin-top: 96px;
+}
+
 /* ---------- Dark bands (inner pages) ---------- */
 .dark-band {
   background: linear-gradient(135deg, #0b1220 0%, #1e293b 100%);

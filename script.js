@@ -68,18 +68,66 @@
     }
   }
 
+  /** Deep links (QR codes) to RF hazard sign accordion items */
+  function initSignDeepLink() {
+    var hash = window.location.hash;
+    if (!hash || hash.length < 2) return;
+
+    var raw = hash.slice(1);
+    var accordion = document.getElementById("rf-hazard-signs");
+
+    // Pages hosting the sign accordion: open and scroll to the matching item.
+    if (accordion) {
+      var target = document.getElementById(raw);
+      if (!target) target = document.getElementById("collapse-" + raw);
+      if (!target || !target.classList.contains("accordion-collapse")) return;
+
+      var button = document.querySelector('[data-bs-target="#' + target.id + '"]');
+
+      var reveal = function () {
+        var header = button ? button.closest(".accordion-header") : null;
+        (header || target).scrollIntoView({ behavior: "smooth", block: "start" });
+      };
+
+      if (window.bootstrap && bootstrap.Collapse) {
+        var instance = bootstrap.Collapse.getOrCreateInstance(target, { toggle: false });
+        target.addEventListener("shown.bs.collapse", reveal, { once: true });
+        instance.show();
+      } else {
+        target.classList.add("show");
+        if (button) {
+          button.classList.remove("collapsed");
+          button.setAttribute("aria-expanded", "true");
+        }
+        reveal();
+      }
+      return;
+    }
+
+    // Home page: forward sign hashes to the RF Compliance page.
+    var isHome = !!document.querySelector(".bg-header");
+    if (!isHome || document.getElementById(raw)) return;
+    if (raw === "rf-hazard-signs") {
+      window.location.replace("rf-compliance.html#rf-hazard-signs");
+      return;
+    }
+    window.location.replace("rf-compliance.html#collapse-" + raw);
+  }
+
   if (document.readyState === "loading") {
     document.addEventListener("DOMContentLoaded", function () {
       initReveal();
       initNavbarScroll();
       initMarqueeClone();
       initContactMailto();
+      initSignDeepLink();
     });
   } else {
     initReveal();
     initNavbarScroll();
     initMarqueeClone();
     initContactMailto();
+    initSignDeepLink();
   }
 })();
 
