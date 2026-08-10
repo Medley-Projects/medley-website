@@ -459,7 +459,7 @@ h5,
   height: auto;
   border-radius: 12px;
   position: absolute;
-  left: max(calc(200px * 8), 100%);
+  left: max(calc(235px * 8), 100%);
   animation-name: scrollLeft;
   animation-duration: 48s;
   animation-timing-function: linear;
@@ -526,12 +526,35 @@ h5,
   color: #fdba74;
 }
 
+.site-footer a img {
+  filter: brightness(0) invert(1);
+}
+
 .site-footer .nav-link {
   color: rgba(248, 250, 252, 0.75) !important;
 }
 
 .site-footer .nav-link:hover {
   color: #fdba74 !important;
+}
+
+.site-footer .footer-links {
+  display: grid;
+  grid-template-columns: repeat(2, auto);
+  column-gap: 1.5rem;
+  row-gap: 0.2rem;
+  justify-content: center;
+  justify-items: end;
+}
+
+.site-footer .footer-links .nav-link {
+  padding: 0.15rem 0 !important;
+}
+
+@media (min-width: 768px) {
+  .site-footer .footer-links {
+    justify-content: end;
+  }
 }
 
 .site-footer .border-top {
