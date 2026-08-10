@@ -88,19 +88,33 @@ function sendEmail() {
   var link = document.getElementById("send_email");
   if (!link) return;
 
-  var nameEl = document.getElementById("fullname");
-  var subjectEl = document.getElementById("subject");
-  var phoneEl = document.getElementById("phone");
-  var messageEl = document.getElementById("message");
+  function val(id) {
+    var el = document.getElementById(id);
+    return el ? el.value.trim() : "";
+  }
 
-  var name = nameEl ? nameEl.value : "";
-  var subject = subjectEl ? subjectEl.value : "";
-  var phone = phoneEl ? phoneEl.value : "";
-  var message = messageEl ? messageEl.value : "";
+  var fields = [
+    ["Name", val("f_name")],
+    ["Company Name", val("f_company")],
+    ["Address", val("f_address")],
+    ["City", val("f_city")],
+    ["State/Prov", val("f_state")],
+    ["Country", val("f_country")],
+    ["Zip", val("f_zip")],
+    ["Phone No", val("f_phone")],
+    ["Fax", val("f_fax")],
+    ["Email", val("f_email")],
+    ["Message", val("f_message")]
+  ];
 
-  var plainBody = message + "\r\n\r\nThanks,\r\n" + name + "\r\n" + phone;
+  var lines = ["Form details below.", ""];
+  fields.forEach(function (pair) {
+    if (pair[1]) lines.push(pair[0] + ": " + pair[1]);
+  });
+
   var email = "info@medleynetworks.com";
   var href =
-    "mailto:" + email + "?subject=" + encodeURIComponent(subject) + "&body=" + encodeURIComponent(plainBody);
+    "mailto:" + email + "?subject=" + encodeURIComponent("Medley Networks form submissions") + "&body=" +
+    encodeURIComponent(lines.join("\r\n"));
   link.setAttribute("href", href);
 }
