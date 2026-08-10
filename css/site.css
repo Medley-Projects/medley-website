@@ -575,7 +575,7 @@ strong { color: var(--ink); font-weight: 600; }
     top: var(--header-h);
     left: 0;
     right: 0;
-    bottom: 0;
+    height: calc(100vh - var(--header-h));
     background: var(--white);
     border-top: 1px solid var(--line);
     padding: 20px 24px 40px;
