@@ -1,0 +1,505 @@
+/* ============================================================
+   Medley Networks — site.css (single site stylesheet)
+   Layers: tokens → type → base → components → utilities.
+   Vendor files (Bootstrap, animate, ionicons, bxslider, grid)
+   load before this file and are intentionally left alone.
+   ============================================================ */
+
+/* ---------- Tokens ---------- */
+:root {
+    --brand: #d84012;
+    --brand-light: #d87843;
+    --ink: #222;
+    --muted: #555;
+    --faint: #777;
+    --wash: #f4f4f4;
+    --white: #fff;
+    --radius: 0;
+    --gap: 28px;
+}
+
+/* ---------- Type system ---------- */
+body {
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-weight: 300;
+}
+
+h1, h2, h3, h4, h5 {
+    font-family: 'Raleway', "Helvetica Neue", Helvetica, Arial, sans-serif !important;
+    font-weight: 900 !important;
+}
+
+p, div, li, ul, ol, td, th, a, button, label, small,
+input, select, textarea, blockquote {
+    font-family: inherit !important;
+}
+
+span:not([class*="glyphicon"]):not([class*="fa-"]):not([class*="ion-"]) {
+    font-family: inherit !important;
+}
+
+.t-hero {
+    font-family: 'Raleway', "Helvetica Neue", Helvetica, Arial, sans-serif !important;
+    font-weight: 900 !important;
+    font-size: 44px !important;
+    line-height: 1.15 !important;
+    text-transform: uppercase !important;
+    letter-spacing: .06em !important;
+}
+
+.t-title {
+    font-family: 'Raleway', "Helvetica Neue", Helvetica, Arial, sans-serif !important;
+    font-weight: 900 !important;
+    font-size: 30px !important;
+    line-height: 1.25 !important;
+    text-transform: uppercase !important;
+    letter-spacing: 4px !important;
+}
+
+.t-h3 {
+    font-family: 'Raleway', "Helvetica Neue", Helvetica, Arial, sans-serif !important;
+    font-weight: 900 !important;
+    font-size: 20px !important;
+    line-height: 1.35 !important;
+}
+
+.t-card-title {
+    font-family: 'Raleway', "Helvetica Neue", Helvetica, Arial, sans-serif !important;
+    font-weight: 900 !important;
+    font-size: 17px !important;
+    line-height: 1.4 !important;
+}
+
+.t-lead {
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif !important;
+    font-weight: 300 !important;
+    font-size: 22px !important;
+    line-height: 1.7 !important;
+}
+
+.t-body {
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif !important;
+    font-weight: 300 !important;
+    font-size: 19px !important;
+    line-height: 1.7 !important;
+}
+
+.t-small {
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif !important;
+    font-weight: 400 !important;
+    font-size: 16px !important;
+    line-height: 1.6 !important;
+}
+
+.t-list {
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif !important;
+    font-weight: 300 !important;
+    font-size: 18px !important;
+    line-height: 1.65 !important;
+    margin-bottom: .5em !important;
+}
+
+.t-btn {
+    font-family: 'Raleway', "Helvetica Neue", Helvetica, Arial, sans-serif !important;
+    font-weight: 700 !important;
+    font-size: 14px !important;
+    letter-spacing: .08em !important;
+    text-transform: uppercase !important;
+}
+
+/* ---------- Base ---------- */
+.navbar-brand img {
+    max-width: 100px;
+    height: auto;
+}
+
+/* ---------- Sections ---------- */
+.section {
+    text-align: left;
+}
+
+.section--pad {
+    padding: 50px 0;
+}
+
+.eyebrow {
+    text-transform: uppercase !important;
+    letter-spacing: .14em !important;
+    font-size: 13px !important;
+    font-weight: 700 !important;
+    color: var(--brand-light);
+    margin-bottom: 12px;
+}
+
+.accent-bar {
+    width: 52px;
+    height: 4px;
+    background: var(--brand-light);
+    margin-bottom: 24px;
+}
+
+/* ---------- Buttons ---------- */
+.btn {
+    display: inline-block;
+    padding: 10px 25px;
+    font-size: 13px;
+    font-weight: 700;
+    text-decoration: none;
+    background: var(--brand);
+    color: var(--white);
+    border: none;
+    transition: background .2s;
+    letter-spacing: 1px;
+    /* Bootstrap sets .btn to nowrap — allow wrapping on narrow screens */
+    white-space: normal;
+}
+
+.btn:hover {
+    background: var(--ink);
+    color: var(--white);
+    text-decoration: none;
+}
+
+.btn--dark {
+    background: var(--ink);
+}
+
+.btn--dark:hover {
+    background: var(--brand);
+}
+
+/* ---------- Grids ---------- */
+.grid {
+    display: grid;
+    gap: var(--gap);
+    margin-bottom: 64px;
+}
+
+.grid--2 { grid-template-columns: 1fr 1fr; }
+.grid--3 { grid-template-columns: repeat(3, 1fr); }
+.grid--4 { grid-template-columns: repeat(4, 1fr); }
+.grid--tight { gap: 16px; }
+.grid--snug { gap: 20px; }
+
+/* Let grid children shrink instead of forcing overflow */
+.grid > * {
+    min-width: 0;
+}
+
+/* ---------- Cards ---------- */
+.card {
+    background: var(--white);
+    padding: 32px 28px;
+    display: flex;
+    flex-direction: column;
+}
+
+.card--tint {
+    background: var(--wash);
+}
+
+.card--pad-lg {
+    padding: 44px;
+}
+
+.card--line {
+    border-left: 4px solid var(--brand-light);
+    background: var(--wash);
+}
+
+.card--line:nth-child(2) { border-left-color: var(--brand); }
+.card--line:nth-child(3) { border-left-color: var(--ink); }
+
+.card--flag {
+    border-top: 3px solid var(--brand-light);
+}
+
+.card--flag:nth-child(2) { border-top-color: var(--brand); }
+.card--flag:nth-child(3) { border-top-color: var(--ink); }
+
+.card--lift {
+    transition: transform .2s, box-shadow .2s;
+}
+
+.card--lift:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 14px 36px rgba(26, 58, 92, .15);
+}
+
+.card--center {
+    text-align: center;
+    align-items: center;
+}
+
+.card .btn {
+    margin-top: auto;
+}
+
+.card h3 {
+    color: var(--brand);
+}
+
+/* Card body text stays compact and readable */
+.card p {
+    font-size: 16px !important;
+    line-height: 1.65 !important;
+}
+
+.card li {
+    font-size: 15px !important;
+    line-height: 1.6 !important;
+}
+
+/* Alt card: dark heading + dark button (2nd CTA card pattern) */
+.card--alt h3 {
+    color: var(--ink);
+}
+
+.card--alt .btn {
+    background: var(--ink);
+}
+
+.card--alt .btn:hover {
+    background: var(--brand);
+}
+
+/* ---------- Dash check lists ---------- */
+.check-list {
+    list-style: none;
+    padding: 0;
+}
+
+.check-list li {
+    color: var(--muted);
+    padding: 5px 0 5px 16px;
+    position: relative;
+}
+
+.check-list li::before {
+    content: '—';
+    position: absolute;
+    left: 0;
+    color: var(--brand-light);
+}
+
+/* ---------- Tags ---------- */
+.tag {
+    display: inline-block;
+    padding: 8px 18px;
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--white);
+    background: var(--brand);
+    border-radius: 20px;
+    white-space: nowrap;
+}
+
+.tag--ghost {
+    background: var(--white);
+    border: 1px solid #ddd;
+    color: var(--ink);
+    border-radius: 0;
+    font-size: 12px;
+    padding: 6px 12px;
+    font-weight: 400;
+}
+
+.tag-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+/* ---------- Bands (full-width tinted sections) ---------- */
+.band {
+    background: var(--wash);
+    padding: 56px;
+    margin-bottom: 64px;
+}
+
+.band--roomy {
+    padding: 64px 56px;
+}
+
+.band--pad {
+    padding: 50px 0;
+}
+
+.inner-narrow {
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+/* ---------- Split (two-column intro) ---------- */
+.split {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 48px;
+    align-items: center;
+    margin-bottom: 56px;
+}
+
+.split--wide {
+    grid-template-columns: 1fr 2fr;
+    gap: 56px;
+    align-items: start;
+    margin-bottom: 48px;
+}
+
+/* ---------- Stats ---------- */
+.stat {
+    background: var(--white);
+    padding: 24px 18px;
+    text-align: center;
+}
+
+.stat-num {
+    font-size: 1.6rem;
+    font-weight: 700;
+    color: var(--brand);
+    display: block;
+}
+
+.stat-label {
+    font-size: 11px;
+    color: var(--faint);
+    text-transform: uppercase;
+    letter-spacing: .08em;
+    margin-top: 4px;
+}
+
+.stat--tint {
+    background: var(--wash);
+}
+
+/* ---------- Steps ---------- */
+.steps {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 24px;
+}
+
+.step {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.step-circle {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background: var(--ink);
+    border: 3px solid var(--brand-light);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: var(--brand-light);
+    margin-bottom: 18px;
+    flex-shrink: 0;
+}
+
+.step:nth-child(2) .step-circle { border-color: var(--brand); color: var(--brand); }
+.step:nth-child(3) .step-circle { border-color: var(--ink); color: var(--white); }
+
+.step-title {
+    font-size: 13px;
+    font-weight: 700;
+    color: var(--ink);
+    margin-bottom: 6px;
+    line-height: 1.3;
+}
+
+.step-body {
+    font-size: 12px;
+    color: var(--muted);
+    line-height: 1.55;
+}
+
+/* Six-column pipeline variant (staffing process) */
+.steps--six {
+    grid-template-columns: repeat(6, 1fr);
+}
+
+/* Five-column variant (RF compliance process) */
+.steps--five {
+    grid-template-columns: repeat(5, 1fr);
+}
+
+.step-tag {
+    display: inline-block;
+    margin-top: 6px;
+    font-size: 10px;
+    font-weight: 700;
+    padding: 3px 10px;
+    border-radius: 20px;
+    color: var(--white);
+    background: var(--brand);
+}
+
+/* Circular icon disc used on industry cards */
+.industry-icon {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+/* ---------- Timeline (horizontal steps with numbered badges) ---------- */
+.timeline {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    margin-top: 30px;
+    margin-bottom: 64px;
+}
+
+.tl-step {
+    display: block;
+}
+
+.tl-dot {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: var(--ink);
+    border: 2px solid var(--brand-light);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 14px;
+    font-weight: 700;
+    color: var(--brand-light);
+    margin-bottom: 16px;
+    flex-shrink: 0;
+}
+
+.tl-title {
+    font-size: 14px;
+    font-weight: 700;
+    color: var(--ink);
+    margin-bottom: 8px;
+    line-height: 1.3;
+}
+
+.tl-body {
+    font-size: 13px;
+    color: var(--muted);
+    line-height: 1.6;
+}
+
+/* ---------- Responsive ---------- */
+@media (max-width: 960px) {
+    .grid--2, .grid--3 { grid-template-columns: 1fr 1fr; }
+    .grid--4, .timeline { grid-template-columns: 1fr 1fr; }
+    .steps { grid-template-columns: repeat(2, 1fr); gap: 20px; }
+    .steps--five { grid-template-columns: repeat(3, 1fr); }
+    .split, .split--wide { grid-template-columns: 1fr; gap: 28px; }
+}
+
+@media (max-width: 600px) {
+    .grid--2, .grid--3, .grid--4, .timeline { grid-template-columns: 1fr; }
+    .steps, .steps--six, .steps--five { grid-template-columns: 1fr 1fr; }
+    .band, .band--roomy, .band--pad { padding: 36px 24px; }
+}
