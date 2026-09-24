@@ -45,9 +45,7 @@
   </style>
 
   <!--JS-->
-  <script type="text/javascript">
-    var embedCode = '<iframe src="https://www.youtube.com/embed/-CpvBYE-rd8?rel=0&autoplay=1" frameborder="0" allowfullscreen></iframe>'
-  </script>
+  
 
   <style>
     .disableClick {
@@ -644,7 +642,7 @@
             <img
               src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?w=640&q=80&fit=crop&crop=top"
               alt="RF Engineering – network planning"
-              onerror="this.src='https://images.unsplash.com/photo-1504384308090-c894fdcc538d?w=640&q=80&fit=crop'"
+              data-fallback="https://images.unsplash.com/photo-1504384308090-c894fdcc538d?w=640&q=80&fit=crop"
               loading="lazy"
             />
             <span class="tile-label">RF Engineering</span>
@@ -662,7 +660,7 @@
             <img
               src="images/rf_compliance.jpeg"
               alt="RF Compliance – antenna measurement"
-              onerror="this.src='https://images.unsplash.com/photo-1614064641938-3bbee52942c7?w=640&q=80&fit=crop&crop=center'"
+              data-fallback="https://images.unsplash.com/photo-1614064641938-3bbee52942c7?w=640&q=80&fit=crop&crop=center"
               loading="lazy"
             />
             <span class="tile-label">RF Compliance</span>
@@ -680,7 +678,7 @@
             <img
               src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?w=640&q=80&fit=crop&crop=top"
               alt="Staffing – professional team"
-              onerror="this.src='https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=640&q=80&fit=crop'"
+              data-fallback="https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=640&q=80&fit=crop"
               loading="lazy"
             />
             <span class="tile-label">Staffing Solutions</span>
@@ -698,7 +696,7 @@
             <img
               src="https://images.unsplash.com/photo-1461749280684-dccba630e2f6?w=640&q=80&fit=crop&crop=center"
               alt="IT Services – software development"
-              onerror="this.src='https://images.unsplash.com/photo-1518770660439-4636190af475?w=640&q=80&fit=crop'"
+              data-fallback="https://images.unsplash.com/photo-1518770660439-4636190af475?w=640&q=80&fit=crop"
               loading="lazy"
             />
             <span class="tile-label">IT Services</span>
@@ -716,7 +714,7 @@
             <img
               src="images/field_services.jpeg"
               alt="Field Services – technician equipment"
-              onerror="this.src='https://images.unsplash.com/photo-1581092580497-e0d23cbdf1dc?w=640&q=80&fit=crop&crop=center'"
+              data-fallback="https://images.unsplash.com/photo-1581092580497-e0d23cbdf1dc?w=640&q=80&fit=crop&crop=center"
               loading="lazy"
             />
             <span class="tile-label">Field Services</span>
@@ -734,7 +732,7 @@
             <img
               src="https://images.unsplash.com/photo-1677442136019-21780ecad995?w=640&q=80&fit=crop&crop=center"
               alt="Emerging Technologies – AI 5G innovation"
-              onerror="this.src='https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=640&q=80&fit=crop'"
+              data-fallback="https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=640&q=80&fit=crop"
               loading="lazy"
             />
             <span class="tile-label">Emerging Technologies</span>
@@ -1598,37 +1596,9 @@
     </div>
   </footer>
 
-  <script>
-    var acc = document.getElementsByClassName("accordion");
-    var i;
+  
 
-    for (i = 0; i < acc.length; i++) {
-      acc[i].addEventListener("click", function () {
-        this.classList.toggle("active");
-        var panel = this.nextElementSibling;
-        if (panel.style.display === "block") {
-          panel.style.display = "none";
-        } else {
-          panel.style.display = "block";
-        }
-      });
-    }
-  </script>
-
-  <script>
-    document.addEventListener("DOMContentLoaded", function () {
-      var hash = window.location.hash.substring(1);
-      if (hash) {
-        var targetAccordion = document.getElementById(hash);
-        if (targetAccordion && targetAccordion.classList.contains("accordion")) {
-          targetAccordion.classList.add("active");
-          var panel = targetAccordion.nextElementSibling;
-          panel.style.display = "block";
-          targetAccordion.scrollIntoView({ behavior: "smooth", block: "center" });
-        }
-      }
-    });
-  </script>
+  
 
 </body>
 <script src="js/modernizr.custom.js"></script>

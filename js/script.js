@@ -139,6 +139,24 @@ $(function() {
     $(".se-pre-con").fadeOut("slow");
 });
 
+// Image fallback without inline handlers (CSP-safe replacement for
+// onerror="this.src=..."). Binds error handling plus a check for images
+// that already failed before binding.
+$(function() {
+    $('img[data-fallback]').each(function() {
+        var img = this,
+            $img = $(this);
+        $img.on('error', function() {
+            var fb = $img.attr('data-fallback');
+            $img.removeAttr('data-fallback');
+            if (fb && img.src !== fb) { img.src = fb; }
+        });
+        if (img.complete && typeof img.naturalWidth !== 'undefined' && img.naturalWidth === 0) {
+            $img.trigger('error');
+        }
+    });
+});
+
 // CSRF token injection: static HTML forms can't embed a server-side token,
 // so fetch it once per page view and attach it to every same-origin PHP form.
 $(function() {
@@ -158,7 +176,31 @@ $(function() {
     } catch (e) { /* no-op */ }
 });
 
+// Accordion toggles + deep-link opener (moved from inline <script> blocks for CSP)
+var acc = document.getElementsByClassName("accordion");
+    var i;
 
+    for (i = 0; i < acc.length; i++) {
+      acc[i].addEventListener("click", function () {
+        this.classList.toggle("active");
+        var panel = this.nextElementSibling;
+        if (panel.style.display === "block") {
+          panel.style.display = "none";
+        } else {
+          panel.style.display = "block";
+        }
+      });
+    }
 
-
-
+document.addEventListener("DOMContentLoaded", function () {
+      var hash = window.location.hash.substring(1);
+      if (hash) {
+        var targetAccordion = document.getElementById(hash);
+        if (targetAccordion && targetAccordion.classList.contains("accordion")) {
+          targetAccordion.classList.add("active");
+          var panel = targetAccordion.nextElementSibling;
+          panel.style.display = "block";
+          targetAccordion.scrollIntoView({ behavior: "smooth", block: "center" });
+        }
+      }
+    });
