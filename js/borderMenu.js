@@ -19,8 +19,10 @@
 
 	function init() {
 
-		var menu = document.getElementById( 'bt-menu' ),
-			trigger = menu.querySelector( 'a.bt-menu-trigger' ),
+		var menu = document.getElementById( 'bt-menu' );
+		// No border menu on this page — skip silently instead of throwing.
+		if ( !menu ) { return; }
+		var trigger = menu.querySelector( 'a.bt-menu-trigger' ),
 			// triggerPlay only for demo 6
 			triggerPlay = document.querySelector( 'a.bt-menu-trigger-out' ),
 			// event type (if mobile use touch events)
@@ -38,6 +40,8 @@
 		overlay.className = 'bt-overlay';
 		menu.appendChild( overlay );
 
+		// No trigger link — nothing to bind.
+		if ( !trigger ) { return; }
 		trigger.addEventListener( eventtype, function( ev ) {
 			ev.stopPropagation();
 			ev.preventDefault();

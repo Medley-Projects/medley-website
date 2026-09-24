@@ -139,6 +139,25 @@ $(function() {
     $(".se-pre-con").fadeOut("slow");
 });
 
+// CSRF token injection: static HTML forms can't embed a server-side token,
+// so fetch it once per page view and attach it to every same-origin PHP form.
+$(function() {
+    try {
+        if (!window.fetch) { return; }
+        fetch('csrf-token.php', { credentials: 'same-origin' })
+            .then(function (r) { return r.ok ? r.json() : null; })
+            .then(function (data) {
+                if (!data || !data.token) { return; }
+                $('form[action$=".php"]').each(function () {
+                    var $f = $(this);
+                    if ($f.find('input[name="csrf_token"]').length) { return; }
+                    $('<input>').attr({ type: 'hidden', name: 'csrf_token', value: data.token }).appendTo($f);
+                });
+            })
+            .catch(function () { /* forms will 403 with a reload hint; never break the page */ });
+    } catch (e) { /* no-op */ }
+});
+
 
 
 

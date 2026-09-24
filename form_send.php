@@ -1,5 +1,26 @@
 <?php
-if(isset($_POST['email'])) {
+// ---- CSRF + session bootstrap (PHP 7.3 compatible) ----
+$secure = (!empty($_SERVER['HTTPS']) && $_SERVER['HTTPS'] !== 'off');
+if (PHP_VERSION_ID >= 70300) {
+    session_set_cookie_params(array(
+        'lifetime' => 0,
+        'path' => '/',
+        'secure' => $secure,
+        'httponly' => true,
+        'samesite' => 'Lax',
+    ));
+}
+session_start();
+if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+    $sent = isset($_POST['csrf_token']) ? $_POST['csrf_token'] : '';
+    $expected = isset($_SESSION['csrf_token']) ? $_SESSION['csrf_token'] : '';
+    if ($expected === '' || !hash_equals($expected, (string) $sent)) {
+        http_response_code(403);
+        echo 'Forbidden: invalid or missing form token. Please go back, reload the page, and try again.';
+        exit;
+    }
+}
+if($_SERVER['REQUEST_METHOD'] === 'POST') {
      
     // CHANGE THE TWO LINES BELOW
     $email_to = "prasanna.nirmale@shrigroup.net";
