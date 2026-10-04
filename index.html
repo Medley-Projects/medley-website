@@ -1291,6 +1291,7 @@
               <h3 class="t-h3">Get In Touch</h3>
               <div class="fielddata">
                 <form name="htmlform" method="post" action="form_send.php">
+                  <input type="hidden" name="csrf_token" value="" />
                   <div class="row">
                     <div class="col-lg-6"> <input name="Name" placeholder="Name" type="text" />
                     </div>
@@ -1572,7 +1573,7 @@
                     </div>
                   </div>
                   <div class="row">
-                    <div class="col-lg-12"> <textarea name="textarea" placeholder="Message" type="textarea"></textarea>
+                    <div class="col-lg-12"> <textarea name="Message" placeholder="Message"></textarea>
                     </div>
                   </div>
                   <div class="row">
@@ -1600,7 +1601,7 @@
 
   
 
-</body><script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha384-1H217gwSVyLSIfaLxHbE7dRb3v4mYCKbpQvzx0cegeju1MVsGrX5xXxAvs/HgeFs" crossorigin="anonymous"></script>
+</body><script src="js/jquery-3.7.1.min.js" integrity="sha384-1H217gwSVyLSIfaLxHbE7dRb3v4mYCKbpQvzx0cegeju1MVsGrX5xXxAvs/HgeFs" crossorigin="anonymous"></script>
 <script src="js/classie.js"></script>
 <script src="js/borderMenu.js"></script>
 <script src="js/jquery.mixitup.min.js"></script>
@@ -1608,5 +1609,6 @@
 <script src="js/waypoints.min.js"></script>
 <script src="js/script.js?v=20260925"></script>
 <script src="js/bootstrap.min.js"></script>
+<script src="js/contact-csrf.js?v=20261004"></script>
 
 </html>
