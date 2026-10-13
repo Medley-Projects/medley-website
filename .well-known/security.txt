@@ -1,4 +1,4 @@
-Contact: mailto:info@medleynetworks.com
+Contact: mailto:security@medleynetworks.com
 Expires: 2027-10-12T00:00:00.000Z
 Policy: https://www.medleynetworks.com/security.html
 Preferred-Languages: en
