@@ -105,7 +105,7 @@ $isAuthed = !empty($_SESSION['catalog_authed']);
   <link rel="stylesheet" type="text/css" href="css/responsive.css">
   <link rel="stylesheet" type="text/css" href="css/animate.css">
   <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
-  <link rel="stylesheet" type="text/css" href="css/site.css?v=20260925">
+  <link rel="stylesheet" type="text/css" href="css/site.css?v=20261021">
 
   <style>
     body {
@@ -190,12 +190,16 @@ $isAuthed = !empty($_SESSION['catalog_authed']);
         <div id="bs-example-navbar-collapse-1" class="collapse navbar-collapse">
           <ul style="vertical-align: bottom !important;" class="nav navbar-nav navbar-right">
             <li style="font-size: 14px; font-family: Arial, sans-serif;"><a href="index.html#home">Home</a></li>
-            <li style="font-size: 14px; font-family: Arial, sans-serif;"><a href="index.html#services">Services</a></li>
-            <li style="font-size: 14px; font-family: Arial, sans-serif;"><a href="/rf-engineering.html">RF Engineering</a></li>
-            <li style="font-size: 14px; font-family: Arial, sans-serif;"><a href="/rf-compliance.html">RF Compliance</a></li>
-            <li style="font-size: 14px; font-family: Arial, sans-serif;"><a href="/staffing.html">Staffing</a></li>
-            <li style="font-size: 14px; font-family: Arial, sans-serif;"><a href="/it-services.html">IT Services</a></li>
-            <li style="font-size: 14px; font-family: Arial, sans-serif;"><a href="/emerging-technologies.html">Emerging Technologies</a></li>
+            <li class="nav-services" style="font-size: 14px; font-family: Arial, sans-serif;">
+              <a href="index.html#services" class="nav-services-toggle">Services</a>
+              <ul class="dropdown-menu nav-services-menu">
+                <li><a href="/rf-engineering.html">RF Engineering</a></li>
+                <li><a href="/rf-compliance.html">RF Compliance</a></li>
+                <li><a href="/staffing.html">Staffing Solutions</a></li>
+                <li><a href="/it-services.html">IT Services</a></li>
+                <li><a href="/emerging-technologies.html">Emerging Technologies</a></li>
+              </ul>
+            </li>
             <li style="font-size: 14px; font-family: Arial, sans-serif;"><a href="index.html#store">Store</a></li>
             <li style="font-size: 14px; font-family: Arial, sans-serif;"><a href="index.html#ContactUs">Contact Us</a></li>
             <li style="font-size: 14px; font-family: Arial, sans-serif;"><a href="/privacy-policy.html">Privacy Policy</a></li>
@@ -264,8 +268,8 @@ $isAuthed = !empty($_SESSION['catalog_authed']);
                 <tr><td>7</td><td>Administrative Staffing</td><td>Financial Analyst</td><td>$&nbsp;&nbsp;&nbsp;&nbsp;51.00</td><td>Hourly</td></tr>
                 <tr><td>8</td><td>Administrative Staffing</td><td>Grant Administrator</td><td>$&nbsp;&nbsp;&nbsp;&nbsp;47.00</td><td>Hourly</td></tr>
                 <tr><td>9</td><td>Administrative Staffing</td><td>HR Manager</td><td>$&nbsp;&nbsp;&nbsp;&nbsp;61.00</td><td>Hourly</td></tr>
-                <tr><td>10</td><td>Administrative Staffing</td><td>Medical Assistant</td><td>$&nbsp;&nbsp;&nbsp;&nbsp;35.00</td><td>Hourly</td></tr>
-                <tr><td>11</td><td>Administrative Staffing</td><td>Medical Biller</td><td>$&nbsp;&nbsp;&nbsp;&nbsp;34.00</td><td>Hourly</td></tr>
+                <!-- <tr><td>10</td><td>Administrative Staffing</td><td>Medical Assistant</td><td>$&nbsp;&nbsp;&nbsp;&nbsp;35.00</td><td>Hourly</td></tr> -->
+                <!-- <tr><td>11</td><td>Administrative Staffing</td><td>Medical Biller</td><td>$&nbsp;&nbsp;&nbsp;&nbsp;34.00</td><td>Hourly</td></tr> -->
                 <tr><td>12</td><td>Administrative Staffing</td><td>Payroll Analyst</td><td>$&nbsp;&nbsp;&nbsp;&nbsp;47.00</td><td>Hourly</td></tr>
                 <tr><td>13</td><td>Administrative Staffing</td><td>Payroll Manager</td><td>$&nbsp;&nbsp;&nbsp;&nbsp;61.00</td><td>Hourly</td></tr>
                 <tr><td>14</td><td>Administrative Staffing</td><td>Payroll Specialist</td><td>$&nbsp;&nbsp;&nbsp;&nbsp;41.00</td><td>Hourly</td></tr>

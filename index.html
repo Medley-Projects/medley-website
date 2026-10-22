@@ -20,7 +20,7 @@
   <link rel="stylesheet" type="text/css" href="css/responsive.css">
   <link rel="stylesheet" type="text/css" href="css/animate.css">
   <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
-<link rel="stylesheet" type="text/css" href="css/site.css?v=20260925">
+<link rel="stylesheet" type="text/css" href="css/site.css?v=20261021">
   <!--<link rel="stylesheet" type="text/css" href="css/custom.css">-->
   <link rel="stylesheet" type="text/css" href="css/ionicons.min.css">
   <link rel="preload" href="assets/images/hero/banner.webp" as="image" type="image/webp">
@@ -485,13 +485,17 @@
         <div id="bs-example-navbar-collapse-1" class="collapse navbar-collapse">
           <ul style="vertical-align: bottom !important;" class="nav navbar-nav navbar-right">
             <li style="font-size: 14px; font-family: Arial, sans-serif;"><a href="#home">Home</a></li>
-            <li style="font-size: 14px; font-family: Arial, sans-serif;"><a href="#services">Services</a></li>
-            <li style="font-size: 14px; font-family: Arial, sans-serif;"><a href="/rf-engineering.html">RF Engineering</a></li>
-            <li style="font-size: 14px; font-family: Arial, sans-serif;"><a href="/rf-compliance.html">RF Compliance</a></li>
-            <li style="font-size: 14px; font-family: Arial, sans-serif;"><a href="/staffing.html">Staffing</a></li>
-            <li style="font-size: 14px; font-family: Arial, sans-serif;"><a href="/it-services.html">IT Services</a></li>
+            <li class="nav-services" style="font-size: 14px; font-family: Arial, sans-serif;">
+              <a href="#services" class="nav-services-toggle">Services</a>
+              <ul class="dropdown-menu nav-services-menu">
+                <li><a href="/rf-engineering.html">RF Engineering</a></li>
+                <li><a href="/rf-compliance.html">RF Compliance</a></li>
+                <li><a href="/staffing.html">Staffing Solutions</a></li>
+                <li><a href="/it-services.html">IT Services</a></li>
+                <li><a href="/emerging-technologies.html">Emerging Technologies</a></li>
+              </ul>
+            </li>
             <!-- <li style="font-size: 14px; font-family: Arial, sans-serif;"><a href="/field-services.html">Field Services</a></li> -->
-            <li style="font-size: 14px; font-family: Arial, sans-serif;"><a href="/emerging-technologies.html">Emerging Technologies</a></li>
             <li style="font-size: 14px; font-family: Arial, sans-serif;"><a href="#store">Store</a></li>
             <li style="font-size: 14px; font-family: Arial, sans-serif;"><a href="#ContactUs">Contact Us</a></li>
             <li style="font-size: 14px; font-family: Arial, sans-serif;"><a href="/privacy-policy.html">Privacy Policy</a></li>
@@ -574,8 +578,8 @@
         We are not a single-service company. Our professionals support the full project lifecycle — from RF design and
         5G network optimization to network launch, RF compliance, IT application development, cloud services, and
         AI-powered solutions. Alongside our technical services, our staffing division places skilled professionals
-        across Telecom, IT, Healthcare, Finance, and Professional Services — on contract, contract-to-hire, and direct
-        placement engagements.
+        across Telecom, IT,<!-- Healthcare,--> Finance, and Professional Services — on contract, contract-to-hire, and
+        direct placement engagements.
       </p>
       <p data-os-animation="fadeIn" data-os-animation-delay="0.9s" style="text-align: justify; margin-bottom: 15px;"
         class="os-animation t-body">
@@ -686,7 +690,7 @@
           </div>
           <div class="tile-body">
             <h3 class="t-h3">Staffing Solutions</h3>
-            <p class="t-body">End-to-end talent placement across Telecom, IT, Healthcare, Finance &amp; Professional Services.</p>
+            <p class="t-body">End-to-end talent placement across Telecom, IT,<!-- Healthcare,--> Finance &amp; Professional Services.</p>
           </div>
           </a>
         </div>

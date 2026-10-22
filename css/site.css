@@ -106,6 +106,72 @@ span:not([class*="glyphicon"]):not([class*="fa-"]):not([class*="ion-"]) {
     height: auto;
 }
 
+/* ---------- Navbar "Services" hover dropdown ---------- */
+.navbar .nav-services {
+    position: relative;
+}
+
+.navbar .nav-services > .nav-services-toggle::after {
+    content: '';
+    display: inline-block;
+    width: 0;
+    height: 0;
+    margin-left: 6px;
+    vertical-align: middle;
+    border-top: 4px dashed;
+    border-right: 4px solid transparent;
+    border-left: 4px solid transparent;
+}
+
+.navbar .nav-services > .nav-services-menu {
+    left: 0;
+    right: auto;
+    min-width: 230px;
+    margin-top: 0;
+    border-top: 2px solid var(--brand);
+    border-radius: 0 0 4px 4px;
+}
+
+/* Open on hover, on keyboard focus, or when toggled open by script */
+.navbar .nav-services:hover > .nav-services-menu,
+.navbar .nav-services:focus-within > .nav-services-menu,
+.navbar .nav-services.open > .nav-services-menu {
+    display: block;
+}
+
+.navbar .nav-services > .nav-services-menu > li > a {
+    font-family: Arial, sans-serif !important;
+    font-size: 14px;
+    padding: 9px 20px;
+    color: #333;
+    white-space: nowrap;
+}
+
+.navbar .nav-services > .nav-services-menu > li > a:hover,
+.navbar .nav-services > .nav-services-menu > li > a:focus {
+    background-color: var(--brand);
+    color: #fff;
+}
+
+/* Touch devices have no hover: show the sub-menu inline under Services */
+@media (max-width: 767px) {
+    .navbar .nav-services > .nav-services-menu {
+        position: static;
+        float: none;
+        width: auto;
+        margin-top: 0;
+        background-color: transparent;
+        border: 0;
+        box-shadow: none;
+        display: block;
+    }
+
+    .navbar .nav-services > .nav-services-menu > li > a {
+        padding-left: 30px;
+        color: #333;
+    }
+}
+
 /* ---------- Sections ---------- */
 .section {
     text-align: left;
